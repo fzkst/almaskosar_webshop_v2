@@ -24,11 +24,11 @@ class StoreCategoryRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'request | string | max:50',
-            'desc' => 'request | string',
-            'status' => 'required | integer',
-            'popular' => 'required |integer',
-            'image' => 'required | string'
+            'name' => 'required | string | max:50',
+            'description' => 'required | string',
+            //'status' => 'required | integer',
+            //'popular' => 'required |integer',
+            'image' => 'required | image'
         ];
     }
 }
