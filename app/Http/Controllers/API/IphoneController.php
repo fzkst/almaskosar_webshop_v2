@@ -4,6 +4,7 @@ namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreIphoneRequest;
+use App\Http\Requests\UpdateIphoneRequest;
 use App\Models\Iphone;
 use Illuminate\Http\Request;
 
@@ -56,7 +57,7 @@ class IphoneController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(UpdateIphoneRequest $request, $id)
     {
         $iphone = Iphone::find($id);
         if (is_null($iphone)){
