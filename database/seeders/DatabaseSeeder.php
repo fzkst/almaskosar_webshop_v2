@@ -18,8 +18,8 @@ class DatabaseSeeder extends Seeder
         $this->call(CustomerSeeder::class);
         $this->call(CategorySeeder::class);
         $this->call(IphoneSeeder::class);
-        /* $this->call(IpadSeeder::class); */
-        
+        $this->call(IpadSeeder::class);
+
         // \App\Models\User::factory()->create([
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',

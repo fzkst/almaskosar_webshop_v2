@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\API\CategoryController;
 use App\Http\Controllers\API\CustomerController;
+use App\Http\Controllers\API\IpadController;
 use App\Http\Controllers\API\IphoneController;
 use App\Http\Controllers\API\UserController;
 use Illuminate\Http\Request;
@@ -33,4 +34,4 @@ Route::resource('categories', CategoryController::class);
 
 Route::resource('iphones', IphoneController::class);
 
-/* Route::resource('ipads', IpadController::class); */
+Route::resource('ipads', IpadController::class);
