@@ -12,6 +12,15 @@
                 @method('PUT')
                 <div>
                     <div class="mb-4">
+                        <label class="form-label" for="">Kategória</label>
+                        <select class="form-select" aria-label="Default select example" name="category_id" value="{{ old('category_id') }}">
+                            <option selected>Válassz kategóriát</option>
+                            <option value="1">iPhone</option>
+                            <option value="2">iPad</option>
+                            <option value="3">macBook</option>
+                        </select>
+                    </div>
+                    <div class="mb-4">
                         <label class="form-label" for="">Modell</label>
                         <input type="text" value="{{ $iphone->model }}" class="form-control" name="model">
                     </div>
@@ -31,8 +40,8 @@
                         <label class="form-label" for="">Készlet</label>
                         <input type="text" value="{{ $iphone->stock }}" class="form-control" name="stock">
                     </div>
-                    @if($iphone->kepfajl)
-                        <img src="{{ asset('img/uploads/iphones/'.$iphone->kepfajl)}}" class="kategoriakep" alt="mobilkép">
+                    @if($iphone->image)
+                        <img src="{{ asset('img/uploads/iphones/'.$iphone->image)}}" class="kategoriakep" alt="mobilkép">
                     @endif
                     <div class="mb-4">
                         <label class="form-file mb-2" for="">Kép feltöltése:</label>

@@ -14,6 +14,7 @@
                 <thead>
                     <tr class="text-center">
                         <th>#</th>
+                        <th>Kategória</th>
                         <th>Modell</th>
                         <th>Szín</th>
                         <th>Tárhely</th>
@@ -27,6 +28,19 @@
                     @foreach ($iphones as $item)
                         <tr>
                             <td>{{ $item->id }}</td>
+                            @switch($item->category_id)
+                                @case(1)
+                                    <td>iPhone</td>
+                                    @break
+                                @case(2)
+                                    <td>iPad</td>
+                                    @break
+                                @case(3)
+                                    <td>macBook</td>
+                                    @break
+                                @default
+                                    <td>nincs adat</td>
+                            @endswitch
                             <td>{{ $item->model }}</td>
                             <td>{{ $item->color }}</td>
                             <td>{{ $item->storage }}</td>

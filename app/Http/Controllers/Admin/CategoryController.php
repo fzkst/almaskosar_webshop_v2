@@ -65,7 +65,7 @@ class CategoryController extends Controller
             $ext = $file->getClientOriginalExtension();
             $filename = time().'.'.$ext;
             $file->move('img/uploads/categories', $filename);
-            $category->kepfajl = $filename;
+            $category->image = $filename;
         }
         $category->name = $request->input('name');
         $category->description = $request->input('description');

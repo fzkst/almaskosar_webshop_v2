@@ -24,6 +24,7 @@ class StoreIphoneRequest extends FormRequest
     public function rules()
     {
         return [
+            'category_id' => 'required | integer | min:1',
             'model' => 'required | string | max:50',
             'color' => 'required | string | max:30',
             'storage' => 'required | integer',

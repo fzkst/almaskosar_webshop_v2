@@ -11,6 +11,15 @@
                 @csrf
                 <div>
                     <div class="mb-4">
+                        <label class="form-label" for="">Kategória</label>
+                        <select class="form-select" name="category_id">
+                            <option selected>Válassz kategóriát</option>
+                            @foreach ($categories as $item)
+                                <option name="category_id" value="{{ $item->id }}">{{ $item->name }}</option>
+                            @endforeach
+                        </select>
+                    </div>
+                    <div class="mb-4">
                         <label class="form-label" for="">Modell</label>
                         <input type="text" class="form-control" name="model" value="{{ old('model') }}">
                     </div>

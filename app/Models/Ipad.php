@@ -10,6 +10,8 @@ class Ipad extends Model
     use HasFactory;
 
     protected $visible = [
+        'id',
+        'category_id',
         'model',
         'color',
         'storage',
@@ -23,6 +25,7 @@ class Ipad extends Model
     ];
 
     protected $fillable = [
+        'category_id',
         'model',
         'color',
         'storage',

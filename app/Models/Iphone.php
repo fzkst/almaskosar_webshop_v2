@@ -11,6 +11,7 @@ class Iphone extends Model
 
     protected $visible = [
         'id',
+        'category_id',
         'model',
         'color',
         'storage',
@@ -23,6 +24,7 @@ class Iphone extends Model
     ];
 
     protected $fillable = [
+        'category_id',
         'model',
         'color',
         'storage',

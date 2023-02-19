@@ -18,6 +18,7 @@ class IpadSeeder extends Seeder
         $ipads = array(
             // 11"
             array(
+                'category_id' => 2,
                 'model' => 'iPad Pro 11',
                 'color' => 'asztroszürke',
                 'storage' => 128,
@@ -27,6 +28,7 @@ class IpadSeeder extends Seeder
                 'image' => 'iPadPro11Asztroszurke.jpg'
             ),
             array(
+                'category_id' => 2,
                 'model' => 'iPad Pro 11',
                 'color' => 'ezüst',
                 'storage' => 128,
@@ -36,6 +38,7 @@ class IpadSeeder extends Seeder
                 'image' => 'iPadPro11Ezust.jpg'
             ),
             array(
+                'category_id' => 2,
                 'model' => 'iPad Pro 11',
                 'color' => 'asztroszürke',
                 'storage' => 256,
@@ -45,6 +48,7 @@ class IpadSeeder extends Seeder
                 'image' => 'iPadPro11Asztroszurke.jpg'
             ),
             array(
+                'category_id' => 2,
                 'model' => 'iPad Pro 11',
                 'color' => 'ezüst',
                 'storage' => 256,
@@ -54,6 +58,7 @@ class IpadSeeder extends Seeder
                 'image' => 'iPadPro11Ezust.jpg'
             ),
             array(
+                'category_id' => 2,
                 'model' => 'iPad Pro 11',
                 'color' => 'asztroszürke',
                 'storage' => 512,
@@ -63,6 +68,7 @@ class IpadSeeder extends Seeder
                 'image' => 'iPadPro11Asztroszurke.jpg'
             ),
             array(
+                'category_id' => 2,
                 'model' => 'iPad Pro 11',
                 'color' => 'ezüst',
                 'storage' => 512,
@@ -72,6 +78,7 @@ class IpadSeeder extends Seeder
                 'image' => 'iPadPro11Ezust.jpg'
             ),
             array(
+                'category_id' => 2,
                 'model' => 'iPad Pro 11',
                 'color' => 'asztroszürke',
                 'storage' => 1,
@@ -81,6 +88,7 @@ class IpadSeeder extends Seeder
                 'image' => 'iPadPro11Asztroszurke.jpg'
             ),
             array(
+                'category_id' => 2,
                 'model' => 'iPad Pro 11',
                 'color' => 'ezüst',
                 'storage' => 1,
@@ -90,6 +98,7 @@ class IpadSeeder extends Seeder
                 'image' => 'iPadPro11Ezust.jpg'
             ),
             array(
+                'category_id' => 2,
                 'model' => 'iPad Pro 11',
                 'color' => 'asztroszürke',
                 'storage' => 2,
@@ -99,6 +108,7 @@ class IpadSeeder extends Seeder
                 'image' => 'iPadPro11Asztroszurke.jpg'
             ),
             array(
+                'category_id' => 2,
                 'model' => 'iPad Pro 11',
                 'color' => 'ezüst',
                 'storage' => 2,
@@ -108,6 +118,7 @@ class IpadSeeder extends Seeder
                 'image' => 'iPadPro11Ezust.jpg'
             ),
             array(
+                'category_id' => 2,
                 'model' => 'iPad Pro 11',
                 'color' => 'asztroszürke',
                 'storage' => 128,
@@ -117,6 +128,7 @@ class IpadSeeder extends Seeder
                 'image' => 'iPadPro11Asztroszurke.jpg'
             ),
             array(
+                'category_id' => 2,
                 'model' => 'iPad Pro 11',
                 'color' => 'ezüst',
                 'storage' => 128,
@@ -126,6 +138,7 @@ class IpadSeeder extends Seeder
                 'image' => 'iPadPro11Ezust.jpg'
             ),
             array(
+                'category_id' => 2,
                 'model' => 'iPad Pro 11',
                 'color' => 'asztroszürke',
                 'storage' => 256,
@@ -135,6 +148,7 @@ class IpadSeeder extends Seeder
                 'image' => 'iPadPro11Asztroszurke.jpg'
             ),
             array(
+                'category_id' => 2,
                 'model' => 'iPad Pro 11',
                 'color' => 'ezüst',
                 'storage' => 256,
@@ -144,6 +158,7 @@ class IpadSeeder extends Seeder
                 'image' => 'iPadPro11Ezust.jpg'
             ),
             array(
+                'category_id' => 2,
                 'model' => 'iPad Pro 11',
                 'color' => 'asztroszürke',
                 'storage' => 512,
@@ -153,6 +168,7 @@ class IpadSeeder extends Seeder
                 'image' => 'iPadPro11Asztroszurke.jpg'
             ),
             array(
+                'category_id' => 2,
                 'model' => 'iPad Pro 11',
                 'color' => 'ezüst',
                 'storage' => 512,
@@ -162,6 +178,7 @@ class IpadSeeder extends Seeder
                 'image' => 'iPadPro11Ezust.jpg'
             ),
             array(
+                'category_id' => 2,
                 'model' => 'iPad Pro 11',
                 'color' => 'asztroszürke',
                 'storage' => 1,
@@ -171,6 +188,7 @@ class IpadSeeder extends Seeder
                 'image' => 'iPadPro11Asztroszurke.jpg'
             ),
             array(
+                'category_id' => 2,
                 'model' => 'iPad Pro 11',
                 'color' => 'ezüst',
                 'storage' => 1,
@@ -180,6 +198,7 @@ class IpadSeeder extends Seeder
                 'image' => 'iPadPro11Ezust.jpg'
             ),
             array(
+                'category_id' => 2,
                 'model' => 'iPad Pro 11',
                 'color' => 'asztroszürke',
                 'storage' => 2,
@@ -189,6 +208,7 @@ class IpadSeeder extends Seeder
                 'image' => 'iPadPro11Asztroszurke.jpg'
             ),
             array(
+                'category_id' => 2,
                 'model' => 'iPad Pro 11',
                 'color' => 'ezüst',
                 'storage' => 2,
@@ -199,6 +219,7 @@ class IpadSeeder extends Seeder
             ),
             // 12.9"
             array(
+                'category_id' => 2,
                 'model' => 'iPad Pro 12.9',
                 'color' => 'asztroszürke',
                 'storage' => 128,
@@ -208,6 +229,7 @@ class IpadSeeder extends Seeder
                 'image' => 'iPadPro12.9Asztroszurke.jpg'
             ),
             array(
+                'category_id' => 2,
                 'model' => 'iPad Pro 12.9',
                 'color' => 'ezüst',
                 'storage' => 128,
@@ -217,6 +239,7 @@ class IpadSeeder extends Seeder
                 'image' => 'iPadPro12.9Ezust.jpg'
             ),
             array(
+                'category_id' => 2,
                 'model' => 'iPad Pro 12.9',
                 'color' => 'asztroszürke',
                 'storage' => 256,
@@ -226,6 +249,7 @@ class IpadSeeder extends Seeder
                 'image' => 'iPadPro12.9Asztroszurke.jpg'
             ),
             array(
+                'category_id' => 2,
                 'model' => 'iPad Pro 12.9',
                 'color' => 'ezüst',
                 'storage' => 256,
@@ -235,6 +259,7 @@ class IpadSeeder extends Seeder
                 'image' => 'iPadPro12.9Ezust.jpg'
             ),
             array(
+                'category_id' => 2,
                 'model' => 'iPad Pro 12.9',
                 'color' => 'asztroszürke',
                 'storage' => 512,
@@ -244,6 +269,7 @@ class IpadSeeder extends Seeder
                 'image' => 'iPadPro12.9Asztroszurke.jpg'
             ),
             array(
+                'category_id' => 2,
                 'model' => 'iPad Pro 12.9',
                 'color' => 'ezüst',
                 'storage' => 512,
@@ -253,6 +279,7 @@ class IpadSeeder extends Seeder
                 'image' => 'iPadPro12.9Ezust.jpg'
             ),
             array(
+                'category_id' => 2,
                 'model' => 'iPad Pro 12.9',
                 'color' => 'asztroszürke',
                 'storage' => 1,
@@ -262,6 +289,7 @@ class IpadSeeder extends Seeder
                 'image' => 'iPadPro12.9Asztroszurke.jpg'
             ),
             array(
+                'category_id' => 2,
                 'model' => 'iPad Pro 12.9',
                 'color' => 'ezüst',
                 'storage' => 1,
@@ -271,6 +299,7 @@ class IpadSeeder extends Seeder
                 'image' => 'iPadPro12.9Ezust.jpg'
             ),
             array(
+                'category_id' => 2,
                 'model' => 'iPad Pro 12.9',
                 'color' => 'asztroszürke',
                 'storage' => 2,
@@ -280,6 +309,7 @@ class IpadSeeder extends Seeder
                 'image' => 'iPadPro12.9Asztroszurke.jpg'
             ),
             array(
+                'category_id' => 2,
                 'model' => 'iPad Pro 12.9',
                 'color' => 'ezüst',
                 'storage' => 2,
@@ -289,6 +319,7 @@ class IpadSeeder extends Seeder
                 'image' => 'iPadPro12.9Ezust.jpg'
             ),
             array(
+                'category_id' => 2,
                 'model' => 'iPad Pro 12.9',
                 'color' => 'asztroszürke',
                 'storage' => 128,
@@ -298,6 +329,7 @@ class IpadSeeder extends Seeder
                 'image' => 'iPadPro12.9Asztroszurke.jpg'
             ),
             array(
+                'category_id' => 2,
                 'model' => 'iPad Pro 12.9',
                 'color' => 'ezüst',
                 'storage' => 128,
@@ -307,6 +339,7 @@ class IpadSeeder extends Seeder
                 'image' => 'iPadPro12.9Ezust.jpg'
             ),
             array(
+                'category_id' => 2,
                 'model' => 'iPad Pro 12.9',
                 'color' => 'asztroszürke',
                 'storage' => 256,
@@ -316,6 +349,7 @@ class IpadSeeder extends Seeder
                 'image' => 'iPadPro12.9Asztroszurke.jpg'
             ),
             array(
+                'category_id' => 2,
                 'model' => 'iPad Pro 12.9',
                 'color' => 'ezüst',
                 'storage' => 256,
@@ -325,6 +359,7 @@ class IpadSeeder extends Seeder
                 'image' => 'iPadPro12.9Ezust.jpg'
             ),
             array(
+                'category_id' => 2,
                 'model' => 'iPad Pro 12.9',
                 'color' => 'asztroszürke',
                 'storage' => 512,
@@ -334,6 +369,7 @@ class IpadSeeder extends Seeder
                 'image' => 'iPadPro12.9Asztroszurke.jpg'
             ),
             array(
+                'category_id' => 2,
                 'model' => 'iPad Pro 12.9',
                 'color' => 'ezüst',
                 'storage' => 512,
@@ -343,6 +379,7 @@ class IpadSeeder extends Seeder
                 'image' => 'iPadPro12.9Ezust.jpg'
             ),
             array(
+                'category_id' => 2,
                 'model' => 'iPad Pro 12.9',
                 'color' => 'asztroszürke',
                 'storage' => 1,
@@ -352,6 +389,7 @@ class IpadSeeder extends Seeder
                 'image' => 'iPadPro12.9Asztroszurke.jpg'
             ),
             array(
+                'category_id' => 2,
                 'model' => 'iPad Pro 12.9',
                 'color' => 'ezüst',
                 'storage' => 1,
@@ -361,6 +399,7 @@ class IpadSeeder extends Seeder
                 'image' => 'iPadPro12.9Ezust.jpg'
             ),
             array(
+                'category_id' => 2,
                 'model' => 'iPad Pro 12.9',
                 'color' => 'asztroszürke',
                 'storage' => 2,
@@ -370,6 +409,7 @@ class IpadSeeder extends Seeder
                 'image' => 'iPadPro12.9Asztroszurke.jpg'
             ),
             array(
+                'category_id' => 2,
                 'model' => 'iPad Pro 12.9',
                 'color' => 'ezüst',
                 'storage' => 2,
@@ -380,6 +420,7 @@ class IpadSeeder extends Seeder
             ),
             //Air asztroszürke
             array(
+                'category_id' => 2,
                 'model' => 'iPad Air',
                 'color' => 'asztroszürke',
                 'storage' => 64,
@@ -389,6 +430,7 @@ class IpadSeeder extends Seeder
                 'image' => 'iPadAirAsztroszurke.jpg'
             ),
             array(
+                'category_id' => 2,
                 'model' => 'iPad Air',
                 'color' => 'asztroszürke',
                 'storage' => 64,
@@ -398,6 +440,7 @@ class IpadSeeder extends Seeder
                 'image' => 'iPadAirAsztroszurke.jpg'
             ),
             array(
+                'category_id' => 2,
                 'model' => 'iPad Air',
                 'color' => 'asztroszürke',
                 'storage' => 256,
@@ -407,6 +450,7 @@ class IpadSeeder extends Seeder
                 'image' => 'iPadAirAsztroszurke.jpg'
             ),
             array(
+                'category_id' => 2,
                 'model' => 'iPad Air',
                 'color' => 'asztroszürke',
                 'storage' => 256,
@@ -417,6 +461,7 @@ class IpadSeeder extends Seeder
             ),
             //Air kék
             array(
+                'category_id' => 2,
                 'model' => 'iPad Air',
                 'color' => 'kék',
                 'storage' => 64,
@@ -426,6 +471,7 @@ class IpadSeeder extends Seeder
                 'image' => 'iPadAirKek.jpg'
             ),
             array(
+                'category_id' => 2,
                 'model' => 'iPad Air',
                 'color' => 'kék',
                 'storage' => 64,
@@ -435,6 +481,7 @@ class IpadSeeder extends Seeder
                 'image' => 'iPadAirKek.jpg'
             ),
             array(
+                'category_id' => 2,
                 'model' => 'iPad Air',
                 'color' => 'kék',
                 'storage' => 256,
@@ -444,6 +491,7 @@ class IpadSeeder extends Seeder
                 'image' => 'iPadAirKek.jpg'
             ),
             array(
+                'category_id' => 2,
                 'model' => 'iPad Air',
                 'color' => 'kék',
                 'storage' => 256,
@@ -454,6 +502,7 @@ class IpadSeeder extends Seeder
             ),
             //Air rózsaszín
             array(
+                'category_id' => 2,
                 'model' => 'iPad Air',
                 'color' => 'rózsaszín',
                 'storage' => 64,
@@ -463,6 +512,7 @@ class IpadSeeder extends Seeder
                 'image' => 'iPadAirRozsaszin.jpg'
             ),
             array(
+                'category_id' => 2,
                 'model' => 'iPad Air',
                 'color' => 'rózsaszín',
                 'storage' => 64,
@@ -472,6 +522,7 @@ class IpadSeeder extends Seeder
                 'image' => 'iPadAirRozsaszin.jpg'
             ),
             array(
+                'category_id' => 2,
                 'model' => 'iPad Air',
                 'color' => 'rózsaszín',
                 'storage' => 256,
@@ -481,6 +532,7 @@ class IpadSeeder extends Seeder
                 'image' => 'iPadAirRozsaszin.jpg'
             ),
             array(
+                'category_id' => 2,
                 'model' => 'iPad Air',
                 'color' => 'rózsaszín',
                 'storage' => 256,
@@ -491,6 +543,7 @@ class IpadSeeder extends Seeder
             ),
             //Air lila
             array(
+                'category_id' => 2,
                 'model' => 'iPad Air',
                 'color' => 'lila',
                 'storage' => 64,
@@ -500,6 +553,7 @@ class IpadSeeder extends Seeder
                 'image' => 'iPadAirLila.jpg'
             ),
             array(
+                'category_id' => 2,
                 'model' => 'iPad Air',
                 'color' => 'lila',
                 'storage' => 64,
@@ -509,6 +563,7 @@ class IpadSeeder extends Seeder
                 'image' => 'iPadAirLila.jpg'
             ),
             array(
+                'category_id' => 2,
                 'model' => 'iPad Air',
                 'color' => 'lila',
                 'storage' => 256,
@@ -518,6 +573,7 @@ class IpadSeeder extends Seeder
                 'image' => 'iPadAirLila.jpg'
             ),
             array(
+                'category_id' => 2,
                 'model' => 'iPad Air',
                 'color' => 'lila',
                 'storage' => 256,
@@ -528,6 +584,7 @@ class IpadSeeder extends Seeder
             ),
             //Air csillagfény
             array(
+                'category_id' => 2,
                 'model' => 'iPad Air',
                 'color' => 'csillagfeny',
                 'storage' => 64,
@@ -537,6 +594,7 @@ class IpadSeeder extends Seeder
                 'image' => 'iPadAirCsillagfeny.jpg'
             ),
             array(
+                'category_id' => 2,
                 'model' => 'iPad Air',
                 'color' => 'csillagfeny',
                 'storage' => 64,
@@ -546,6 +604,7 @@ class IpadSeeder extends Seeder
                 'image' => 'iPadAirCsillagfeny.jpg'
             ),
             array(
+                'category_id' => 2,
                 'model' => 'iPad Air',
                 'color' => 'csillagfeny',
                 'storage' => 256,
@@ -555,6 +614,7 @@ class IpadSeeder extends Seeder
                 'image' => 'iPadAirCsillagfeny.jpg'
             ),
             array(
+                'category_id' => 2,
                 'model' => 'iPad Air',
                 'color' => 'csillagfeny',
                 'storage' => 256,

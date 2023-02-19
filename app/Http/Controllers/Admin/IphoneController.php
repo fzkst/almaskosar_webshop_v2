@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreIphoneRequest;
 use App\Http\Requests\UpdateIphoneRequest;
+use App\Models\Category;
 use App\Models\Iphone;
 use Illuminate\Support\Facades\File;
 
@@ -17,7 +18,8 @@ class IphoneController extends Controller
     }
 
     public function create(){
-        return view('admin.iphones.create');
+        $categories = Category::all();
+        return view('admin.iphones.create', compact('categories'));
     }
 
     public function store(StoreIphoneRequest $request){
@@ -29,6 +31,7 @@ class IphoneController extends Controller
             $file->move('img/uploads/iphones', $filename);
             $iphone->image = $filename;
         }
+        $iphone->category_id = $request->input('category_id');
         $iphone->model = $request->input('model');
         $iphone->color = $request->input('color');
         $iphone->storage = $request->input('storage');
@@ -59,7 +62,7 @@ class IphoneController extends Controller
             return response()->json(["message" => "Ilyen azonosítóval nem található iPhone!"], 404);
         }
         if($request->hasFile('image')){
-            $path = 'img/uploads/iphones/'.$iphone->kepfajl;
+            $path = 'img/uploads/iphones/'.$iphone->image;
             if(File::exists($path))
             {
                 File::delete($path);
@@ -68,8 +71,9 @@ class IphoneController extends Controller
             $ext = $file->getClientOriginalExtension();
             $filename = time().'.'.$ext;
             $file->move('img/uploads/iphones', $filename);
-            $iphone->kepfajl = $filename;
+            $iphone->image = $filename;
         }
+        $iphone->category_id = $request->input('category_id');
         $iphone->model = $request->input('model');
         $iphone->color = $request->input('color');
         $iphone->storage = $request->input('storage');
@@ -85,9 +89,9 @@ class IphoneController extends Controller
     public function destroy($id){
         $iphone = Iphone::find($id);
         if (is_null($iphone)){
-            return response()->json(["message: " => "Ilyen azonosítóval nem található iPhone!"], 404);
+            return response()->json(["message" => "Ilyen azonosítóval nem található iPhone!"], 404);
         }
-        if($iphone->kepfajl){
+        if($iphone->image){
             $path = 'img/uploads/iphones/'.$iphone->image;
             if(File::exists($path))
             {

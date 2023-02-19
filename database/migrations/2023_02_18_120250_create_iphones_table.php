@@ -15,6 +15,7 @@ return new class extends Migration
     {
         Schema::create('iphones', function (Blueprint $table) {
             $table->id();
+            $table->tinyInteger('category_id');
             $table->string('model', 50);
             $table->string('color', 30);
             $table->integer('storage');

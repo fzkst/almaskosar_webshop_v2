@@ -17,39 +17,39 @@
                     </div>
                     <div class="mb-4">
                         <label class="form-check-label" for="">Magánszemély</label>
-                        <input type="checkbox" value="{{ $customer->maganszemely }}"  class="form-check-control" name="maganszemely">
+                        <input type="checkbox" value="{{ $customer->person }}"  class="form-check-control" name="person">
                     </div>
                     <div class="mb-4">
                         <label class="form-label" for="">Cégnév</label>
-                        <input type="text" value="{{ $customer->cegnev }}" class="form-control" name="cegnev">
+                        <input type="text" value="{{ $customer->company }}" class="form-control" name="company">
                     </div>
                     <div class="mb-4">
                         <label class="form-label" for="">Vezetéknév</label>
-                        <input type="text" value="{{ $customer->vezeteknev }}" class="form-control" name="vezeteknev">
+                        <input type="text" value="{{ $customer->last_name }}" class="form-control" name="last_name">
                     </div>
                     <div class="mb-4">
                         <label class="form-label" for="">Keresztnév</label>
-                        <input type="text" value="{{ $customer->keresztnev }}" class="form-control" name="keresztnev">
+                        <input type="text" value="{{ $customer->first_name }}" class="form-control" name="first_name">
                     </div>
                     <div class="mb-4">
                         <label class="form-label" for="">Irányítószám</label>
-                        <input type="text" value="{{ $customer->iranyitoszam }}" class="form-control" name="iranyitoszam">
+                        <input type="text" value="{{ $customer->postal_code }}" class="form-control" name="postal_code">
                     </div>
                     <div class="mb-4">
                         <label class="form-label" for="">Város</label>
-                        <input type="text" value="{{ $customer->varos }}" class="form-control" name="varos">
+                        <input type="text" value="{{ $customer->city }}" class="form-control" name="city">
                     </div>
                     <div class="mb-4">
                         <label class="form-label" for="">Cím</label>
-                        <input type="text" value="{{ $customer->cim }}" class="form-control" name="cim">
+                        <input type="text" value="{{ $customer->address }}" class="form-control" name="address">
                     </div>
                     <div class="mb-4">
                         <label class="form-label" for="">Telefonszám</label>
-                        <input type="text" value="{{ $customer->telefon }}" class="form-control" name="telefon">
+                        <input type="text" value="{{ $customer->phone_number }}" class="form-control" name="phone_number">
                     </div>
                     <div class="mb-4">
                         <label class="form-label" for="">Adószám</label>
-                        <input type="text" value="{{ $customer->adoszam }}" class="form-control" name="adoszam">
+                        <input type="text" value="{{ $customer->tax_number }}" class="form-control" name="tax_number">
                     </div>
                     <div class="mb-4">
                         <button type="submit" class="btn btn-outline-secondary mt-2" id="btn_hozzaad">Módosít</button>

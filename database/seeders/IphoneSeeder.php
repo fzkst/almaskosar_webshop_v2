@@ -17,6 +17,7 @@ class IphoneSeeder extends Seeder
     {
         $iphones = array(
             array(
+                'category_id' => 1,
                 'model' => 'iPhone 14 Pro Max',
                 'color' => 'mélylila',
                 'storage' => 128,
@@ -25,6 +26,7 @@ class IphoneSeeder extends Seeder
                 'image' => 'iPhone14proMaxMelylila.jpg'
             ),
             array(
+                'category_id' => 1,
                 'model' => 'iPhone 14 Pro Max',
                 'color' => 'mélylila',
                 'storage' => 256,
@@ -33,6 +35,7 @@ class IphoneSeeder extends Seeder
                 'image' => 'iPhone14proMaxMelylila.jpg'
             ),
             array(
+                'category_id' => 1,
                 'model' => 'iPhone 14 Pro Max',
                 'color' => 'mélylila',
                 'storage' => 512,
@@ -41,6 +44,7 @@ class IphoneSeeder extends Seeder
                 'image' => 'iPhone14proMaxMelylila.jpg'
             ),
             array(
+                'category_id' => 1,
                 'model' => 'iPhone 14 Pro Max',
                 'color' => 'arany',
                 'storage' => 128,
@@ -49,6 +53,7 @@ class IphoneSeeder extends Seeder
                 'image' => 'iPhone14proMaxArany.jpg'
             ),
             array(
+                'category_id' => 1,
                 'model' => 'iPhone 14 Pro Max',
                 'color' => 'arany',
                 'storage' => 256,
@@ -57,6 +62,7 @@ class IphoneSeeder extends Seeder
                 'image' => 'iPhone14proMaxArany.jpg'
             ),
             array(
+                'category_id' => 1,
                 'model' => 'iPhone 14 Pro Max',
                 'color' => 'arany',
                 'storage' => 512,
@@ -65,6 +71,7 @@ class IphoneSeeder extends Seeder
                 'image' => 'iPhone14proMaxArany.jpg'
             ),
             array(
+                'category_id' => 1,
                 'model' => 'iPhone 14 Pro Max',
                 'color' => 'arany',
                 'storage' => 1,
@@ -73,6 +80,7 @@ class IphoneSeeder extends Seeder
                 'image' => 'iPhone14proMaxArany.jpg'
             ),
             array(
+                'category_id' => 1,
                 'model' => 'iPhone 14 Pro Max',
                 'color' => 'ezüst',
                 'storage' => 128,
@@ -81,6 +89,7 @@ class IphoneSeeder extends Seeder
                 'image' => 'iPhone14proMaxEzust.jpg'
             ),
             array(
+                'category_id' => 1,
                 'model' => 'iPhone 14 Pro Max',
                 'color' => 'ezüst',
                 'storage' => 256,
