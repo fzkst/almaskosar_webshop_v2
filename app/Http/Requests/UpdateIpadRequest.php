@@ -28,7 +28,7 @@ class UpdateIpadRequest extends FormRequest
             'model' => 'required | string | max:50',
             'color' => 'required | string | max:30',
             'storage' => 'required | integer',
-            'cellular' => 'required | integer | min:0 max:1',
+            //'cellular' => 'required | integer,
             'price' => 'required | integer',
             'stock' => 'required | integer',
             'image' => 'required | image'

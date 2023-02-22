@@ -53,7 +53,8 @@ class IphoneController extends Controller
         if (is_null($iphone)){
             return response()->json(["message" => "Ilyen azonosítóval nem található iPhone!"], 404);
         }
-        return view('admin.iphones.edit', compact('iphone'));
+        $categories = Category::all();
+        return view('admin.iphones.edit', compact(['iphone', 'categories']));
     }
 
     public function update(UpdateIphoneRequest $request, $id){

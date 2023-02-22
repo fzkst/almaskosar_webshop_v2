@@ -25,7 +25,7 @@ class IpadSeeder extends Seeder
                 'cellular' => 0,
                 'price' => 469990,
                 'stock' => 5,
-                'image' => 'iPadPro11Asztroszurke.jpg'
+                'image' => 'iPadPro11AsztroszurkeA.jpg'
             ),
             array(
                 'category_id' => 2,
@@ -35,7 +35,7 @@ class IpadSeeder extends Seeder
                 'cellular' => 0,
                 'price' => 469990,
                 'stock' => 6,
-                'image' => 'iPadPro11Ezust.jpg'
+                'image' => 'iPadPro11EzustA.jpg'
             ),
             array(
                 'category_id' => 2,
@@ -45,7 +45,7 @@ class IpadSeeder extends Seeder
                 'cellular' => 0,
                 'price' => 529990,
                 'stock' => 5,
-                'image' => 'iPadPro11Asztroszurke.jpg'
+                'image' => 'iPadPro11AsztroszurkeA.jpg'
             ),
             array(
                 'category_id' => 2,
@@ -55,7 +55,7 @@ class IpadSeeder extends Seeder
                 'cellular' => 0,
                 'price' => 529990,
                 'stock' => 4,
-                'image' => 'iPadPro11Ezust.jpg'
+                'image' => 'iPadPro11EzustA.jpg'
             ),
             array(
                 'category_id' => 2,
@@ -65,7 +65,7 @@ class IpadSeeder extends Seeder
                 'cellular' => 0,
                 'price' => 649990,
                 'stock' => 5,
-                'image' => 'iPadPro11Asztroszurke.jpg'
+                'image' => 'iPadPro11AsztroszurkeA.jpg'
             ),
             array(
                 'category_id' => 2,
@@ -75,7 +75,7 @@ class IpadSeeder extends Seeder
                 'cellular' => 0,
                 'price' => 649990,
                 'stock' => 3,
-                'image' => 'iPadPro11Ezust.jpg'
+                'image' => 'iPadPro11EzustA.jpg'
             ),
             array(
                 'category_id' => 2,
@@ -85,7 +85,7 @@ class IpadSeeder extends Seeder
                 'cellular' => 0,
                 'price' => 889990,
                 'stock' => 5,
-                'image' => 'iPadPro11Asztroszurke.jpg'
+                'image' => 'iPadPro11AsztroszurkeA.jpg'
             ),
             array(
                 'category_id' => 2,
@@ -95,7 +95,7 @@ class IpadSeeder extends Seeder
                 'cellular' => 0,
                 'price' => 889990,
                 'stock' => 6,
-                'image' => 'iPadPro11Ezust.jpg'
+                'image' => 'iPadPro11EzustA.jpg'
             ),
             array(
                 'category_id' => 2,
@@ -105,7 +105,7 @@ class IpadSeeder extends Seeder
                 'cellular' => 0,
                 'price' => 1129990,
                 'stock' => 3,
-                'image' => 'iPadPro11Asztroszurke.jpg'
+                'image' => 'iPadPro11AsztroszurkeA.jpg'
             ),
             array(
                 'category_id' => 2,
@@ -115,7 +115,7 @@ class IpadSeeder extends Seeder
                 'cellular' => 0,
                 'price' => 1129990,
                 'stock' => 6,
-                'image' => 'iPadPro11Ezust.jpg'
+                'image' => 'iPadPro11EzustA.jpg'
             ),
             array(
                 'category_id' => 2,
@@ -125,7 +125,7 @@ class IpadSeeder extends Seeder
                 'cellular' => 1,
                 'price' => 469990,
                 'stock' => 5,
-                'image' => 'iPadPro11Asztroszurke.jpg'
+                'image' => 'iPadPro11AsztroszurkeA.jpg'
             ),
             array(
                 'category_id' => 2,
@@ -135,7 +135,7 @@ class IpadSeeder extends Seeder
                 'cellular' => 1,
                 'price' => 469990,
                 'stock' => 4,
-                'image' => 'iPadPro11Ezust.jpg'
+                'image' => 'iPadPro11EzustA.jpg'
             ),
             array(
                 'category_id' => 2,
@@ -145,7 +145,7 @@ class IpadSeeder extends Seeder
                 'cellular' => 1,
                 'price' => 529990,
                 'stock' => 5,
-                'image' => 'iPadPro11Asztroszurke.jpg'
+                'image' => 'iPadPro11AsztroszurkeA.jpg'
             ),
             array(
                 'category_id' => 2,
@@ -155,7 +155,7 @@ class IpadSeeder extends Seeder
                 'cellular' => 1,
                 'price' => 529990,
                 'stock' => 4,
-                'image' => 'iPadPro11Ezust.jpg'
+                'image' => 'iPadPro11EzustA.jpg'
             ),
             array(
                 'category_id' => 2,
@@ -165,7 +165,7 @@ class IpadSeeder extends Seeder
                 'cellular' => 0,
                 'price' => 649990,
                 'stock' => 4,
-                'image' => 'iPadPro11Asztroszurke.jpg'
+                'image' => 'iPadPro11AsztroszurkeA.jpg'
             ),
             array(
                 'category_id' => 2,
@@ -175,7 +175,7 @@ class IpadSeeder extends Seeder
                 'cellular' => 1,
                 'price' => 649990,
                 'stock' => 5,
-                'image' => 'iPadPro11Ezust.jpg'
+                'image' => 'iPadPro11EzustA.jpg'
             ),
             array(
                 'category_id' => 2,
@@ -185,7 +185,7 @@ class IpadSeeder extends Seeder
                 'cellular' => 1,
                 'price' => 889990,
                 'stock' => 5,
-                'image' => 'iPadPro11Asztroszurke.jpg'
+                'image' => 'iPadPro11AsztroszurkeA.jpg'
             ),
             array(
                 'category_id' => 2,
@@ -195,7 +195,7 @@ class IpadSeeder extends Seeder
                 'cellular' => 1,
                 'price' => 889990,
                 'stock' => 6,
-                'image' => 'iPadPro11Ezust.jpg'
+                'image' => 'iPadPro11EzustA.jpg'
             ),
             array(
                 'category_id' => 2,
@@ -205,7 +205,7 @@ class IpadSeeder extends Seeder
                 'cellular' => 1,
                 'price' => 1129990,
                 'stock' => 6,
-                'image' => 'iPadPro11Asztroszurke.jpg'
+                'image' => 'iPadPro11AsztroszurkeA.jpg'
             ),
             array(
                 'category_id' => 2,
@@ -215,7 +215,7 @@ class IpadSeeder extends Seeder
                 'cellular' => 1,
                 'price' => 1129990,
                 'stock' => 3,
-                'image' => 'iPadPro11Ezust.jpg'
+                'image' => 'iPadPro11EzustA.jpg'
             ),
             // 12.9"
             array(
@@ -226,7 +226,7 @@ class IpadSeeder extends Seeder
                 'cellular' => 0,
                 'price' => 469990,
                 'stock' => 5,
-                'image' => 'iPadPro12.9Asztroszurke.jpg'
+                'image' => 'iPadPro129AsztroszurkeA.jpg'
             ),
             array(
                 'category_id' => 2,
@@ -236,7 +236,7 @@ class IpadSeeder extends Seeder
                 'cellular' => 0,
                 'price' => 469990,
                 'stock' => 6,
-                'image' => 'iPadPro12.9Ezust.jpg'
+                'image' => 'iPadPro129EzustA.jpg'
             ),
             array(
                 'category_id' => 2,
@@ -246,7 +246,7 @@ class IpadSeeder extends Seeder
                 'cellular' => 0,
                 'price' => 529990,
                 'stock' => 6,
-                'image' => 'iPadPro12.9Asztroszurke.jpg'
+                'image' => 'iPadPro129AsztroszurkeA.jpg'
             ),
             array(
                 'category_id' => 2,
@@ -256,7 +256,7 @@ class IpadSeeder extends Seeder
                 'cellular' => 0,
                 'price' => 529990,
                 'stock' => 4,
-                'image' => 'iPadPro12.9Ezust.jpg'
+                'image' => 'iPadPro129EzustA.jpg'
             ),
             array(
                 'category_id' => 2,
@@ -266,7 +266,7 @@ class IpadSeeder extends Seeder
                 'cellular' => 0,
                 'price' => 649990,
                 'stock' => 5,
-                'image' => 'iPadPro12.9Asztroszurke.jpg'
+                'image' => 'iPadPro129AsztroszurkeA.jpg'
             ),
             array(
                 'category_id' => 2,
@@ -276,7 +276,7 @@ class IpadSeeder extends Seeder
                 'cellular' => 0,
                 'price' => 649990,
                 'stock' => 6,
-                'image' => 'iPadPro12.9Ezust.jpg'
+                'image' => 'iPadPro129EzustA.jpg'
             ),
             array(
                 'category_id' => 2,
@@ -286,7 +286,7 @@ class IpadSeeder extends Seeder
                 'cellular' => 0,
                 'price' => 889990,
                 'stock' => 6,
-                'image' => 'iPadPro12.9Asztroszurke.jpg'
+                'image' => 'iPadPro129AsztroszurkeA.jpg'
             ),
             array(
                 'category_id' => 2,
@@ -296,7 +296,7 @@ class IpadSeeder extends Seeder
                 'cellular' => 0,
                 'price' => 889990,
                 'stock' => 3,
-                'image' => 'iPadPro12.9Ezust.jpg'
+                'image' => 'iPadPro129EzustA.jpg'
             ),
             array(
                 'category_id' => 2,
@@ -306,7 +306,7 @@ class IpadSeeder extends Seeder
                 'cellular' => 0,
                 'price' => 11299990,
                 'stock' => 2,
-                'image' => 'iPadPro12.9Asztroszurke.jpg'
+                'image' => 'iPadPro129AsztroszurkeA.jpg'
             ),
             array(
                 'category_id' => 2,
@@ -316,7 +316,7 @@ class IpadSeeder extends Seeder
                 'cellular' => 0,
                 'price' => 11299990,
                 'stock' => 4,
-                'image' => 'iPadPro12.9Ezust.jpg'
+                'image' => 'iPadPro129EzustA.jpg'
             ),
             array(
                 'category_id' => 2,
@@ -326,7 +326,7 @@ class IpadSeeder extends Seeder
                 'cellular' => 1,
                 'price' => 469990,
                 'stock' => 5,
-                'image' => 'iPadPro12.9Asztroszurke.jpg'
+                'image' => 'iPadPro129AsztroszurkeA.jpg'
             ),
             array(
                 'category_id' => 2,
@@ -336,7 +336,7 @@ class IpadSeeder extends Seeder
                 'cellular' => 1,
                 'price' => 469990,
                 'stock' => 2,
-                'image' => 'iPadPro12.9Ezust.jpg'
+                'image' => 'iPadPro129EzustA.jpg'
             ),
             array(
                 'category_id' => 2,
@@ -346,7 +346,7 @@ class IpadSeeder extends Seeder
                 'cellular' => 1,
                 'price' => 529990,
                 'stock' => 5,
-                'image' => 'iPadPro12.9Asztroszurke.jpg'
+                'image' => 'iPadPro129AsztroszurkeA.jpg'
             ),
             array(
                 'category_id' => 2,
@@ -356,7 +356,7 @@ class IpadSeeder extends Seeder
                 'cellular' => 1,
                 'price' => 529990,
                 'stock' => 3,
-                'image' => 'iPadPro12.9Ezust.jpg'
+                'image' => 'iPadPro129EzustA.jpg'
             ),
             array(
                 'category_id' => 2,
@@ -366,7 +366,7 @@ class IpadSeeder extends Seeder
                 'cellular' => 0,
                 'price' => 649990,
                 'stock' => 1,
-                'image' => 'iPadPro12.9Asztroszurke.jpg'
+                'image' => 'iPadPro129AsztroszurkeA.jpg'
             ),
             array(
                 'category_id' => 2,
@@ -376,7 +376,7 @@ class IpadSeeder extends Seeder
                 'cellular' => 1,
                 'price' => 649990,
                 'stock' => 6,
-                'image' => 'iPadPro12.9Ezust.jpg'
+                'image' => 'iPadPro129EzustA.jpg'
             ),
             array(
                 'category_id' => 2,
@@ -386,7 +386,7 @@ class IpadSeeder extends Seeder
                 'cellular' => 1,
                 'price' => 889990,
                 'stock' => 2,
-                'image' => 'iPadPro12.9Asztroszurke.jpg'
+                'image' => 'iPadPro129AsztroszurkeA.jpg'
             ),
             array(
                 'category_id' => 2,
@@ -396,7 +396,7 @@ class IpadSeeder extends Seeder
                 'cellular' => 1,
                 'price' => 889990,
                 'stock' => 6,
-                'image' => 'iPadPro12.9Ezust.jpg'
+                'image' => 'iPadPro129EzustA.jpg'
             ),
             array(
                 'category_id' => 2,
@@ -406,7 +406,7 @@ class IpadSeeder extends Seeder
                 'cellular' => 1,
                 'price' => 1129990,
                 'stock' => 5,
-                'image' => 'iPadPro12.9Asztroszurke.jpg'
+                'image' => 'iPadPro129AsztroszurkeA.jpg'
             ),
             array(
                 'category_id' => 2,
@@ -416,7 +416,7 @@ class IpadSeeder extends Seeder
                 'cellular' => 1,
                 'price' => 1129990,
                 'stock' => 6,
-                'image' => 'iPadPro12.9Ezust.jpg'
+                'image' => 'iPadPro129EzustA.jpg'
             ),
             //Air asztroszürke
             array(
@@ -427,7 +427,7 @@ class IpadSeeder extends Seeder
                 'cellular' => 0,
                 'price' => 344990,
                 'stock' => 4,
-                'image' => 'iPadAirAsztroszurke.jpg'
+                'image' => 'iPadAirAsztroszurkeA.jpg'
             ),
             array(
                 'category_id' => 2,
@@ -437,7 +437,7 @@ class IpadSeeder extends Seeder
                 'cellular' => 1,
                 'price' => 344990,
                 'stock' => 6,
-                'image' => 'iPadAirAsztroszurke.jpg'
+                'image' => 'iPadAirAsztroszurkeA.jpg'
             ),
             array(
                 'category_id' => 2,
@@ -447,7 +447,7 @@ class IpadSeeder extends Seeder
                 'cellular' => 0,
                 'price' => 434990,
                 'stock' => 3,
-                'image' => 'iPadAirAsztroszurke.jpg'
+                'image' => 'iPadAirAsztroszurkeA.jpg'
             ),
             array(
                 'category_id' => 2,
@@ -457,7 +457,7 @@ class IpadSeeder extends Seeder
                 'cellular' => 1,
                 'price' => 434990,
                 'stock' => 6,
-                'image' => 'iPadAirAsztroszurke.jpg'
+                'image' => 'iPadAirAsztroszurkeA.jpg'
             ),
             //Air kék
             array(
@@ -468,7 +468,7 @@ class IpadSeeder extends Seeder
                 'cellular' => 0,
                 'price' => 344990,
                 'stock' => 1,
-                'image' => 'iPadAirKek.jpg'
+                'image' => 'iPadAirKekA.jpg'
             ),
             array(
                 'category_id' => 2,
@@ -478,7 +478,7 @@ class IpadSeeder extends Seeder
                 'cellular' => 1,
                 'price' => 344990,
                 'stock' => 6,
-                'image' => 'iPadAirKek.jpg'
+                'image' => 'iPadAirKekA.jpg'
             ),
             array(
                 'category_id' => 2,
@@ -488,7 +488,7 @@ class IpadSeeder extends Seeder
                 'cellular' => 0,
                 'price' => 434990,
                 'stock' => 4,
-                'image' => 'iPadAirKek.jpg'
+                'image' => 'iPadAirKekA.jpg'
             ),
             array(
                 'category_id' => 2,
@@ -498,7 +498,7 @@ class IpadSeeder extends Seeder
                 'cellular' => 1,
                 'price' => 434990,
                 'stock' => 6,
-                'image' => 'iPadAirKek.jpg'
+                'image' => 'iPadAirKekA.jpg'
             ),
             //Air rózsaszín
             array(
@@ -509,7 +509,7 @@ class IpadSeeder extends Seeder
                 'cellular' => 0,
                 'price' => 344990,
                 'stock' => 1,
-                'image' => 'iPadAirRozsaszin.jpg'
+                'image' => 'iPadAirRozsaszinA.jpg'
             ),
             array(
                 'category_id' => 2,
@@ -519,7 +519,7 @@ class IpadSeeder extends Seeder
                 'cellular' => 1,
                 'price' => 344990,
                 'stock' => 6,
-                'image' => 'iPadAirRozsaszin.jpg'
+                'image' => 'iPadAirRozsaszinA.jpg'
             ),
             array(
                 'category_id' => 2,
@@ -529,7 +529,7 @@ class IpadSeeder extends Seeder
                 'cellular' => 0,
                 'price' => 434990,
                 'stock' => 4,
-                'image' => 'iPadAirRozsaszin.jpg'
+                'image' => 'iPadAirRozsaszinA.jpg'
             ),
             array(
                 'category_id' => 2,
@@ -539,7 +539,7 @@ class IpadSeeder extends Seeder
                 'cellular' => 1,
                 'price' => 434990,
                 'stock' => 6,
-                'image' => 'iPadAirRozsaszin.jpg'
+                'image' => 'iPadAirRozsaszinA.jpg'
             ),
             //Air lila
             array(
@@ -550,7 +550,7 @@ class IpadSeeder extends Seeder
                 'cellular' => 0,
                 'price' => 344990,
                 'stock' => 1,
-                'image' => 'iPadAirLila.jpg'
+                'image' => 'iPadAirLilaA.jpg'
             ),
             array(
                 'category_id' => 2,
@@ -560,7 +560,7 @@ class IpadSeeder extends Seeder
                 'cellular' => 1,
                 'price' => 344990,
                 'stock' => 6,
-                'image' => 'iPadAirLila.jpg'
+                'image' => 'iPadAirLilaA.jpg'
             ),
             array(
                 'category_id' => 2,
@@ -570,7 +570,7 @@ class IpadSeeder extends Seeder
                 'cellular' => 0,
                 'price' => 434990,
                 'stock' => 4,
-                'image' => 'iPadAirLila.jpg'
+                'image' => 'iPadAirLilaA.jpg'
             ),
             array(
                 'category_id' => 2,
@@ -580,7 +580,7 @@ class IpadSeeder extends Seeder
                 'cellular' => 1,
                 'price' => 434990,
                 'stock' => 6,
-                'image' => 'iPadAirLila.jpg'
+                'image' => 'iPadAirLilaA.jpg'
             ),
             //Air csillagfény
             array(
@@ -591,7 +591,7 @@ class IpadSeeder extends Seeder
                 'cellular' => 0,
                 'price' => 344990,
                 'stock' => 1,
-                'image' => 'iPadAirCsillagfeny.jpg'
+                'image' => 'iPadAirCsillagfenyA.jpg'
             ),
             array(
                 'category_id' => 2,
@@ -601,7 +601,7 @@ class IpadSeeder extends Seeder
                 'cellular' => 1,
                 'price' => 344990,
                 'stock' => 6,
-                'image' => 'iPadAirCsillagfeny.jpg'
+                'image' => 'iPadAirCsillagfenyA.jpg'
             ),
             array(
                 'category_id' => 2,
@@ -611,7 +611,7 @@ class IpadSeeder extends Seeder
                 'cellular' => 0,
                 'price' => 434990,
                 'stock' => 4,
-                'image' => 'iPadAirCsillagfeny.jpg'
+                'image' => 'iPadAirCsillagfenyA.jpg'
             ),
             array(
                 'category_id' => 2,
@@ -621,7 +621,7 @@ class IpadSeeder extends Seeder
                 'cellular' => 1,
                 'price' => 434990,
                 'stock' => 6,
-                'image' => 'iPadAirCsillagfeny.jpg'
+                'image' => 'iPadAirCsillagfenyA.jpg'
             ),
         );
 

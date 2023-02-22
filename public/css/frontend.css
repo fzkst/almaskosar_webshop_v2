@@ -1,0 +1,50 @@
+body {
+    background-color: #f1f0ee;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/*NAVBAR*/
+.navbar {
+    background-color: black;
+}
+.navbar-brand {
+    font-size:medium
+}
+
+/*CAROUSEL*/
+.carouselcss {
+    background-color: black;
+}
+
+@media (max-width: 800px) {
+    .carouselcss {
+      display: none;
+    }
+}
+
+/*CATEGORIES CARDS*/
+.card {
+    padding: 0;
+    background-color: #fbfbfa;
+}
+
+.card-footer {
+    background-color: #fbfbfa;
+}
+
+/*OWL CAROUSEL*/
+.owlcarousel, li {
+    list-style: none;
+}
+
+
+/*IPHONES*/
+.card-footer, a {
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+
+/*SHOW_IPHONE*/
+.carousel-indicators .active {
+    background-color: darkgray;
+}
