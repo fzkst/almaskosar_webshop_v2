@@ -21,18 +21,6 @@
                     </div>
                     <div class="card-footer">
                         <div class="row">
-
-                            <div class="col">
-                                <label for="quantity">Mennyiség</label>
-                                <div class="input-group text-center mb-3 w-50">
-                                    <span class="input-group-text">-</span>
-                                    <input class="form-control" type="text" name="quantity" value="1">
-                                    <span class="input-group-text">+</span>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="row">
                             <a class="col" href="{{ url('/frontend/show_iphone/' . $iphone->id) }}">Részletek</a>
                             <a class="float-end col" href="">Kosárba <i class="fa fa-shopping-cart"></i></a>
                         </div>
@@ -42,3 +30,5 @@
         </div>
     </div>
 @endsection
+
+

@@ -52,41 +52,54 @@
                 <span class="float-end">{{ $formated_price }}.-</span class="float-end">
             </div>
             <div class="card-footer">
-                <a href="">Részletek</a>
-                <a class="float-end" href="">Kosárba</a>
+                <div class="row w-25">
+                    <div class="col">
+                        <span class="me-2 stock-color">Raktáron</span><span class="stock stock-color">{{ $iphone->stock }}</span>
+                        <label for="quantity">Mennyiség</label>
+                        <div class="input-group text-center mb-3">
+                            <button class="input-group-text decrement">-</button>
+                            <input class="form-control text-center quantity" type="text" name="quantity" value="1" size="10">
+                            <button class="input-group-text increment">+</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <a class="col" href="{{ url('/frontend/show_iphone/' . $iphone->id) }}">Részletek</a>
+                    <a class="float-end text-end col" href="">Kosárba <i class="fa fa-shopping-cart"></i></a>
+                </div>
             </div>
         </div>
     </div>
 @endsection
 
-{{-- @section('scripts')
+@section('scripts')
     <script>
-        $('.selected-carousel').owlCarousel({
-            loop: true,
-            margin: 0,
-            responsiveClass: true,
-            nav: true,
-            autoplay: true,
-            autoplayTimeout: 2000,
-            autoplayHoverPause: true,
-            0: {
-                items: 1,
-                nav: true
-            },
-            600: {
-                items: 1,
-                nav: true
-            },
-            1000: {
-                items: 1,
-                nav: true,
-                loop: false
+        $(document).ready(function () {
+            $('.increment').click(function (e) {
+                e.preventDefault();
+                var value = parseInt($('.quantity').val());
+                value = isNaN(value) ? '0' : value;
+                if(value < 10){
+                    value++;
+                    $(".quantity").val(value);
+                }
+            });
+
+            $('.decrement').click(function (e) {
+                e.preventDefault();
+                var value = parseInt($('.quantity').val());
+                value = isNaN(value) ? '0' : value;
+                if (value > 1){
+                    value--;
+                    $(".quantity").val(value);
+                }
+            });
+            var stock = parseInt($('.stock').text());
+            if (stock < 1){
+                $('.stock-color').css({color: 'red'});
+            } else {
+                $('.stock-color').css({color: 'green'});
             }
-        })
+        });
     </script>
 @endsection
-<div class="owl-carousel selected-carousel owl-theme">
-    <div><img class="w-100" src="{{ asset('img/uploads/iphones/' . $iphone->image) }}" alt="{{ $iphone->image }}"></div>
-    <div><img class="w-100" src="{{ asset('img/uploads/iphones/'.'B'.$iphone->image) }}" alt="{{ $iphone->image }}"></div>
-    <div><img class="w-100" src="{{ asset('img/uploads/iphones/'.'C'.$iphone->image) }}" alt="{{ $iphone->image }}"></div>
-</div> --}}
