@@ -25,6 +25,10 @@
                             <i class="fs-4 bi-table p-1 {{ Request::is('ipads') ? 'active' : '' }}"></i><span class="ms-1 d-none d-sm-inline ms-3">Táblagépek</span></a>
                     </li>
                     <li class="nav-item">
+                        <a href="{{ url('products') }}" class="px-0 align-middle">
+                            <i class="fs-4 bi-table p-1 {{ Request::is('products') ? 'active' : '' }}"></i><span class="ms-1 d-none d-sm-inline ms-3">Termékek</span></a>
+                    </li>
+                    <li class="nav-item">
                         <a href="{{ url('customers') }}" class="px-0 align-middle">
                             <i class="fs-4 bi-people p-1 {{ Request::is('customers') ? 'active' : '' }}"></i> <span class="ms-1 d-none d-sm-inline ms-2">Felhasználók</span> </a>
                     </li>

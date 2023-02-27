@@ -11,7 +11,8 @@ class Category extends Model
 
     protected $visible = [
         'name',
-        'desc',
+        'table_name',
+        'description',
         'status',
         'popular',
         'image'
@@ -19,7 +20,8 @@ class Category extends Model
 
     protected $fillable = [
         'name',
-        'desc',
+        'table_name',
+        'description',
         'status',
         'popular',
         'image'

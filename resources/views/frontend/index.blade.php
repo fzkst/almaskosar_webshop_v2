@@ -7,25 +7,36 @@
         <div class="container">
             <div class="row">
                 <div class="owl-carousel popular-carousel owl-theme">
-                    @foreach ($popular_products as $item)
+                    @foreach ($popular_products as $product)
                         <div class="">
                             <div class="card">
-                                @if ($item->category_id === 1)
-                                    <img src="{{ asset('img/uploads/iphones/'.$item->image) }}" alt="{{ $item->image }}">
-                                @else
-                                    <img src="{{ asset('img/uploads/ipads/'.$item->image) }}" alt="{{ $item->image }}">
-                                @endif
+                                <a href="{{ url('/frontend/show_iphone/'.$product->id) }}">
+                                    <img src="{{ asset('img/uploads/products/'.Arr::random($letters).$product->image) }}" alt="{{ $product->image }}"></a>
                                 <div class="card-body">
-                                    <h5>{{ $item->model }}</h5>
-                                    <div class="card-text">
-                                        <li>{{ $item->color }}</li>
-                                        <li>{{ $item->storage }} GB</li>
-                   
+                                    <h5 class="fw-bold">{{ $product->model }}</h5>
+                                    <div class="card-text fs-6">
+                                        <li>{{ $product->color }}</li>
+                                        <li>{{ $product->storage }} GB</li>
+                                        <a class="mt-5" href="{{ url('/frontend/show_iphone/' . $product->id) }}">Részletek</a>
                                     </div>
-                                    @php
-                                        $formated_price = number_format($item->price, 0, '.', '.');
-                                    @endphp
-                                    <span class="float-end">{{ $formated_price }}.-</span class="float-end">
+                                </div>
+                                <div class="card-footer">
+                                    <div class="col">
+                                        <span class="float-start stock-color">
+                                            @if ($product->stock > 0)
+                                                Készleten
+                                            @else
+                                                Nincs raktáron
+                                            @endif
+                                        </span>
+                                        <input class="stock" type="hidden" value="{{ $product->stock }}">
+                                    </div>
+                                    <div class="col">
+                                        @php
+                                            $formated_price = number_format($product->price, 0, '.', '.');
+                                        @endphp
+                                        <span class="float-end fw-bold">{{ $formated_price }}.-</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -59,6 +70,13 @@
                     nav:true,
                     loop:false
                 }
-        })
+        });
+
+        var stock = parseInt($('.stock').text());
+            if (stock < 1){
+                $('.stock-color').css({color: 'red'});
+            } else {
+                $('.stock-color').css({color: 'green'});
+            }
     </script>
 @endsection

@@ -2,12 +2,22 @@ body {
     background-color: #f1f0ee;
     font-family: Arial, Helvetica, sans-serif;
 }
+
 /*NAVBAR*/
 .navbar {
     background-color: black;
 }
+
 .navbar-brand {
     font-size:medium
+}
+
+.cart-icon {
+    color: #9FA6B2;
+}
+
+.cart-icon:hover {
+    color: #bfbfbf;
 }
 
 /*CAROUSEL*/
@@ -33,7 +43,7 @@ body {
 
 /*OWL CAROUSEL*/
 .owlcarousel, li {
-    list-style: none;
+
 }
 
 

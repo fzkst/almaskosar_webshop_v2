@@ -25,6 +25,7 @@ class StoreCategoryRequest extends FormRequest
     {
         return [
             'name' => 'required | string | max:50',
+            'table_name' => 'required | string | max:50',
             'description' => 'required | string',
             //'status' => 'required | integer',
             //'popular' => 'required |integer',

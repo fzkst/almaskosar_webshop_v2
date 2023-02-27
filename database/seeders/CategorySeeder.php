@@ -16,7 +16,17 @@ class CategorySeeder extends Seeder
     public function run()
     {
         Category::factory()->create([
+            "name" => "Mobiltelefonok",
+            "table_name" => "iphones",
+            "description" => "Apple okostelefonok iPhone 12-től a legújabbakig.",
+            "status" => 0,
+            "popular" => 0,
+            "image" => "Iphone_14_pro_kat.png"
+        ]);
+        
+        Category::factory()->create([
             "name" => "Táblagépek",
+            "table_name" => "ipads",
             "description" => "Apple tabletek - iPad, iPad Pro, iPad Mini - különböző színekben, méretben és tárhellyel.",
             "status" => 0,
             "popular" => 0,
@@ -24,15 +34,8 @@ class CategorySeeder extends Seeder
         ]);
 
         Category::factory()->create([
-            "name" => "Mobiltelefonok",
-            "description" => "Apple okostelefonok iPhone 12-től a legújabbakig.",
-            "status" => 0,
-            "popular" => 0,
-            "image" => "Iphone_14_pro_kat.png"
-        ]);
-
-        Category::factory()->create([
             "name" => "Laptopok",
+            "table_name" => "macbooks",
             "description" => "A MacBook Pro az Apple professzionális hordozható számítógépe. 2006-ban mutatta be az Apple, 2020-ig kizárólag Intel processzorral szerelték, 2020. novemberében az Apple saját processzorával mutatott be MacBook Pro-t.",
             "status" => 0,
             "popular" => 0,

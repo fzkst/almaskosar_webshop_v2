@@ -10,13 +10,13 @@
             {{-- LEFT SIDE --}}
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active" href="/frontend/iphones">iPhone</a>
+                    <a class="nav-link {{ Request::is('/frontend/iphones*') ? 'active' : '' }}" href="{{ url('/frontend/iphones') }}">iPhone</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href='/frontend/ipads'>iPad</a>
+                    <a class="nav-link {{ Request::is('/frontend/ipads*') ? 'active' : '' }}" href="{{ url('/frontend/ipads') }}">iPad</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href='/frontend/macbooks'>MacBook</a>
+                    <a class="nav-link{{ Request::is('/frontend/macbooks*') ? 'active' : '' }}" href="{{ url('/frontend/macbooks') }}">MacBook</a>
                 </li>
             </ul>
             {{-- RIGHT SIDE --}}
@@ -48,6 +48,9 @@
                                     @csrf
                                 </form>
                             </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href='/cart'><i class="bi bi-cart3 cart-icon"></a></i>
                         </li>
                 @endguest
             </ul>

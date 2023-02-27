@@ -3,8 +3,9 @@
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\CustomerController;
 use App\Http\Controllers\Admin\DashboardController;
-use App\Http\Controllers\Admin\IpadController;
 use App\Http\Controllers\Admin\IphoneController;
+use App\Http\Controllers\Admin\ProductController;
+use App\Http\Controllers\Frontend\CartController;
 use App\Http\Controllers\Frontend\FrontendController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -31,6 +32,8 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 
+
+//ADMIN
 Route::middleware(['auth','isAdmin'])->group( function () {
     //Route::get('/dashboard', 'Admin/FrontendController@index');
     /* Route::get('/dashboard', function () {
@@ -38,22 +41,27 @@ Route::middleware(['auth','isAdmin'])->group( function () {
     }); */
 
     Route::get('/dashboard', [DashboardController::class, 'index']);
-
     Route::resource('customers', CustomerController::class);
-
     Route::resource('categories', CategoryController::class);
-
     Route::resource('iphones', IphoneController::class);
-
-    Route::resource('ipads', IpadController::class);
-
+    Route::resource('products', ProductController::class);
 });
 
 
-Route::get('/', [FrontendController::class, 'index']);
 
+//FRONTEND
+Route::get('/', [FrontendController::class, 'index']);
 Route::get('/frontend/iphones', [FrontendController::class, 'iphones']);
 Route::get('/frontend/ipads', [FrontendController::class, 'ipads']);
 Route::get('/frontend/macbooks', [FrontendController::class, 'macbooks']);
-
 Route::get('/frontend/show_iphone/{id}', [FrontendController::class, 'show_iphone']);
+
+
+
+//CART
+Route::post('/add_to_cart', [CartController::class, 'addProduct'])->name('add_to_cart');
+Route::post('delete-cart-item', [CartController::class, 'deleteProduct']);
+
+Route::middleware(['auth'])->group( function () {
+    Route::get('cart', [CartController::class, 'cartview']);
+});

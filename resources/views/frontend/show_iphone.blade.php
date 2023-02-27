@@ -1,19 +1,19 @@
 @extends('layouts.frontend')
 
 @section('content')
-    <div class="py-3 mb-4 shadow-sm bg-warning border-top">
+    <div class="py-3 mb-4 shadow-sm border-top">
         <div class="container">
-            <h6 class="mb-0"><a href="{{ url('/') }}">Collections /</a>
+            <h6 class="mb-0"><a href="{{ url('/') }}">Almáskosár /</a>
                 @php
-                    $kategoria_neve = DB::table('categories')->where('id', $iphone->category_id)->get('name');
+                    $kategoria_neve = DB::table('categories')->where('id', $product->category_id)->get('name');
                 @endphp
                 <a href="{{ url('/frontend/'.$kategoria_neve[0]->name)}}">{{ $kategoria_neve[0]->name;}}</a>
-                / {{ $iphone->model }}
+                / {{ $product->model }}
             </h6>
         </div>
     </div>
     <div class="container py-5 iphones">
-        <div class="card mx-auto shadow" style="max-width: 40rem">
+        <div class="card mx-auto shadow productData" style="max-width: 40rem">
             <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-indicators">
                     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -22,13 +22,13 @@
                   </div>
                 <div class="carousel-inner">
                   <div class="carousel-item active" data-bs-interval="2000">
-                    <img src="{{ asset('img/uploads/iphones/' . $iphone->image) }}" alt="{{ $iphone->image }}" class="d-block w-100" alt="...">
+                    <img src="{{ asset('img/uploads/products/'.'A'.$product->image) }}" alt="{{ $product->image }}" class="d-block w-100" alt="{{$product->model}}">
                   </div>
                   <div class="carousel-item" data-bs-interval="2000">
-                    <img src="{{ asset('img/uploads/iphones/'.'B'.$iphone->image) }}" alt="{{ $iphone->image }}" class="d-block w-100" alt="...">
+                    <img src="{{ asset('img/uploads/products/'.'B'.$product->image) }}" alt="{{ $product->image }}" class="d-block w-100" alt="{{$product->model}}">
                   </div>
                   <div class="carousel-item" data-bs-interval="2000">
-                    <img src="{{ asset('img/uploads/iphones/'.'C'.$iphone->image) }}" alt="{{ $iphone->image }}" class="d-block w-100" alt="...">
+                    <img src="{{ asset('img/uploads/products/'.'C'.$product->image) }}" alt="{{ $product->image }}" class="d-block w-100" alt="{{$product->model}}">
                   </div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
@@ -41,20 +41,22 @@
                 </button>
               </div>
             <div class="card-body">
-                <h5>{{ $iphone->model }}</h5>
+                <h5>{{ $product->model }}</h5>
                 <div class="card-text">
-                    <li>{{ $iphone->color }}</li>
-                    <li>{{ $iphone->storage }} GB</li>
+                    <li>{{ $product->color }}</li>
+                    <li>{{ $product->storage }} GB</li>
                 </div>
                 @php
-                    $formated_price = number_format($iphone->price, 0, '.', '.');
+                    $formated_price = number_format($product->price, 0, '.', '.');
                 @endphp
                 <span class="float-end">{{ $formated_price }}.-</span class="float-end">
             </div>
             <div class="card-footer">
                 <div class="row w-25">
                     <div class="col">
-                        <span class="me-2 stock-color">Raktáron</span><span class="stock stock-color">{{ $iphone->stock }}</span>
+                        <input class="productId" type="hidden" value="{{ $product->id }}">
+                        <input class="categoryId" type="hidden" value="{{ $product->category_id }}">
+                        <span class="me-2 stock-color">Raktáron</span><span class="stock stock-color">{{ $product->stock }}</span>
                         <label for="quantity">Mennyiség</label>
                         <div class="input-group text-center mb-3">
                             <button class="input-group-text decrement">-</button>
@@ -64,8 +66,8 @@
                     </div>
                 </div>
                 <div class="row">
-                    <a class="col" href="{{ url('/frontend/show_iphone/' . $iphone->id) }}">Részletek</a>
-                    <a class="float-end text-end col" href="">Kosárba <i class="fa fa-shopping-cart"></i></a>
+                    <a class="col" href="{{ url('/frontend/show_iphone/' . $product->id) }}">Részletek</a>
+                    <a class="col float-end text-end addToCart" href="">Kosárba <i class="fa fa-shopping-cart"></i></a>
                 </div>
             </div>
         </div>
@@ -94,12 +96,46 @@
                     $(".quantity").val(value);
                 }
             });
+
             var stock = parseInt($('.stock').text());
             if (stock < 1){
                 $('.stock-color').css({color: 'red'});
             } else {
                 $('.stock-color').css({color: 'green'});
             }
+
+
+
+            $('.addToCart').click(function (e) {
+                e.preventDefault();
+
+                var category_id = $(this).closest('.productData').find('.categoryId').val();
+                var product_id = $(this).closest('.productData').find('.productId').val();
+                var product_quantity = $(this).closest('.productData').find('.quantity').val();
+
+                /* $.ajaxSetup({
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    }
+                }); */
+
+                $.ajax({
+                    method: "POST",
+                    url: "/add_to_cart",
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    },
+                    data: {
+                        'category_id': category_id,
+                        'product_id': product_id,
+                        'product_quantity': product_quantity,
+                    },
+                    success: function (response) {
+                        alert(response.status);
+                    }
+                });
+            });
+
         });
     </script>
 @endsection
