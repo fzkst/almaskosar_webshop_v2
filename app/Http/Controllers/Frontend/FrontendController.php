@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
+use App\Models\Category;
 use App\Models\Ipad;
 use App\Models\Iphone;
 use App\Models\Product;
@@ -24,27 +25,49 @@ class FrontendController extends Controller
     }
 
     public function iphones() {
+        $categories = Category::all();
         $letters = ['A', 'B', 'C'];
-        $iphones = DB::table('products')->where('category_id', 1)->get();
-        return view('frontend.iphones', compact(['iphones', 'letters']));
+        $products = DB::table('products')->where('category_id', 1)->get();
+        return view('frontend.products', compact(['products', 'letters', 'categories']));
     }
     public function ipads() {
+        $categories = Category::all();
         $letters = ['A', 'B', 'C'];
-        $ipads = DB::table('products')->where('category_id', 2)->get();
-        return view('frontend.ipads', compact(['ipads', 'letters']));
+        $products = DB::table('products')->where('category_id', 2)->get();
+        return view('frontend.products', compact(['products', 'letters', 'categories']));
     }
     public function macbooks() {
-        $macbooks = DB::table('products')->where('category_id', 3)->get();
-        return view('frontend.macbooks', compact('macbooks'));
+        $categories = Category::all();
+        $letters = ['A', 'B', 'C'];
+        $products = DB::table('products')->where('category_id', 3)->get();
+        return view('frontend.products', compact(['products', 'letters', 'categories']));
     }
 
-    public function show_iphone($id) {
+    public function show_product($id) {
         //$product = DB::table('products')->where('id', $id)->get();
         $product = Product::find($id);
         //$iphone = Iphone::find($id);
         if(is_null($product)){
             return response()->json(["message" => "Ilyen azonosítóval nem található termék!"], 404);
         }
-        return view('frontend.show_iphone', compact('product'));
+        return view('frontend.show_product', compact('product'));
     }
+
+    public function aszf() {
+        return view('frontend.footer_components.aszf');
+    }
+
+    public function tajekoztato() {
+        return view('frontend.footer_components.tajekoztato');
+    }
+
+    public function uzletek(Request $request) {
+        $req = $request->route()->getName();
+        return view('frontend.footer_components.uzletek', compact(['req']));
+    }
+
+    public function szallitas() {
+        return view('frontend.footer_components.szallitas');
+    }
+
 }

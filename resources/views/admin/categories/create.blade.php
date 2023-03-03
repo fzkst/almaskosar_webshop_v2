@@ -15,6 +15,10 @@
                         <input type="text" class="form-control" name="name" value="{{ old('name') }}">
                     </div>
                     <div class="mb-4">
+                        <label class="form-label" for="">Táblanév</label>
+                        <input type="text" class="form-control" name="name" value="{{ old('name') }}">
+                    </div>
+                    <div class="mb-4">
                         <label class="form-label" for="">Leírás</label>
                         <textarea class="form-control" rows="5" name="description" value="{{ old('description') }}"></textarea>
                     </div>
@@ -23,7 +27,7 @@
                         <input type="checkbox" class="form-check-control" name="status" value="{{ old('status') }}">
                     </div>
                     <div class="mb-4">
-                        <label class="form-check-label" for="">Népszerű termék</label>
+                        <label class="form-check-label" for="">Kiemelt kategória</label>
                         <input type="checkbox" class="form-check-control" name="popular" value="{{ old('popular') }}">
                     </div>
                     <div class="mb-4">

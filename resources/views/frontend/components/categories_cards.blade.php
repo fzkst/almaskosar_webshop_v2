@@ -4,9 +4,9 @@
             $categories = DB::table('categories')->get();
         @endphp
         @foreach ($categories as $category)
-                <div class="card col me-3" style="width: 18rem">
+                <div class="card col me-3" style="max-width: 10rem">
                     <div class="card-body text-center">
-                        <img class="w-75" src="{{ asset('img/uploads/categories/'.$category->image) }}" alt="{{ $category->image }}">
+                        <a href="{{ asset('/frontend/'.$category->table_name) }}"><img class="w-75" src="{{ asset('img/uploads/categories/'.$category->image) }}" alt="{{ $category->image }}"></a>
                     </div>
                     <a href="
                         {{ asset('/frontend/'.$category->table_name) }}

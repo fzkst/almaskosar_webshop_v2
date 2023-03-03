@@ -33,17 +33,22 @@ body {
 
 /*CATEGORIES CARDS*/
 .card {
-    padding: 0;
     background-color: #fbfbfa;
+    border-radius: 20px;
+    border-style: solid;
+    border-width: 1px;
+    padding: 5px;
+    font-size: small;
 }
+
 
 .card-footer {
     background-color: #fbfbfa;
 }
 
 /*OWL CAROUSEL*/
-.owlcarousel, li {
-
+.owlcarousel, img {
+    border-radius: 20px 20px 0px 0px;
 }
 
 
@@ -57,4 +62,57 @@ body {
 /*SHOW_IPHONE*/
 .carousel-indicators .active {
     background-color: darkgray;
+}
+
+.iphones .btn:hover {
+    background-color: lightgray;
+}
+
+.kiskartya {
+    font-size: smaller;
+}
+
+/*FOOTER*/
+.footer {
+    background-color: #f1f0ee;
+}
+.footer li {
+    font-size: small;
+    list-style-type: none;
+    padding-left: 0px;
+}
+
+.footer h6 {
+    font-weight: bold;
+}
+
+.footer i {
+    color: blue;
+}
+
+.footer a {
+    font-weight: normal;
+}
+
+.footer a:link {
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: grey;
+}
+
+.footer table th {
+    padding-left: 20px;
+    font-size: small;
+}
+
+.footer table td {
+    padding-left: 20px;
+    font-size: small;
+}
+
+/*ASZF*/
+.aszf li {
+    list-style-type: none;
 }

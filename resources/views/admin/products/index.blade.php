@@ -46,7 +46,7 @@
                             <td>{{ $item->storage }}</td>
                             <td>{{ $item->price }}</td>
                             <td>{{ $item->stock }}</td>
-                            <td class="kepek"><img src="{{ asset('img/uploads/products/'.$item->image)}}" class="kategoriakep" alt="mobilkép"></td>
+                            <td class="kepek"><img src="{{ asset('img/uploads/products/A'.$item->image)}}" class="kategoriakep" alt="mobilkép"></td>
                             <td class="align-middle text-center">
                                 <a href="{{ url('products/'.$item->id.'/edit')}} "><button class="btn btn-prim btn-sm">Szerkesztés</button></a>
                                 <form action="{{ url('products/'.$item->id)}}" method="post">

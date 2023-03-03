@@ -49,25 +49,25 @@
                 @php
                     $formated_price = number_format($product->price, 0, '.', '.');
                 @endphp
-                <span class="float-end">{{ $formated_price }}.-</span class="float-end">
+                <div class="mt-2">
+                    <span class="me-2 stock-color">Raktáron</span><span class="stock stock-color">{{ $product->stock }}</span>
+                    <span class="float-end">{{ $formated_price }}.-</span class="float-end">
+                </div>
             </div>
             <div class="card-footer">
-                <div class="row w-25">
-                    <div class="col">
+                <div class="row ">
+                    <div class="col-3">
                         <input class="productId" type="hidden" value="{{ $product->id }}">
                         <input class="categoryId" type="hidden" value="{{ $product->category_id }}">
-                        <span class="me-2 stock-color">Raktáron</span><span class="stock stock-color">{{ $product->stock }}</span>
-                        <label for="quantity">Mennyiség</label>
-                        <div class="input-group text-center mb-3">
+                        <div class="input-group text-center">
                             <button class="input-group-text decrement">-</button>
                             <input class="form-control text-center quantity" type="text" name="quantity" value="1" size="10">
                             <button class="input-group-text increment">+</button>
                         </div>
                     </div>
-                </div>
-                <div class="row">
-                    <a class="col" href="{{ url('/frontend/show_iphone/' . $product->id) }}">Részletek</a>
-                    <a class="col float-end text-end addToCart" href="">Kosárba <i class="fa fa-shopping-cart"></i></a>
+                    <div class="col-9 d-flex justify-content-end">
+                        <button class="btn btn-outline-secondary text-end addToCart">Kosárba <i class="fa fa-shopping-cart"></i></button>
+                    </div>
                 </div>
             </div>
         </div>

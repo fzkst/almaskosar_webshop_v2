@@ -27,11 +27,14 @@
         @include('frontend.components.frontendnavbar')
         @include('frontend.components.carousel')
     </header>
-    <main>
+    <main class="shado">
         <div>
             @yield('content')
         </div>
     </main>
+    <footer>
+        @include('frontend.components.frontendfooter')
+    </footer>
 </div>
 </div>
 </div>

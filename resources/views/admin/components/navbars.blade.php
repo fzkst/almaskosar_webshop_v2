@@ -16,14 +16,14 @@
                         <a href="{{ url('categories') }}" class="px-0 align-middle">
                             <i class="fs-4 bi-grid p-1 {{ Request::is('categories') ? 'active' : '' }}"></i><span class="ms-1 d-none d-sm-inline ms-3">Kategóriák</span></a>
                     </li>
-                    <li class="nav-item">
+                    {{-- <li class="nav-item">
                         <a href="{{ url('iphones') }}" class="px-0 align-middle">
                             <i class="fs-4 bi-table p-1 {{ Request::is('iphones') ? 'active' : '' }}"></i><span class="ms-1 d-none d-sm-inline ms-3">Mobilok</span></a>
                     </li>
                     <li class="nav-item">
                         <a href="{{ url('ipads') }}" class="px-0 align-middle">
                             <i class="fs-4 bi-table p-1 {{ Request::is('ipads') ? 'active' : '' }}"></i><span class="ms-1 d-none d-sm-inline ms-3">Táblagépek</span></a>
-                    </li>
+                    </li> --}}
                     <li class="nav-item">
                         <a href="{{ url('products') }}" class="px-0 align-middle">
                             <i class="fs-4 bi-table p-1 {{ Request::is('products') ? 'active' : '' }}"></i><span class="ms-1 d-none d-sm-inline ms-3">Termékek</span></a>
@@ -37,7 +37,7 @@
                             <i class="fs-4 bi-table p-1 {{ Request::is('rendelesek') ? 'active' : '' }}"></i><span class="ms-1 d-none d-sm-inline ms-3">Rendelések</span></a>
                     </li>
 
-                    <li>
+                    {{-- <li>
                         <a href="#" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
                             <i class="fs-4 bi-bootstrap"></i> <span class="ms-1 d-none d-sm-inline">Valami 1</span></a>
                         <ul class="collapse nav flex-column ms-1" id="submenu2" data-bs-parent="#menu">
@@ -80,7 +80,7 @@
                                 <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Item</span> 2 </a>
                             </li>
                         </ul>
-                    </li>
+                    </li> --}}
 
 
 
@@ -93,8 +93,8 @@
                         <span class="d-none d-sm-inline mx-1 ms-3">{{ Auth::user()->name }}</span>
                     </a>
                     <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
-                        <li><a class="dropdown-item" href="#">New project...</a></li>
-                        <li><a class="dropdown-item" href="#">Settings</a></li>
+                        {{-- <li><a class="dropdown-item" href="#">New project...</a></li>
+                        <li><a class="dropdown-item" href="#">Settings</a></li> --}}
                         <li><a class="dropdown-item" href="#">Profile</a></li>
                         <li>
                             <hr class="dropdown-divider">
