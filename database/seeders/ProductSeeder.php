@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\DB;
 
 class ProductSeeder extends Seeder
@@ -16,12 +17,13 @@ class ProductSeeder extends Seeder
     public function run()
     {
         $iphones = array(
+            //14 ProMax
             array(
                 'category_id' => 1,
                 'model' => 'iPhone 14 Pro Max',
                 'color' => 'mélylila',
                 'storage' => 128,
-                'popular' => 1,
+                'popular' => 0,
                 'price' => 629990,
                 'stock' => 5,
                 'image' => 'iPhone14proMaxMelylila.jpg'
@@ -33,7 +35,7 @@ class ProductSeeder extends Seeder
                 'storage' => 256,
                 'popular' => 1,
                 'price' => 689990,
-                'stock' => 4,
+                'stock' => 0,
                 'image' => 'iPhone14proMaxMelylila.jpg'
             ),
             array(
@@ -41,7 +43,7 @@ class ProductSeeder extends Seeder
                 'model' => 'iPhone 14 Pro Max',
                 'color' => 'mélylila',
                 'storage' => 512,
-                'popular' => 1,
+                'popular' => 0,
                 'price' => 809990,
                 'stock' => 3,
                 'image' => 'iPhone14proMaxMelylila.jpg'
@@ -51,9 +53,9 @@ class ProductSeeder extends Seeder
                 'model' => 'iPhone 14 Pro Max',
                 'color' => 'arany',
                 'storage' => 128,
-                'popular' => 1,
+                'popular' => 0,
                 'price' => 629990,
-                'stock' => 3,
+                'stock' => 0,
                 'image' => 'iPhone14proMaxArany.jpg'
             ),
             array(
@@ -61,7 +63,7 @@ class ProductSeeder extends Seeder
                 'model' => 'iPhone 14 Pro Max',
                 'color' => 'arany',
                 'storage' => 256,
-                'popular' => 1,
+                'popular' => 0,
                 'price' => 689990,
                 'stock' => 3,
                 'image' => 'iPhone14proMaxArany.jpg'
@@ -71,7 +73,7 @@ class ProductSeeder extends Seeder
                 'model' => 'iPhone 14 Pro Max',
                 'color' => 'arany',
                 'storage' => 512,
-                'popular' => 1,
+                'popular' => 0,
                 'price' => 809990,
                 'stock' => 3,
                 'image' => 'iPhone14proMaxArany.jpg'
@@ -81,8 +83,8 @@ class ProductSeeder extends Seeder
                 'model' => 'iPhone 14 Pro Max',
                 'color' => 'arany',
                 'storage' => 1,
-
- 'popular' => 1,               'price' => 929990,
+                'popular' => 0,
+                'price' => 929990,
                 'stock' => 3,
                 'image' => 'iPhone14proMaxArany.jpg'
             ),
@@ -93,7 +95,7 @@ class ProductSeeder extends Seeder
                 'storage' => 128,
                 'popular' => 1,
                 'price' => 629990,
-                'stock' => 3,
+                'stock' => 0,
                 'image' => 'iPhone14proMaxEzust.jpg'
             ),
             array(
@@ -101,11 +103,1128 @@ class ProductSeeder extends Seeder
                 'model' => 'iPhone 14 Pro Max',
                 'color' => 'ezüst',
                 'storage' => 256,
-                'popular' => 1,
+                'popular' => 0,
                 'price' => 689990,
-                'stock' => 3,
+                'stock' => 0,
                 'image' => 'iPhone14proMaxEzust.jpg'
-            )
+            ),
+            //14 Pro
+            array(
+                'category_id' => 1,
+                'model' => 'iPhone 14 Pro',
+                'color' => 'mélylila',
+                'storage' => 128,
+                'popular' => 0,
+                'price' => 569990,
+                'stock' => 0,
+                'image' => 'iPhone14proMelylila.jpg'
+            ),
+            array(
+                'category_id' => 1,
+                'model' => 'iPhone 14 Pro',
+                'color' => 'mélylila',
+                'storage' => 256,
+                'popular' => 0,
+                'price' => 629990,
+                'stock' => 2,
+                'image' => 'iPhone14proMelylila.jpg'
+            ),
+            array(
+                'category_id' => 1,
+                'model' => 'iPhone 14 Pro',
+                'color' => 'mélylila',
+                'storage' => 512,
+                'popular' => 1,
+                'price' => 749990,
+                'stock' => 2,
+                'image' => 'iPhone14proMelylila.jpg'
+            ),
+            array(
+                'category_id' => 1,
+                'model' => 'iPhone 14 Pro',
+                'color' => 'mélylila',
+                'storage' => 1,
+                'popular' => 0,
+                'price' => 869990,
+                'stock' => 2,
+                'image' => 'iPhone14proMelylila.jpg'
+            ),
+            array(
+                'category_id' => 1,
+                'model' => 'iPhone 14 Pro',
+                'color' => 'arany',
+                'storage' => 128,
+                'popular' => 1,
+                'price' => 569990,
+                'stock' => 2,
+                'image' => 'iPhone14proArany.jpg'
+            ),
+            array(
+                'category_id' => 1,
+                'model' => 'iPhone 14 Pro',
+                'color' => 'arany',
+                'storage' => 256,
+                'popular' => 0,
+                'price' => 629990,
+                'stock' => 2,
+                'image' => 'iPhone14proArany.jpg'
+            ),
+            array(
+                'category_id' => 1,
+                'model' => 'iPhone 14 Pro',
+                'color' => 'arany',
+                'storage' => 256,
+                'popular' => 0,
+                'price' => 629990,
+                'stock' => 2,
+                'image' => 'iPhone14proArany.jpg'
+            ),
+            array(
+                'category_id' => 1,
+                'model' => 'iPhone 14 Pro',
+                'color' => 'arany',
+                'storage' => 256,
+                'popular' => 0,
+                'price' => 629990,
+                'stock' => 2,
+                'image' => 'iPhone14proArany.jpg'
+            ),
+            array(
+                'category_id' => 1,
+                'model' => 'iPhone 14 Pro',
+                'color' => 'arany',
+                'storage' => 512,
+                'popular' => 0,
+                'price' => 749990,
+                'stock' => 0,
+                'image' => 'iPhone14proArany.jpg'
+            ),
+            array(
+                'category_id' => 1,
+                'model' => 'iPhone 14 Pro',
+                'color' => 'arany',
+                'storage' => 1,
+                'popular' => 0,
+                'price' => 869990,
+                'stock' => 3,
+                'image' => 'iPhone14proArany.jpg'
+            ),
+            array(
+                'category_id' => 1,
+                'model' => 'iPhone 14 Pro',
+                'color' => 'ezüst',
+                'storage' => 128,
+                'popular' => 0,
+                'price' => 569990,
+                'stock' => 0,
+                'image' => 'iPhone14proEzust.jpg'
+            ),
+            array(
+                'category_id' => 1,
+                'model' => 'iPhone 14 Pro',
+                'color' => 'ezüst',
+                'storage' => 256,
+                'popular' => 0,
+                'price' => 629990,
+                'stock' => 4,
+                'image' => 'iPhone14proEzust.jpg'
+            ),
+            array(
+                'category_id' => 1,
+                'model' => 'iPhone 14 Pro',
+                'color' => 'ezüst',
+                'storage' => 512,
+                'popular' => 1,
+                'price' => 749990,
+                'stock' => 2,
+                'image' => 'iPhone14proEzust.jpg'
+            ),
+            array(
+                'category_id' => 1,
+                'model' => 'iPhone 14 Pro',
+                'color' => 'ezüst',
+                'storage' => 1,
+                'popular' => 0,
+                'price' => 869990,
+                'stock' => 4,
+                'image' => 'iPhone14proEzust.jpg'
+            ),
+            array(
+                'category_id' => 1,
+                'model' => 'iPhone 14 Pro',
+                'color' => 'asztrofekete',
+                'storage' => 128,
+                'popular' => 1,
+                'price' => 569990,
+                'stock' => 8,
+                'image' => 'iPhone14proAsztrofekete.jpg'
+            ),
+            array(
+                'category_id' => 1,
+                'model' => 'iPhone 14 Pro',
+                'color' => 'asztrofekete',
+                'storage' => 256,
+                'popular' => 0,
+                'price' => 629990,
+                'stock' => 8,
+                'image' => 'iPhone14proAsztrofekete.jpg'
+            ),
+            array(
+                'category_id' => 1,
+                'model' => 'iPhone 14 Pro',
+                'color' => 'asztrofekete',
+                'storage' => 512,
+                'popular' => 0,
+                'price' => 749990,
+                'stock' => 8,
+                'image' => 'iPhone14proAsztrofekete.jpg'
+            ),
+            array(
+                'category_id' => 1,
+                'model' => 'iPhone 14 Pro',
+                'color' => 'asztrofekete',
+                'storage' => 1,
+                'popular' => 0,
+                'price' => 869990,
+                'stock' => 0,
+                'image' => 'iPhone14proAsztrofekete.jpg'
+            ),
+            //14 Plus
+            array(
+                'category_id' => 1,
+                'model' => 'iPhone 14 Plus',
+                'color' => 'kék',
+                'storage' => 128,
+                'popular' => 0,
+                'price' => 499990,
+                'stock' => 3,
+                'image' => 'iPhone14PlusKek.jpg'
+            ),
+            array(
+                'category_id' => 1,
+                'model' => 'iPhone 14 Plus',
+                'color' => 'kék',
+                'storage' => 256,
+                'popular' => 1,
+                'price' => 559990,
+                'stock' => 3,
+                'image' => 'iPhone14PlusKek.jpg'
+            ),
+            array(
+                'category_id' => 1,
+                'model' => 'iPhone 14 Plus',
+                'color' => 'kék',
+                'storage' => 512,
+                'popular' => 0,
+                'price' => 679990,
+                'stock' => 1,
+                'image' => 'iPhone14PlusKek.jpg'
+            ),
+            array(
+                'category_id' => 1,
+                'model' => 'iPhone 14 Plus',
+                'color' => 'lila',
+                'storage' => 128,
+                'popular' => 1,
+                'price' => 499990,
+                'stock' => 1,
+                'image' => 'iPhone14PlusLila.jpg'
+            ),
+            array(
+                'category_id' => 1,
+                'model' => 'iPhone 14 Plus',
+                'color' => 'lila',
+                'storage' => 256,
+                'popular' => 1,
+                'price' => 559990,
+                'stock' => 2,
+                'image' => 'iPhone14PlusLila.jpg'
+            ),
+            array(
+                'category_id' => 1,
+                'model' => 'iPhone 14 Plus',
+                'color' => 'lila',
+                'storage' => 512,
+                'popular' => 1,
+                'price' => 679990,
+                'stock' => 2,
+                'image' => 'iPhone14PlusLila.jpg'
+            ),
+            array(
+                'category_id' => 1,
+                'model' => 'iPhone 14 Plus',
+                'color' => 'éjfekete',
+                'storage' => 128,
+                'popular' => 0,
+                'price' => 499990,
+                'stock' => 5,
+                'image' => 'iPhone14PlusEjfekete.jpg'
+            ),
+            array(
+                'category_id' => 1,
+                'model' => 'iPhone 14 Plus',
+                'color' => 'éjfekete',
+                'storage' => 256,
+                'popular' => 0,
+                'price' => 559990,
+                'stock' => 3,
+                'image' => 'iPhone14PlusEjfekete.jpg'
+            ),
+            array(
+                'category_id' => 1,
+                'model' => 'iPhone 14 Plus',
+                'color' => 'éjfekete',
+                'storage' => 521,
+                'popular' => 1,
+                'price' => 679990,
+                'stock' => 3,
+                'image' => 'iPhone14PlusEjfekete.jpg'
+            ),
+            array(
+                'category_id' => 1,
+                'model' => 'iPhone 14 Plus',
+                'color' => 'csillagfény',
+                'storage' => 128,
+                'popular' => 0,
+                'price' => 499990,
+                'stock' => 3,
+                'image' => 'iPhone14PlusCsillagfeny.jpg'
+            ),
+            array(
+                'category_id' => 1,
+                'model' => 'iPhone 14 Plus',
+                'color' => 'csillagfény',
+                'storage' => 256,
+                'popular' => 1,
+                'price' => 559990,
+                'stock' => 3,
+                'image' => 'iPhone14PlusCsillagfeny.jpg'
+            ),
+            array(
+                'category_id' => 1,
+                'model' => 'iPhone 14 Plus',
+                'color' => 'csillagfény',
+                'storage' => 512,
+                'popular' => 0,
+                'price' => 679990,
+                'stock' => 3,
+                'image' => 'iPhone14PlusCsillagfeny.jpg'
+            ),
+            array(
+                'category_id' => 1,
+                'model' => 'iPhone 14 Plus',
+                'color' => '(PRODUCT)RED',
+                'storage' => 128,
+                'popular' => 0,
+                'price' => 499990,
+                'stock' => 6,
+                'image' => 'iPhone14PlusProductRed.jpg'
+            ),
+            array(
+                'category_id' => 1,
+                'model' => 'iPhone 14 Plus',
+                'color' => '(PRODUCT)RED',
+                'storage' => 256,
+                'popular' => 1,
+                'price' => 559990,
+                'stock' => 4,
+                'image' => 'iPhone14PlusProductRed.jpg'
+            ),
+            array(
+                'category_id' => 1,
+                'model' => 'iPhone 14 Plus',
+                'color' => '(PRODUCT)RED',
+                'storage' => 512,
+                'popular' => 0,
+                'price' => 679990,
+                'stock' => 2,
+                'image' => 'iPhone14PlusProductRed.jpg'
+            ),
+            //14
+            array(
+                'category_id' => 1,
+                'model' => 'iPhone 14',
+                'color' => 'kék',
+                'storage' => 128,
+                'popular' => 0,
+                'price' => 449990,
+                'stock' => 3,
+                'image' => 'iPhone14PlusKek.jpg'
+            ),
+            array(
+                'category_id' => 1,
+                'model' => 'iPhone 14',
+                'color' => 'kék',
+                'storage' => 256,
+                'popular' => 1,
+                'price' => 509990,
+                'stock' => 1,
+                'image' => 'iPhone14PlusKek.jpg'
+            ),
+            array(
+                'category_id' => 1,
+                'model' => 'iPhone 14',
+                'color' => 'kék',
+                'storage' => 512,
+                'popular' => 0,
+                'price' => 629990,
+                'stock' => 1,
+                'image' => 'iPhone14PlusKek.jpg'
+            ),
+            array(
+                'category_id' => 1,
+                'model' => 'iPhone 14',
+                'color' => 'lila',
+                'storage' => 128,
+                'popular' => 1,
+                'price' => 449990,
+                'stock' => 4,
+                'image' => 'iPhone14PlusKek.jpg'
+            ),
+            array(
+                'category_id' => 1,
+                'model' => 'iPhone 14',
+                'color' => 'lila',
+                'storage' => 256,
+                'popular' => 1,
+                'price' => 509990,
+                'stock' => 2,
+                'image' => 'iPhone14PlusKek.jpg'
+            ),
+            array(
+                'category_id' => 1,
+                'model' => 'iPhone 14',
+                'color' => 'lila',
+                'storage' => 512,
+                'popular' => 0,
+                'price' => 629990,
+                'stock' => 2,
+                'image' => 'iPhone14PlusKek.jpg'
+            ),
+            array(
+                'category_id' => 1,
+                'model' => 'iPhone 14',
+                'color' => 'éjfekete',
+                'storage' => 128,
+                'popular' => 0,
+                'price' => 449990,
+                'stock' => 6,
+                'image' => 'iPhone14Ejfekete.jpg'
+            ),
+            array(
+                'category_id' => 1,
+                'model' => 'iPhone 14',
+                'color' => 'éjfekete',
+                'storage' => 256,
+                'popular' => 0,
+                'price' => 509990,
+                'stock' => 5,
+                'image' => 'iPhone14Ejfekete.jpg'
+            ),
+            array(
+                'category_id' => 1,
+                'model' => 'iPhone 14',
+                'color' => 'éjfekete',
+                'storage' => 512,
+                'popular' => 1,
+                'price' => 629990,
+                'stock' => 3,
+                'image' => 'iPhone14Ejfekete.jpg'
+            ),
+            array(
+                'category_id' => 1,
+                'model' => 'iPhone 14',
+                'color' => 'csillagfény',
+                'storage' => 128,
+                'popular' => 0,
+                'price' => 449990,
+                'stock' => 5,
+                'image' => 'iPhone14Csillagfeny.jpg'
+            ),
+            array(
+                'category_id' => 1,
+                'model' => 'iPhone 14',
+                'color' => 'csillagfény',
+                'storage' => 256,
+                'popular' => 1,
+                'price' => 509990,
+                'stock' => 3,
+                'image' => 'iPhone14Csillagfeny.jpg'
+            ),
+            array(
+                'category_id' => 1,
+                'model' => 'iPhone 14',
+                'color' => 'csillagfény',
+                'storage' => 512,
+                'popular' => 0,
+                'price' => 629990,
+                'stock' => 2,
+                'image' => 'iPhone14Csillagfeny.jpg'
+            ),
+            array(
+                'category_id' => 1,
+                'model' => 'iPhone 14',
+                'color' => '(PRODUCT)RED',
+                'storage' => 128,
+                'popular' => 0,
+                'price' => 449990,
+                'stock' => 4,
+                'image' => 'iPhone14ProductRed.jpg'
+            ),
+            array(
+                'category_id' => 1,
+                'model' => 'iPhone 14',
+                'color' => '(PRODUCT)RED',
+                'storage' => 256,
+                'popular' => 1,
+                'price' => 509990,
+                'stock' => 3,
+                'image' => 'iPhone14ProductRed.jpg'
+            ),
+            array(
+                'category_id' => 1,
+                'model' => 'iPhone 14',
+                'color' => '(PRODUCT)RED',
+                'storage' => 512,
+                'popular' => 0,
+                'price' => 629990,
+                'stock' => 3,
+                'image' => 'iPhone14ProductRed.jpg'
+            ),
+            //13
+            array(
+                'category_id' => 1,
+                'model' => 'iPhone 13',
+                'color' => 'rózsaszín',
+                'storage' => 128,
+                'popular' => 1,
+                'price' => 389000,
+                'stock' => 2,
+                'image' => 'iphone13Rozsaszin.jpg'
+            ),
+            array(
+                'category_id' => 1,
+                'model' => 'iPhone 13',
+                'color' => 'rózsaszín',
+                'storage' => 256,
+                'popular' => 0,
+                'price' => 449000,
+                'stock' => 1,
+                'image' => 'iphone13Rozsaszin.jpg'
+            ),
+            array(
+                'category_id' => 1,
+                'model' => 'iPhone 13',
+                'color' => 'rózsaszín',
+                'storage' => 512,
+                'popular' => 0,
+                'price' => 569000,
+                'stock' => 1,
+                'image' => 'iphone13Rozsaszin.jpg'
+            ),
+            array(
+                'category_id' => 1,
+                'model' => 'iPhone 13',
+                'color' => 'kék',
+                'storage' => 128,
+                'popular' => 0,
+                'price' => 389000,
+                'stock' => 1,
+                'image' => 'iphone13Kek.jpg'
+            ),
+            array(
+                'category_id' => 1,
+                'model' => 'iPhone 13',
+                'color' => 'kék',
+                'storage' => 256,
+                'popular' => 0,
+                'price' => 449000,
+                'stock' => 0,
+                'image' => 'iphone13Kek.jpg'
+            ),
+            array(
+                'category_id' => 1,
+                'model' => 'iPhone 13',
+                'color' => 'kék',
+                'storage' => 512,
+                'popular' => 0,
+                'price' => 569000,
+                'stock' => 0,
+                'image' => 'iphone13Kek.jpg'
+            ),
+            array(
+                'category_id' => 1,
+                'model' => 'iPhone 13',
+                'color' => 'éjfekete',
+                'storage' => 128,
+                'popular' => 0,
+                'price' => 389000,
+                'stock' => 3,
+                'image' => 'iPhone13Ejfekete.jpg'
+            ),
+            array(
+                'category_id' => 1,
+                'model' => 'iPhone 13',
+                'color' => 'éjfekete',
+                'storage' => 256,
+                'popular' => 0,
+                'price' => 449000,
+                'stock' => 1,
+                'image' => 'iPhone13Ejfekete.jpg'
+            ),
+            array(
+                'category_id' => 1,
+                'model' => 'iPhone 13',
+                'color' => 'éjfekete',
+                'storage' => 512,
+                'popular' => 0,
+                'price' => 569000,
+                'stock' => 0,
+                'image' => 'iPhone13Ejfekete.jpg'
+            ),
+            array(
+                'category_id' => 1,
+                'model' => 'iPhone 13',
+                'color' => 'csillagfény',
+                'storage' => 128,
+                'popular' => 0,
+                'price' => 389000,
+                'stock' => 2,
+                'image' => 'iphone13Csillagfeny.jpg'
+            ),
+            array(
+                'category_id' => 1,
+                'model' => 'iPhone 13',
+                'color' => 'csillagfény',
+                'storage' => 256,
+                'popular' => 0,
+                'price' => 449000,
+                'stock' => 1,
+                'image' => 'iphone13Csillagfeny.jpg'
+            ),
+            array(
+                'category_id' => 1,
+                'model' => 'iPhone 13',
+                'color' => 'csillagfény',
+                'storage' => 512,
+                'popular' => 0,
+                'price' => 569000,
+                'stock' => 0,
+                'image' => 'iphone13Csillagfeny.jpg'
+            ),
+            array(
+                'category_id' => 1,
+                'model' => 'iPhone 13',
+                'color' => 'zöld',
+                'storage' => 128,
+                'popular' => 0,
+                'price' => 389000,
+                'stock' => 2,
+                'image' => 'iPhone12Zold.jpg'
+            ),
+            array(
+                'category_id' => 1,
+                'model' => 'iPhone 13',
+                'color' => 'zöld',
+                'storage' => 256,
+                'popular' => 0,
+                'price' => 449000,
+                'stock' => 1,
+                'image' => 'iPhone12Zold.jpg'
+            ),
+            array(
+                'category_id' => 1,
+                'model' => 'iPhone 13',
+                'color' => 'zöld',
+                'storage' => 512,
+                'popular' => 0,
+                'price' => 569000,
+                'stock' => 0,
+                'image' => 'iPhone12Zold.jpg'
+            ),
+            array(
+                'category_id' => 1,
+                'model' => 'iPhone 13',
+                'color' => '(PRODUCT)RED',
+                'storage' => 128,
+                'popular' => 1,
+                'price' => 389000,
+                'stock' => 2,
+                'image' => 'iPhone12ProductRed.jpg'
+            ),
+            array(
+                'category_id' => 1,
+                'model' => 'iPhone 13',
+                'color' => '(PRODUCT)RED',
+                'storage' => 256,
+                'popular' => 0,
+                'price' => 449000,
+                'stock' => 0,
+                'image' => 'iPhone12ProductRed.jpg'
+            ),
+            array(
+                'category_id' => 1,
+                'model' => 'iPhone 13',
+                'color' => '(PRODUCT)RED',
+                'storage' => 512,
+                'popular' => 0,
+                'price' => 569000,
+                'stock' => 0,
+                'image' => 'iPhone12ProductRed.jpg'
+            ),
+            //13 mini
+            array(
+                'category_id' => 1,
+                'model' => 'iPhone 13 mini',
+                'color' => 'rózsaszín',
+                'storage' => 128,
+                'popular' => 1,
+                'price' => 339000,
+                'stock' => 2,
+                'image' => 'iphone13MiniRozsaszin.jpg'
+            ),
+            array(
+                'category_id' => 1,
+                'model' => 'iPhone 13 mini',
+                'color' => 'rózsaszín',
+                'storage' => 256,
+                'popular' => 0,
+                'price' => 399000,
+                'stock' => 1,
+                'image' => 'iphone13MiniRozsaszin.jpg'
+            ),
+            array(
+                'category_id' => 1,
+                'model' => 'iPhone 13 mini',
+                'color' => 'rózsaszín',
+                'storage' => 512,
+                'popular' => 0,
+                'price' => 519000,
+                'stock' => 0,
+                'image' => 'iphone13MiniRozsaszin.jpg'
+            ),
+            array(
+                'category_id' => 1,
+                'model' => 'iPhone 13 mini',
+                'color' => 'kék',
+                'storage' => 128,
+                'popular' => 0,
+                'price' => 339000,
+                'stock' => 2,
+                'image' => 'iphone13MiniKek.jpg'
+            ),
+            array(
+                'category_id' => 1,
+                'model' => 'iPhone 13 mini',
+                'color' => 'kék',
+                'storage' => 256,
+                'popular' => 0,
+                'price' => 399000,
+                'stock' => 1,
+                'image' => 'iphone13MiniKek.jpg'
+            ),
+            array(
+                'category_id' => 1,
+                'model' => 'iPhone 13 mini',
+                'color' => 'kék',
+                'storage' => 512,
+                'popular' => 0,
+                'price' => 519000,
+                'stock' => 0,
+                'image' => 'iphone13MiniKek.jpg'
+            ),
+            array(
+                'category_id' => 1,
+                'model' => 'iPhone 13 mini',
+                'color' => 'éjfekete',
+                'storage' => 128,
+                'popular' => 1,
+                'price' => 339000,
+                'stock' => 4,
+                'image' => 'iPhone13MiniEjfekete.jpg'
+            ),
+            array(
+                'category_id' => 1,
+                'model' => 'iPhone 13 mini',
+                'color' => 'éjfekete',
+                'storage' => 256,
+                'popular' => 0,
+                'price' => 399000,
+                'stock' => 2,
+                'image' => 'iPhone13MiniEjfekete.jpg'
+            ),
+            array(
+                'category_id' => 1,
+                'model' => 'iPhone 13 mini',
+                'color' => 'éjfekete',
+                'storage' => 512,
+                'popular' => 0,
+                'price' => 519000,
+                'stock' => 2,
+                'image' => 'iPhone13MiniEjfekete.jpg'
+            ),
+            array(
+                'category_id' => 1,
+                'model' => 'iPhone 13 mini',
+                'color' => 'csillagfény',
+                'storage' => 128,
+                'popular' => 1,
+                'price' => 339000,
+                'stock' => 3,
+                'image' => 'iphone13MiniCsillagfeny.jpg'
+            ),
+            array(
+                'category_id' => 1,
+                'model' => 'iPhone 13 mini',
+                'color' => 'csillagfény',
+                'storage' => 256,
+                'popular' => 0,
+                'price' => 399000,
+                'stock' => 1,
+                'image' => 'iphone13MiniCsillagfeny.jpg'
+            ),
+            array(
+                'category_id' => 1,
+                'model' => 'iPhone 13 mini',
+                'color' => 'csillagfény',
+                'storage' => 512,
+                'popular' => 0,
+                'price' => 519000,
+                'stock' => 0,
+                'image' => 'iphone13MiniCsillagfeny.jpg'
+            ),
+            array(
+                'category_id' => 1,
+                'model' => 'iPhone 13 mini',
+                'color' => 'zöld',
+                'storage' => 128,
+                'popular' => 0,
+                'price' => 339000,
+                'stock' => 1,
+                'image' => 'iphone13MiniZold.jpg'
+            ),
+            array(
+                'category_id' => 1,
+                'model' => 'iPhone 13 mini',
+                'color' => 'zöld',
+                'storage' => 256,
+                'popular' => 0,
+                'price' => 399000,
+                'stock' => 0,
+                'image' => 'iphone13MiniZold.jpg'
+            ),
+            array(
+                'category_id' => 1,
+                'model' => 'iPhone 13 mini',
+                'color' => 'zöld',
+                'storage' => 512,
+                'popular' => 0,
+                'price' => 519000,
+                'stock' => 0,
+                'image' => 'iphone13MiniZold.jpg'
+            ),
+            array(
+                'category_id' => 1,
+                'model' => 'iPhone 13 mini',
+                'color' => '(PRODUCT)RED',
+                'storage' => 128,
+                'popular' => 1,
+                'price' => 339000,
+                'stock' => 1,
+                'image' => 'iPhone13MiniProductRed.jpg'
+            ),
+            array(
+                'category_id' => 1,
+                'model' => 'iPhone 13 mini',
+                'color' => '(PRODUCT)RED',
+                'storage' => 256,
+                'popular' => 0,
+                'price' => 399000,
+                'stock' => 1,
+                'image' => 'iPhone13MiniProductRed.jpg'
+            ),
+            array(
+                'category_id' => 1,
+                'model' => 'iPhone 13 mini',
+                'color' => '(PRODUCT)RED',
+                'storage' => 512,
+                'popular' => 0,
+                'price' => 519000,
+                'stock' => 0,
+                'image' => 'iPhone13MiniProductRed.jpg'
+            ),
+            //SE
+            array(
+                'category_id' => 1,
+                'model' => 'iPhone SE',
+                'color' => 'éjfekete',
+                'storage' => 64,
+                'popular' => 1,
+                'price' => 239990,
+                'stock' => 1,
+                'image' => 'iPhoneSEejfekete.jpg'
+            ),
+            array(
+                'category_id' => 1,
+                'model' => 'iPhone SE',
+                'color' => 'éjfekete',
+                'storage' => 128,
+                'popular' => 0,
+                'price' => 269990,
+                'stock' => 1,
+                'image' => 'iPhoneSEejfekete.jpg'
+            ),
+            array(
+                'category_id' => 1,
+                'model' => 'iPhone SE',
+                'color' => 'éjfekete',
+                'storage' => 256,
+                'popular' => 0,
+                'price' => 329990,
+                'stock' => 0,
+                'image' => 'iPhoneSEejfekete.jpg'
+            ),
+            array(
+                'category_id' => 1,
+                'model' => 'iPhone SE',
+                'color' => 'csillagfény',
+                'storage' => 64,
+                'popular' => 0,
+                'price' => 239990,
+                'stock' => 1,
+                'image' => 'iPhoneSEcsillagfeny.jpg'
+            ),
+            array(
+                'category_id' => 1,
+                'model' => 'iPhone SE',
+                'color' => 'csillagfény',
+                'storage' => 128,
+                'popular' => 0,
+                'price' => 269990,
+                'stock' => 0,
+                'image' => 'iPhoneSEcsillagfeny.jpg'
+            ),
+            array(
+                'category_id' => 1,
+                'model' => 'iPhone SE',
+                'color' => 'csillagfény',
+                'storage' => 256,
+                'popular' => 0,
+                'price' => 329990,
+                'stock' => 0,
+                'image' => 'iPhoneSEcsillagfeny.jpg'
+            ),
+            array(
+                'category_id' => 1,
+                'model' => 'iPhone SE',
+                'color' => '(PRODUCT)RED',
+                'storage' => 64,
+                'popular' => 1,
+                'price' => 239990,
+                'stock' => 0,
+                'image' => 'iPhoneSEproductRed.jpg'
+            ),
+            array(
+                'category_id' => 1,
+                'model' => 'iPhone SE',
+                'color' => '(PRODUCT)RED',
+                'storage' => 128,
+                'popular' => 0,
+                'price' => 269990,
+                'stock' => 1,
+                'image' => 'iPhoneSEproductRed.jpg'
+            ),
+            array(
+                'category_id' => 1,
+                'model' => 'iPhone SE',
+                'color' => '(PRODUCT)RED',
+                'storage' => 256,
+                'popular' => 0,
+                'price' => 329990,
+                'stock' => 1,
+                'image' => 'iPhoneSEproductRed.jpg'
+            ),
+            //12
+            array(
+                'category_id' => 1,
+                'model' => 'iPhone 12',
+                'color' => 'kék',
+                'storage' => 64,
+                'popular' => 1,
+                'price' => 339990,
+                'stock' => 0,
+                'image' => 'iPhone12Kek.jpg'
+            ),
+            array(
+                'category_id' => 1,
+                'model' => 'iPhone 12',
+                'color' => 'kék',
+                'storage' => 128,
+                'popular' => 0,
+                'price' => 369990,
+                'stock' => 1,
+                'image' => 'iPhone12Kek.jpg'
+            ),
+            array(
+                'category_id' => 1,
+                'model' => 'iPhone 12',
+                'color' => 'kék',
+                'storage' => 256,
+                'popular' => 0,
+                'price' => 429990,
+                'stock' => 0,
+                'image' => 'iPhone12Kek.jpg'
+            ),
+            array(
+                'category_id' => 1,
+                'model' => 'iPhone 12',
+                'color' => 'lila',
+                'storage' => 64,
+                'popular' => 0,
+                'price' => 339990,
+                'stock' => 0,
+                'image' => 'iPhone12Lila.jpg'
+            ),
+            array(
+                'category_id' => 1,
+                'model' => 'iPhone 12',
+                'color' => 'lila',
+                'storage' => 128,
+                'popular' => 0,
+                'price' => 369990,
+                'stock' => 1,
+                'image' => 'iPhone12Lila.jpg'
+            ),
+            array(
+                'category_id' => 1,
+                'model' => 'iPhone 12',
+                'color' => 'lila',
+                'storage' => 256,
+                'popular' => 0,
+                'price' => 429990,
+                'stock' => 0,
+                'image' => 'iPhone12Lila.jpg'
+            ),
+            array(
+                'category_id' => 1,
+                'model' => 'iPhone 12',
+                'color' => 'zöld',
+                'storage' => 64,
+                'popular' => 1,
+                'price' => 339990,
+                'stock' => 0,
+                'image' => 'iPhone12Zold.jpg'
+            ),
+            array(
+                'category_id' => 1,
+                'model' => 'iPhone 12',
+                'color' => 'zöld',
+                'storage' => 128,
+                'popular' => 0,
+                'price' => 369990,
+                'stock' => 1,
+                'image' => 'iPhone12Zold.jpg'
+            ),
+            array(
+                'category_id' => 1,
+                'model' => 'iPhone 12',
+                'color' => 'zöld',
+                'storage' => 256,
+                'popular' => 0,
+                'price' => 429990,
+                'stock' => 0,
+                'image' => 'iPhone12Zold.jpg'
+            ),
+            array(
+                'category_id' => 1,
+                'model' => 'iPhone 12',
+                'color' => 'fehér',
+                'storage' => 64,
+                'popular' => 1,
+                'price' => 339990,
+                'stock' => 1,
+                'image' => 'iPhone12Feher.jpg'
+            ),
+            array(
+                'category_id' => 1,
+                'model' => 'iPhone 12',
+                'color' => 'fehér',
+                'storage' => 128,
+                'popular' => 0,
+                'price' => 369990,
+                'stock' => 1,
+                'image' => 'iPhone12Feher.jpg'
+            ),
+            array(
+                'category_id' => 1,
+                'model' => 'iPhone 12',
+                'color' => 'fehér',
+                'storage' => 256,
+                'popular' => 0,
+                'price' => 429990,
+                'stock' => 1,
+                'image' => 'iPhone12Feher.jpg'
+            ),
+            array(
+                'category_id' => 1,
+                'model' => 'iPhone 12',
+                'color' => 'fekete',
+                'storage' => 64,
+                'popular' => 1,
+                'price' => 339990,
+                'stock' => 1,
+                'image' => 'iPhone12Fekete.jpg'
+            ),
+            array(
+                'category_id' => 1,
+                'model' => 'iPhone 12',
+                'color' => 'fekete',
+                'storage' => 128,
+                'popular' => 0,
+                'price' => 369990,
+                'stock' => 1,
+                'image' => 'iPhone12Fekete.jpg'
+            ),
+            array(
+                'category_id' => 1,
+                'model' => 'iPhone 12',
+                'color' => 'fekete',
+                'storage' => 256,
+                'popular' => 0,
+                'price' => 429990,
+                'stock' => 1,
+                'image' => 'iPhone12Fekete.jpg'
+            ),
+            array(
+                'category_id' => 1,
+                'model' => 'iPhone 12',
+                'color' => '(PRODUCT)RED',
+                'storage' => 64,
+                'popular' => 1,
+                'price' => 339990,
+                'stock' => 1,
+                'image' => 'iPhone12ProductRed.jpg'
+            ),
+            array(
+                'category_id' => 1,
+                'model' => 'iPhone 12',
+                'color' => '(PRODUCT)RED',
+                'storage' => 128,
+                'popular' => 0,
+                'price' => 369990,
+                'stock' => 1,
+                'image' => 'iPhone12ProductRed.jpg'
+            ),
+            array(
+                'category_id' => 1,
+                'model' => 'iPhone 12',
+                'color' => '(PRODUCT)RED',
+                'storage' => 256,
+                'popular' => 0,
+                'price' => 429990,
+                'stock' => 1,
+                'image' => 'iPhone12ProductRed.jpg'
+            ),
         );
         DB::table('products')->insert($iphones);
 
