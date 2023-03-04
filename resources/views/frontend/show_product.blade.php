@@ -12,7 +12,7 @@
             </h6>
         </div>
     </div>
-    <div class="container py-5 iphones">
+    <div class="container py-5 products">
         <div class="card mx-auto shadow productData" style="max-width: 40rem">
             <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-indicators">

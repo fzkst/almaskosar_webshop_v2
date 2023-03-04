@@ -15,7 +15,7 @@
                     @foreach ($popular_products as $product)
                             <div class="card" style="max-width: 18rem">
                                 <a href="{{ url('/frontend/show_product/'.$product->id) }}">
-                                    <img src="{{ asset('img/uploads/products/'.Arr::random($letters).$product->image) }}" alt="{{ $product->image }}"></a>
+                                    <img class="card-img" src="{{ asset('img/uploads/products/'.Arr::random($letters).$product->image) }}" alt="{{ $product->image }}"></a>
                                 <div class="card-body">
                                     <h6 class="fw-bold">{{ $product->model }}</h6>
                                     <div class="card-text fs-6">
@@ -32,8 +32,8 @@
                                             @else
                                                 Nincs raktáron
                                             @endif
+                                            <input class="stock" type="hidden" value="{{ $product->stock }}">
                                         </span>
-                                        <input class="stock" type="hidden" value="{{ $product->stock }}">
                                     </div>
                                     <div class="col">
                                         @php
@@ -75,7 +75,8 @@
                 }
         });
 
-        var stock = parseInt($('.stock').text());
+        var stock = parseInt($('.stock').val());
+        console.log(stock);
             if (stock < 1){
                 $('.stock-color').css({color: 'red'});
             } else {
