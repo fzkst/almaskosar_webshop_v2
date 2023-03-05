@@ -46,7 +46,7 @@ body {
 }
 
 /*OWL CAROUSEL*/
-.owlcarousel, img {
+.owlcarousel, .img-rounded {
     border-radius: 20px 20px 0px 0px;
 }
 
@@ -66,6 +66,10 @@ body {
     color: black;
 }
 
+.h6-bold {
+    font-weight: bold;
+}
+
 /*SHOW_PRODUCT*/
 .carousel-indicators .active {
     background-color: darkgray;
@@ -81,6 +85,14 @@ body {
 
 .kiskartya {
     font-size: smaller;
+}
+
+/*CART*/
+.quantity {
+    max-width: 50px;
+}
+.delete-cart-item {
+    margin-bottom: 4px;
 }
 
 /*FOOTER*/

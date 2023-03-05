@@ -9,6 +9,7 @@
     {{--BOOTSTRAP--}}
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    {{--SWEET ALERT2--}}
     <link href='https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.min.css'>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     {{--OWL CAROUSEL--}}
@@ -27,7 +28,7 @@
         @include('frontend.components.frontendnavbar')
         @include('frontend.components.carousel')
     </header>
-    <main class="shado">
+    <main> {{-- class=shadow? --}}
         <div>
             @yield('content')
         </div>
@@ -39,15 +40,26 @@
 </div>
 </div>
 
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    {{-- <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> --}}
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     @if (session('message'))
         <script>
             swal("{{ session('message') }}")
+            Swal.fire({
+                icon: icon,
+                text: message,
+                confirmButtonText: 'OK'
+            });
         </script>
     @endif
     @if (session('status'))
         <script>
             swal("{{ session('status') }}")
+            Swal.fire({
+                icon: icon,
+                text: status,
+                confirmButtonText: 'OK'
+            });
         </script>
     @endif
 

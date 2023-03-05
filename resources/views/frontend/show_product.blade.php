@@ -22,13 +22,13 @@
                   </div>
                 <div class="carousel-inner">
                   <div class="carousel-item active" data-bs-interval="2000">
-                    <img src="{{ asset('img/uploads/products/'.'A'.$product->image) }}" alt="{{ $product->image }}" class="d-block w-100" alt="{{$product->model}}">
+                    <img src="{{ asset('img/uploads/products/'.'A'.$product->image) }}" alt="{{ $product->image }}" class="d-block w-100 img-rounded" alt="{{$product->model}}">
                   </div>
                   <div class="carousel-item" data-bs-interval="2000">
-                    <img src="{{ asset('img/uploads/products/'.'B'.$product->image) }}" alt="{{ $product->image }}" class="d-block w-100" alt="{{$product->model}}">
+                    <img src="{{ asset('img/uploads/products/'.'B'.$product->image) }}" alt="{{ $product->image }}" class="d-block w-100 img-rounded" alt="{{$product->model}}">
                   </div>
                   <div class="carousel-item" data-bs-interval="2000">
-                    <img src="{{ asset('img/uploads/products/'.'C'.$product->image) }}" alt="{{ $product->image }}" class="d-block w-100" alt="{{$product->model}}">
+                    <img src="{{ asset('img/uploads/products/'.'C'.$product->image) }}" alt="{{ $product->image }}" class="d-block w-100 img-rounded" alt="{{$product->model}}">
                   </div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
@@ -50,7 +50,7 @@
                     $formated_price = number_format($product->price, 0, '.', '.');
                 @endphp
                 <div class="mt-2">
-                    <span class="me-2 stock-color">Raktáron</span><span class="stock stock-color">{{ $product->stock }}</span>
+                    <span class="me-2 {{ $product->stock < 1 ? "text-danger" : "text-success" }}">Raktáron</span><span class="stockOLD {{ $product->stock < 1 ? "text-danger" : "text-success" }}">{{ $product->stock }}</span>
                     <span class="float-end">{{ $formated_price }}.-</span class="float-end">
                 </div>
             </div>
@@ -59,6 +59,7 @@
                     <div class="col-3">
                         <input class="productId" type="hidden" value="{{ $product->id }}">
                         <input class="categoryId" type="hidden" value="{{ $product->category_id }}">
+                        <input class="stock-value" type="hidden" value="{{ $product->stock }}">
                         <div class="input-group text-center">
                             <button class="input-group-text decrement">-</button>
                             <input class="form-control text-center quantity" type="text" name="quantity" value="1" size="10">
@@ -66,7 +67,7 @@
                         </div>
                     </div>
                     <div class="col-9 d-flex justify-content-end">
-                        <button class="btn btn-outline-secondary text-end addToCart">Kosárba <i class="fa fa-shopping-cart"></i></button>
+                        <button class="btn btn-outline-secondary text-end addToCart {{ $product->stock < 1 ? "disabled" : "" }}">Kosárba <i class="fa fa-shopping-cart"></i></button>
                     </div>
                 </div>
             </div>
@@ -77,15 +78,23 @@
 @section('scripts')
     <script>
         $(document).ready(function () {
+
             $('.increment').click(function (e) {
                 e.preventDefault();
                 var value = parseInt($('.quantity').val());
                 value = isNaN(value) ? '0' : value;
-                if(value < 10){
+                var stock = parseInt($('.stock-value').val());
+                if(value < stock){
                     value++;
                     $(".quantity").val(value);
+                } else {
+                    Swal.fire({
+                        text: 'Csak a készlet erejéig tud terméket helyezni a kosárba!',
+                        confirmButtonText: 'OK'
+                    })
                 }
             });
+
 
             $('.decrement').click(function (e) {
                 e.preventDefault();
@@ -97,27 +106,12 @@
                 }
             });
 
-            var stock = parseInt($('.stock').text());
-            if (stock < 1){
-                $('.stock-color').css({color: 'red'});
-            } else {
-                $('.stock-color').css({color: 'green'});
-            }
-
-
 
             $('.addToCart').click(function (e) {
                 e.preventDefault();
-
                 var category_id = $(this).closest('.productData').find('.categoryId').val();
                 var product_id = $(this).closest('.productData').find('.productId').val();
                 var product_quantity = $(this).closest('.productData').find('.quantity').val();
-
-                /* $.ajaxSetup({
-                    headers: {
-                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                    }
-                }); */
 
                 $.ajax({
                     method: "POST",
@@ -131,7 +125,11 @@
                         'product_quantity': product_quantity,
                     },
                     success: function (response) {
-                        alert(response.status);
+                        Swal.fire({
+                        icon: response.icon,
+                        text: response.status,
+                        confirmButtonText: 'OK'
+                        });
                     }
                 });
             });

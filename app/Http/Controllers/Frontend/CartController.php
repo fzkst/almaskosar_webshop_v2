@@ -25,7 +25,7 @@ class CartController extends Controller
             if($product_check){
                 if(Cart::where('product_id', $product_id)->where('user_id', Auth::id())->exists())
                 {
-                    return response()->json(['status' => "Az ".$product_check->model." már a kosárban van!"]);
+                    return response()->json(['status' => "Az ".$product_check->model." már a kosárban van!", 'icon' => "info"]);
                 }
                 else
                 {
@@ -35,14 +35,14 @@ class CartController extends Controller
                     $cartItem->product_id = $product_id;
                     $cartItem->product_quantity = $product_quantity;
                     $cartItem->save();
-                    return response()->json(['status' => $product_check->model." Sikeresen hozzáadva a kosárhoz!"]);
+                    return response()->json(['status' => $product_check->model." Sikeresen hozzáadva a kosárhoz!", 'icon' => "success"]);
                 }
 
             }
 
         }
         else {
-            return response()->json(['status' => "Előbb jelentkezzen be!"]);
+            return response()->json(['status' => "Előbb jelentkezzen be!", 'icon' => "error"]);
         }
     }
 
@@ -59,11 +59,11 @@ class CartController extends Controller
             if (Cart::where('product_id', $product_id)->where('user_id', Auth::id())->exists()){
                 $cartItem = Cart::where('product_id', $product_id)->where('user_id', Auth::id())->first();
                 $cartItem->delete();
-                return response()->json(['status' => 'A termék törlése sikeres!']);
+                return response()->json(['status' => 'A termék törlése sikeres!', 'icon' => "success"]);
             }
         }
         else {
-            return response()->json(['status' => "Előbb jelentkezzen be!"]);
+            return response()->json(['status' => "Előbb jelentkezzen be!", 'icon' => "error"]);
         }
 
     }

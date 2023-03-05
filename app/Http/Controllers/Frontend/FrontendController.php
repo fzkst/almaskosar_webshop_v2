@@ -16,9 +16,6 @@ use function PHPUnit\Framework\isNull;
 class FrontendController extends Controller
 {
     public function index() {
-        /* $pop_iphones = DB::table('iphones')->where('popular', 1)->get()->toArray();
-        $pop_ipads = DB::table('ipads')->where('popular', 1)->get()->toArray();
-        $popular_products = array_merge($pop_iphones, $pop_ipads); */
         $letters = ['A', 'B', 'C'];
         $popular_products = DB::table('products')->where('popular', 1)->get();
         return view('frontend.index', compact(['popular_products', 'letters']));
@@ -44,11 +41,9 @@ class FrontendController extends Controller
     }
 
     public function show_product($id) {
-        //$product = DB::table('products')->where('id', $id)->get();
         $product = Product::find($id);
-        //$iphone = Iphone::find($id);
         if(is_null($product)){
-            return response()->json(["message" => "Ilyen azonosítóval nem található termék!"], 404);
+            return response()->json(["message" => "Ilyen azonosítóval nem található termék!", 'icon' => "error"], 404);
         }
         return view('frontend.show_product', compact('product'));
     }
@@ -62,8 +57,7 @@ class FrontendController extends Controller
     }
 
     public function uzletek(Request $request) {
-        $req = $request->route()->getName();
-        return view('frontend.footer_components.uzletek', compact(['req']));
+        return view('frontend.footer_components.uzletek');
     }
 
     public function szallitas() {

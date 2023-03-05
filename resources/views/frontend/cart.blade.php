@@ -4,6 +4,12 @@
     <div class="container py-5">
         <div class="card shadow">
             <div class="card-body">
+                @php
+                    $carts = DB::table('carts')->get();
+                @endphp
+                @if ($carts->isEmpty())
+                    <h5 class="text-center">A kosár üres.</h5>
+                @endif
                 @foreach ($cartItems as $item)
                     <div class="row productData">
                         <div class="col-md-2">
@@ -12,16 +18,17 @@
                         <div class="col-md-5 d-flex align-items-center">
                             <h6 class="">{{ $item->products->model }}</h6>
                         </div>
-                        <div class="col-md-3">
+                        <div class="col-md-3 mt-3 d-flex align-items-center">
                             <input type="hidden" class="product_id" value="{{ $item->product_id }}">
-                            <label for="quantity">Mennyiség</label>
-                            <div class="input-group text-center mb-3">
+                            <input type="hidden" class="stock-value" value="{{ $item->products->stock }}">
+                            {{-- <label for="quantity">Mennyiség</label> --}}
+                            <div class="input-group text-center mb-3 d-flex justify-content-end">
                                 <button class="input-group-text decrement">-</button>
                                 <input class="form-control quantity text-center" type="text" name="quantity" value="{{ $item->product_quantity}}">
-                                <button class="input-group-text increment">-</button>
+                                <button class="input-group-text increment">+</button>
                             </div>
                         </div>
-                        <div class="col-md-2 d-flex align-items-center mt-2">
+                        <div class="col-md-2 d-flex align-items-center mt-1">
                             <button class="btn btn-danger delete-cart-item"><i class="fa fa-trash"></i> Törlés</button>
                         </div>
                     </div>
@@ -36,65 +43,28 @@
         $(document).ready(function () {
             $('.increment').click(function (event) {
                 event.preventDefault();
-                //var value = parseInt($('.quantity').val());
                 var value = parseInt($(this).closest('.productData').find('.quantity').val());
                 value = isNaN(value) ? '0' : value;
-                if(value < 10){
+                var stock = parseInt($('.stock-value').val());
+                if(value < stock){
                     value++;
-                    //$(".quantity").val(value);
                     $(this).closest('.productData').find('.quantity').val(value);
+                } else {
+                    Swal.fire({
+                        text: 'Csak a készlet erejéig tud terméket helyezni a kosárba!',
+                        confirmButtonText: 'OK'
+                    });
                 }
             });
 
             $('.decrement').click(function (event) {
                 event.preventDefault();
-                //var value = parseInt($('.quantity').val());
                 var value = parseInt($(this).closest('.productData').find('.quantity').val());
                 value = isNaN(value) ? '0' : value;
                 if (value > 1){
                     value--;
-                    //$(".quantity").val(value);
                     $(this).closest('.productData').find('.quantity').val(value);
                 }
-            });
-
-            var stock = parseInt($('.stock').text());
-            if (stock < 1){
-                $('.stock-color').css({color: 'red'});
-            } else {
-                $('.stock-color').css({color: 'green'});
-            }
-
-
-
-            $('.addToCart').click(function (event) {
-                event.preventDefault();
-
-                var category_id = $(this).closest('.productData').find('.categoryId').val();
-                var product_id = $(this).closest('.productData').find('.productId').val();
-                var product_quantity = $(this).closest('.productData').find('.quantity').val();
-
-                /* $.ajaxSetup({
-                    headers: {
-                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                    }
-                }); */
-
-                $.ajax({
-                    method: "POST",
-                    url: "/add_to_cart",
-                    headers: {
-                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                    },
-                    data: {
-                        'category_id': category_id,
-                        'product_id': product_id,
-                        'product_quantity': product_quantity,
-                    },
-                    success: function (response) {
-                        alert(response.status);
-                    }
-                });
             });
 
             $('.delete-cart-item').click( function (event){
@@ -112,12 +82,15 @@
                     data: {
                         'category_id': category_id,
                         'product_id': product_id,
-
                     },
                     success: function (response) {
-                        window.location.reload();
-                        swal("", response.status, "success");
-                        alert(response.status, "success");
+                        Swal.fire({
+                            icon: "success",
+                            text: response.status,
+                            confirmButtonText: 'OK'
+                        }).then(function() {
+                            window.location.reload();
+                        });
                     }
                 });
             });

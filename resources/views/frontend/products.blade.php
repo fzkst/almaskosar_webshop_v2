@@ -3,7 +3,7 @@
 @section('content')
     <div class="py-3 mb-4 shadow-sm linkline border-top">
         <div class="container">
-            <h6 class="mb-0"><a href="{{ url('/') }}">Almáskosár /</a>
+            <h6 class="mb-0"><a href="{{ url('/') }}"><span class=" h6-bold">Almáskosár /</span></a>
                 <span>{{ $categories[$products[0]->category_id - 1]->name }}</span>
             </h6>
         </div>
@@ -18,7 +18,7 @@
         <div class="row g-5">
             @foreach ($products as $product)
                 <div class="card col-md-4 mx-auto shadow kiskartya" style="max-width: 18rem">
-                    <img src="{{ asset('img/uploads/products/'.Arr::random($letters).$product->image) }}" alt="{{ $product->image }}">
+                    <img class="img-rounded" src="{{ asset('img/uploads/products/'.Arr::random($letters).$product->image) }}" alt="{{ $product->image }}">
                     <div class="card-body">
                         <p>{{ $product->model }}</p>
                         <div class="card-text">

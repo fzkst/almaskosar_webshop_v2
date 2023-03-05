@@ -1,9 +1,9 @@
 @extends('layouts.frontend')
 
 @section('content')
-    <div class="py-2 mb-4 shadow-sm linkline border-top">
+    <div class="py-3 mb-4 shadow-sm linkline border-top">
         <div class="container">
-            <h6 class="mb-0"><a href="{{ url('/') }}">Almáskosár</a></h6>
+            <h6 class="mb-0 h6-bold"><a href="{{ url('/') }}">Almáskosár</a></h6>
         </div>
     </div>
     @include('frontend.components.categories_cards')
@@ -15,7 +15,7 @@
                     @foreach ($popular_products as $product)
                             <div class="card" style="max-width: 18rem">
                                 <a href="{{ url('/frontend/show_product/'.$product->id) }}">
-                                    <img class="card-img" src="{{ asset('img/uploads/products/'.Arr::random($letters).$product->image) }}" alt="{{ $product->image }}"></a>
+                                    <img class="card-img img-rounded" src="{{ asset('img/uploads/products/'.Arr::random($letters).$product->image) }}" alt="{{ $product->image }}"></a>
                                 <div class="card-body">
                                     <h6 class="fw-bold">{{ $product->model }}</h6>
                                     <div class="card-text fs-6">
@@ -25,10 +25,10 @@
                                     </div>
                                 </div>
                                 <div class="card-footer">
-                                    <div class="col">
-                                        <span class="float-start stock-color">
+                                    <div class="col {{ $product->stock < 1 ? "text-danger" : "text-success" }}">
+                                        <span class="float-start">
                                             @if ($product->stock > 0)
-                                                Készleten
+                                                Raktáron: {{ $product->stock }}
                                             @else
                                                 Nincs raktáron
                                             @endif
@@ -75,12 +75,12 @@
                 }
         });
 
-        var stock = parseInt($('.stock').val());
+/*         var stock = parseInt($('.stock').val());
         console.log(stock);
             if (stock < 1){
                 $('.stock-color').css({color: 'red'});
             } else {
                 $('.stock-color').css({color: 'green'});
-            }
+            } */
     </script>
 @endsection
