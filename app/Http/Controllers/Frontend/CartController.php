@@ -25,7 +25,8 @@ class CartController extends Controller
             if($product_check){
                 if(Cart::where('product_id', $product_id)->where('user_id', Auth::id())->exists())
                 {
-                    return response()->json(['status' => "Az ".$product_check->model." már a kosárban van!", 'icon' => "info"]);
+                    return response()->json(['status' => "Az ".$product_check->model." már a kosárban van!\n
+                    Ha többet szeretne vásárolni, lehetősége lesz módosítani a mennyiséget a megrendelésnél.", 'icon' => "info"]);
                 }
                 else
                 {
@@ -42,12 +43,28 @@ class CartController extends Controller
 
         }
         else {
-            return response()->json(['status' => "Előbb jelentkezzen be!", 'icon' => "error"]);
+            return response()->json(['status' => "A vásárláshoz bejelentkezés szükséges!", 'icon' => "error"]);
+        }
+    }
+
+    public function updateProduct(Request $request) {
+
+        $product_id = $request->input('product_id');
+        $product_quantity = $request->input('product_quantity');
+
+        if (Auth::check()){
+
+            if (Cart::where('product_id', $product_id)->where('user_id', Auth::id())->exists()){
+                $cartItem = Cart::where('product_id', $product_id)->where('user_id', Auth::id())->first();
+                $cartItem->product_quantity = $product_quantity;
+                $cartItem->update();
+                return response()->json(['status' => 'A mennyiség módosítása sikeres!', 'icon' => "success"]);
+            }
         }
     }
 
 
-    public function cartview(){
+    public function indexCart(){
         $cartItems = Cart::where('user_id', Auth::id())->get();
         return view('frontend.cart', compact('cartItems'));
     }

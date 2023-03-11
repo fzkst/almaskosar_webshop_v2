@@ -6,6 +6,7 @@ use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\IphoneController;
 use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Frontend\CartController;
+use App\Http\Controllers\Frontend\CheckoutController;
 use App\Http\Controllers\Frontend\FrontendController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -56,18 +57,27 @@ Route::get('/frontend/ipads', [FrontendController::class, 'ipads']);
 Route::get('/frontend/macbooks', [FrontendController::class, 'macbooks']);
 /* Route::get('/frontend/show_iphone/{id}', [FrontendController::class, 'show_iphone']); */
 
+Route::get('filter', [FrontendController::class, 'filter']);
+
 Route::get('/frontend/show_product/{id}', [FrontendController::class, 'show_product']);
 Route::get('/frontend/footer_components/aszf', [FrontendController::class, 'aszf']);
-Route::get('/frontend/footer_components/tajekoztato', [FrontendController::class, 'tajekoztato']);
-Route::get('frontend/footer_components/uzletek', [FrontendController::class, 'uzletek']);
-Route::get('frontend/footer_components/szallitas', [FrontendController::class, 'szallitas']);
+Route::get('/frontend/footer_components/info', [FrontendController::class, 'info']);
+Route::get('frontend/footer_components/shops', [FrontendController::class, 'shops']);
+Route::get('frontend/footer_components/shipping', [FrontendController::class, 'shipping']);
 
 
 
 //CART
 Route::post('/add_to_cart', [CartController::class, 'addProduct'])->name('add_to_cart');
+Route::post('update-cart-item', [CartController::class, 'updateProduct']);
 Route::post('delete-cart-item', [CartController::class, 'deleteProduct']);
 
+
 Route::middleware(['auth'])->group( function () {
-    Route::get('cart', [CartController::class, 'cartview']);
+    Route::get('cart', [CartController::class, 'indexCart']);
+    Route::get('checkout', [CheckoutController::class, 'index']);
+    Route::post('order', [CheckoutController::class, 'ordering']);
+
+    Route::get('rendelesek', [FrontendController::class, 'indexOrders']);
+    Route::get('rendeleseim/{id}', [FrontendController::class, 'showOrder']);
 });

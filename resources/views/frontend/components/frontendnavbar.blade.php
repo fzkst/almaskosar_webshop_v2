@@ -16,7 +16,7 @@
                     <a class="nav-link {{ Request::is('frontend/ipads') ? 'active' : '' }}" href="{{ url('/frontend/ipads') }}">iPad</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link{{ Request::is('frontend/macbooks') ? 'active' : '' }}" href="{{ url('/frontend/macbooks') }}">MacBook</a>
+                    <a class="nav-link {{ Request::is('frontend/macbooks') ? 'active' : '' }}" href="{{ url('/frontend/macbooks') }}">MacBook</a>
                 </li>
             </ul>
             {{-- RIGHT SIDE --}}
@@ -37,13 +37,15 @@
                             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                 {{ Auth::user()->name }}
                             </a>
-                            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+
+                            <div class="dropdown-menu dropdown-menu-end drop-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="{{ url('/') }}">Beállítások</a>
+                                <a class="dropdown-item" href="{{ url('rendelesek') }}">Rendeléseim</a>
                                 <a class="dropdown-item" href="{{ route('logout') }}"
                                     onclick="event.preventDefault();
                                         document.getElementById('logout-form').submit();">
-                                    {{ __('Logout') }}
+                                    {{ __('Kilépés') }}
                                 </a>
-
                                 <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                     @csrf
                                 </form>

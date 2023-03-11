@@ -19,11 +19,14 @@ class UserFactory extends Factory
     public function definition()
     {
         $nem = fake()->randomElement(['male', 'female']);
-        $nev = fake()->lastName() . ' ' . fake()->firstName($nem);   //fake()->name($nem);
+        //$nev = fake()->lastName() . ' ' . fake()->firstName($nem);   //fake()->name($nem);
+        $keresztnev = fake()->firstName($nem);
+        $vezeteknev = fake()->lastName();
+        $nev = $vezeteknev.' '.$keresztnev;
         $ekezetesKarakterek = array('á', 'é', 'ö', 'ü', 'ő', 'ű', 'ú', 'í', ' ');
         $karakterek = array('a', 'e', 'o', 'u', 'o', 'u', 'u', 'i', '');
         $email = str_replace($ekezetesKarakterek, $karakterek, Str::lower($nev));
-        $randomNumber = random_int(10, 999);
+        $randomNumber = random_int(111, 999);
         $email = $email.$randomNumber."@gmail.com";
 
         return [
@@ -31,7 +34,14 @@ class UserFactory extends Factory
             'email' => $email,  //fake()->unique()->safeEmail(),
             'email_verified_at' => now(),
             'password' => Hash::make("password"),
-            'remember_token' => Str::random(10),
+            'last_name' => $vezeteknev,
+            'first_name' => $keresztnev,
+            'postal_code' => fake()->randomElement([1541, 2045, 1156]),
+            'city' => fake()->state(),
+            'address' => fake()->streetAddress(),
+            'phone_number' => fake()->phoneNumber(),
+            'customer_code' => $randomNumber,
+            'remember_token' => Str::random(10)
         ];
     }
 

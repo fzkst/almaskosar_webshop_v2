@@ -7,7 +7,7 @@
                 @php
                     $kategoria_neve = DB::table('categories')->where('id', $product->category_id)->get('name');
                 @endphp
-                <a href="{{ url('/frontend/'.$kategoria_neve[0]->name)}}">{{ $kategoria_neve[0]->name;}}</a>
+                <a href="{{ url('/frontend/'.$kategoria_neve[0]->name)}}">{{ $kategoria_neve[0]->name }}</a>
                 / {{ $product->model }}
             </h6>
         </div>
@@ -75,8 +75,8 @@
     </div>
 @endsection
 
-@section('scripts')
-    <script>
+@section('script')
+{{--     <script>
         $(document).ready(function () {
 
             $('.increment').click(function (e) {
@@ -135,5 +135,5 @@
             });
 
         });
-    </script>
+    </script> --}}
 @endsection

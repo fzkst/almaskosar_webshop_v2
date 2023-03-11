@@ -34,11 +34,13 @@ class LoginController extends Controller
      {
          if(Auth::user()->admin == '1') //1 = Admin Login
          {
-             return redirect('dashboard')->with('status','Welcome to your dashboard');
+             //return redirect('dashboard')->with('status','Welcome to your dashboard');
+             return redirect('dashboard')->with('status','Üdv az ADMIN felületen!');
          }
          elseif(Auth::user()->admin == '0') // Normal or Default User Login
          {
-             return redirect('/')->with('status','Logged in successfully');
+             //return redirect('/')->with('status','Logged in successfully');
+             return redirect('/')->with('status','Sikeres bejelentkezés!');
          }
      }
 

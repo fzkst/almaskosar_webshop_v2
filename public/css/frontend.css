@@ -25,9 +25,26 @@ body {
     background-color: black;
 }
 
+.drop-menu {
+    background-color: black;
+}
+
+.drop-menu a {
+    color: #9FA6B2;
+}
+
+.drop-menu a:hover {
+    background-color: black;
+    color: #9FA6B2;
+}
+
 @media (max-width: 800px) {
     .carouselcss {
       display: none;
+    }
+    /*CHECKOUT*/
+    .checkout-table th, td {
+        font-size: smaller;
     }
 }
 
@@ -52,6 +69,10 @@ body {
 
 .products-img .card-body {
     flex-grow: 0;
+}
+
+.carousel-body li, span {
+    font-size: small;
 }
 
 /*PRODUCTS*/
@@ -94,6 +115,7 @@ body {
 .delete-cart-item {
     margin-bottom: 4px;
 }
+
 
 /*FOOTER*/
 .footer {
@@ -138,4 +160,28 @@ body {
 /*ASZF*/
 .aszf li {
     list-style-type: none;
+}
+
+/*FILTER*/
+.filter .card{
+    min-width: 12rem;
+    max-width: 15rem;
+}
+
+#melylila { background-color: #36013F; }
+#arany { background-color: #f4e8ce; }
+#ezust { background-color: #f1f3f2; }
+#asztrofekete { background-color: #4f4e4c; }
+#kek { background-color: #a7b8ca; }
+#lila { background-color: #e5ddea; }
+#ejfekete { background-color: #2c333b; }
+#csillagfeny { background-color: #faf7f2; }
+#productred { background-color: #c82635; }
+#rozsaszin { background-color: #fbe2dd; }
+#zold { background-color: #495a48; }
+#feher { background-color: white; accent-color: darkgrey}
+
+/*SHOW ORDER*/
+.show-order td {
+    width: 100px;
 }

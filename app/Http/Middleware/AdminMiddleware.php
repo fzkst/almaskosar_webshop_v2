@@ -25,12 +25,14 @@ class AdminMiddleware
             }
             else
             {
-                return redirect('/home')->with('status','Access Denied! as you are not as admin');
+                //return redirect('/home')->with('status','Access Denied! as you are not as admin');
+                return redirect('/home')->with('status','Belépés csak az ADMIN-nak engedélyezett!');
             }
         }
         else
         {
-            return redirect('/home')->with('status','Please Login First');
+            //return redirect('/home')->with('status','Please Login First');
+            return redirect('/home')->with('status','Előbb jelentkezzen be!');
         }
     }
 }
