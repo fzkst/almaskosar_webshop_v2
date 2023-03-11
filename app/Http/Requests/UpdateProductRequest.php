@@ -30,7 +30,7 @@ class UpdateProductRequest extends FormRequest
             'storage' => 'required | integer',
             'price' => 'required | integer',
             'stock' => 'required | integer',
-            'image' => 'required | image'
+            //'image' => 'required | image'
         ];
     }
 }

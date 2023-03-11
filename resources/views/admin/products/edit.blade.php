@@ -1,13 +1,13 @@
 @extends('admin.admin')
 
 @section('content')
-    <div class="card">
+    <div class="card mb-5">
         <div class="cardheader mt-2">
             <h5>Termék adatainak szerkesztése</h5>
             <hr>
         </div>
         <div class="card-body" id="kategoria_urlap">
-            <form action="{{ url('products/A'.$product->id)}} " method="POST" enctype="multipart/form-data">
+            <form action="{{ url('products/'.$product->id)}} " method="POST" enctype="multipart/form-data">
                 @csrf
                 @method('PUT')
                 <div>
@@ -33,8 +33,34 @@
                         <input type="text" value="{{ $product->storage }}" class="form-control" name="storage">
                     </div>
                     <div class="mb-4">
+                        <label class="form-label" for="">CPU</label>
+                        <input type="text" value="{{ $product->cpu }}" class="form-control" name="cpu">
+                    </div>
+                    <div class="mb-4">
+                        <label class="form-label" for="">Memória</label>
+                        <input type="text" value="{{ $product->memory }}" class="form-control" name="memory">
+                    </div>
+                    <div class="mb-4">
+                        <label class="form-label" for="">Leírás</label>
+                        <textarea value="{{ $product->description }}" class="form-control" name="description" rows="5"></textarea>
+                    </div>
+                    <div class="row">
+                        <div class="col mb-4">
+                            <input type="checkbox" value="{{ $product->cellular }}" class="form-check-control" name="cellular">
+                            <label class="form-check-label" for="">Cellular</label>
+                        </div>
+                        <div class="col mb-4">
+                            <input type="checkbox" value="{{ $product->popular }}" class="form-check-control" name="popular">
+                            <label class="form-check-label" for="">Népszerű</label>
+                        </div>
+                    </div>
+                    <div class="mb-4">
                         <label class="form-label" for="">Ár</label>
                         <input type="text" value="{{ $product->price }}" class="form-control" name="price">
+                    </div>
+                    <div class="mb-4">
+                        <label class="form-label" for="">Akciós ár</label>
+                        <input type="text" value="{{ $product->sale_price }}" class="form-control" name="sale_price">
                     </div>
                     <div class="mb-4">
                         <label class="form-label" for="">Készlet</label>

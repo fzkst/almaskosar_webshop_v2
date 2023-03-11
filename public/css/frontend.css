@@ -35,7 +35,7 @@ body {
 
 .drop-menu a:hover {
     background-color: black;
-    color: #9FA6B2;
+    color: #bfbfbf;
 }
 
 @media (max-width: 800px) {

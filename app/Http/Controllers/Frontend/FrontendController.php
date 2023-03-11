@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Category;
 use App\Models\Order;
 use App\Models\Product;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -76,6 +77,24 @@ class FrontendController extends Controller
         return view('frontend.show_order', compact('order'));
     }
 
+    public function userSettings(){
+        return view('frontend.user_settings');
+    }
+
+    public function updateUsersDatas(Request $request){
+        $user = User::where('id', Auth::id())->first();
+        $user->last_name = $request->input('last_name');
+        $user->first_name = $request->input('first_name');
+        $user->email = $request->input('email');
+        $user->postal_code = $request->input('postal_code');
+        $user->city = $request->input('city');
+        $user->address = $request->input('address');
+        $user->phone_number = $request->input('phone_number');
+        $user->update();
+
+        return view('frontend.settings_response')->with(['status' => "Adatait sikeresen módosította!", 'icon' => "success"]);
+    }
+
     // Szűrés
 
     public function filter(Request $request){
@@ -107,3 +126,5 @@ class FrontendController extends Controller
             ['model', $iphone13mini],
             ['model', $iphone12],
             ['model', $iphoneSE] */
+
+

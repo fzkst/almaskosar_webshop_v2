@@ -16,7 +16,7 @@
                     </div>
                     <div class="mb-4">
                         <label class="form-label" for="">Táblanév</label>
-                        <input type="text" class="form-control" name="name" value="{{ old('name') }}">
+                        <input type="text" class="form-control" name="table_name" value="{{ old('table_name') }}">
                     </div>
                     <div class="mb-4">
                         <label class="form-label" for="">Leírás</label>

@@ -2,21 +2,45 @@ body {
     background-color: #121212;  /* #f8f9fa */
 }
 
+/*NAVBAR*/
+.dropdown-menu {
+    /* background-color: #1F1B24; */
+    background-color: #121212;
+}
+
 .brand_text {
     font-size: 15px;
     color: #cacacb;
 }
 
+.active {
+    border: solid 1px;
+    border-radius: 5px;
+    border-color: #03DAC6;
+    border-image: radial-gradient(to right, rgba(239, 25, 25, 0), rgb(255, 255, 255), rgba(194, 51, 51, 0));
+}
 
-#btn_uj_kategoria, #btn_hozzaad {
-    font-weight: 700;
-    background-color: #1F1B24;
+li {
+    margin-bottom: 15px;
+}
+
+li a{
     color: #BB86FC;
+    text-decoration: none;
 }
 
-#btn_uj_kategoria:hover, #btn_hozzaad:hover {
-    color: #cacacb;
+li a:hover {
+    color: gray;
 }
+
+.sidenav {
+   /*  background-color: #1F1B24; */
+}
+
+.bi-person-circle {
+    color:  #03DAC6;
+}
+
 
 
 h5 {
@@ -38,33 +62,11 @@ input {
 }
 
 
-.active {
-    border: solid 1px;
-    border-radius: 5px;
-    border-color: #cacacb;
-    border-image: radial-gradient(to right, rgba(239, 25, 25, 0), rgb(255, 255, 255), rgba(194, 51, 51, 0));
-}
 
-li {
-    margin-bottom: 15px;
-}
-
-li a{
-    color: #BB86FC;
-    text-decoration: none;
-}
-
-li a:hover {
-    color: gray;
-}
-
-.sidenav {
-    background-color: #1F1B24;
-}
 
 .card {
     background-color: #1F1B24;
-    border-color: #3700B3;
+    border-color: #03DAC6;
     color: #BB86FC;
     font-size: small;
 }
@@ -78,25 +80,34 @@ li a:hover {
 }
 
 hr {
-    color: #BB86FC;
+    display: block;
+    background-color: #03DAC6;
+    height: 2px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
 }
 
+/*TABLE*/
 th {
     color: #BB86FC;
 }
 
 td {
-    color: #03DAC6;
+    color: #BB86FC;
 }
 
 table {
-    color: #03DAC6;
+    border-color: #03DAC6;
+    color: #BB86FC;
 }
 
 .table_felh {
     font-size: smaller;
 }
 
+/*BUTTON*/
 .btn-dangerer {
    background-color: #CF6679;
    color: #cacacb;
@@ -106,6 +117,19 @@ table {
     background-color: #3700B3;
     color: #cacacb;
 }
+
+#btn_uj_kategoria, #btn_hozzaad {
+    font-weight: 700;
+    background-color: #1F1B24;
+    border-color: #03DAC6;
+    color: #BB86FC;
+}
+
+#btn_uj_kategoria:hover, #btn_hozzaad:hover {
+    color: #cacacb;
+}
+
+
 
 .kepek {
     background-color: #cacacb;
@@ -118,6 +142,11 @@ input[type="text"], input[type="number"], input[type="checkbox"], textarea {
 .scrollable {
     overflow-y: auto;
     max-height: 900px;
+}
+
+/*FOOTER*/
+.footer-card {
+    border-radius: 0;
 }
 
 

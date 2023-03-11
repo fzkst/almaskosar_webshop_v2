@@ -16,6 +16,10 @@
                         <input type="text" value="{{ $category->name }}" class="form-control" name="name">
                     </div>
                     <div class="mb-4">
+                        <label class="form-label" for="">Táblanév</label>
+                        <input type="text" value="{{ $category->table_name }}" class="form-control" name="table_name">
+                    </div>
+                    <div class="mb-4">
                         <label class="form-label" for="">Leírás</label>
                         <textarea class="form-control" rows="6" name="description">{{ $category->description }}</textarea>
                     </div>

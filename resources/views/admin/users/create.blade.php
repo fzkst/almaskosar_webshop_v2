@@ -7,21 +7,9 @@
             <hr>
         </div>
         <div class="card-body" id="kategoria_urlap">
-            <form action="{{ url('customers')}} " method="POST" enctype="multipart/form-data">
+            <form action="{{ url('users')}} " method="POST" enctype="multipart/form-data">
                 @csrf
                 <div>
-                    <div class="mb-4">
-                        <label class="form-label" for="">User Id</label>
-                        <input type="text" class="form-control" name="user_id" value="{{ old('user_id') }}">
-                    </div>
-                    <div class="mb-4">
-                        <label class="form-check-label" for="">Magánszemély</label>
-                        <input type="checkbox" class="form-check-control ms-2" name="person" value="{{ old('person') }}">
-                    </div>
-                    <div class="mb-4">
-                        <label class="form-label" for="">Cégnév</label>
-                        <input type="text" class="form-control" name="company" value="{{ old('company') }}">
-                    </div>
                     <div class="mb-4">
                         <label class="form-label" for="">Vezetéknév</label>
                         <input type="text" class="form-control" name="last_name" value="{{ old('last_name') }}">
@@ -29,6 +17,10 @@
                     <div class="mb-4">
                         <label class="form-label" for="">Keresztnév</label>
                         <input type="text" class="form-control" name="first_name" value="{{ old('first_name') }}">
+                    </div>
+                    <div class="mb-4">
+                        <label class="form-label" for="">Email</label>
+                        <input type="email" class="form-control" name="email" value="{{ old('email') }}">
                     </div>
                     <div class="mb-4">
                         <label class="form-label" for="">Irányítószám</label>
@@ -47,8 +39,8 @@
                         <input type="text" class="form-control" name="phone_number" value="{{ old('phone_number') }}">
                     </div>
                     <div class="mb-4">
-                        <label class="form-label" for="">Adószám</label>
-                        <input type="text" class="form-control" name="tax_number" maxlength="13" value="{{ old('tax_number') }}">
+                        <label class="form-label" for="">Vevőkód</label>
+                        <input type="text" class="form-control" name="customer_code" maxlength="4" value="{{ old('customer_code') }}">
                     </div>
                     <div class="mb-4">
                         <button type="submit" class="btn btn-outline-secondary mt-3" id="btn_hozzaad">Hozzáad</button>

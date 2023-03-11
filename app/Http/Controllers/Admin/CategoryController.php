@@ -34,6 +34,7 @@ class CategoryController extends Controller
         }
 
         $category->name = $request->input('name');
+        $category->table_name = $request->input('table_name');
         $category->description = $request->input('description');
         $category->status = $request->input('status') == true ? '1' : '0';
         $category->popular = $request->input('popular') == true ? '1' : '0';
@@ -68,6 +69,7 @@ class CategoryController extends Controller
             $category->image = $filename;
         }
         $category->name = $request->input('name');
+        $category->table_name = $request->input('table_name');
         $category->description = $request->input('description');
         $category->status = $request->input('status') == true ? '1' : '0';
         $category->popular = $request->input('popular') == true ? '1' : '0';

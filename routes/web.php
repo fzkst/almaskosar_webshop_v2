@@ -1,10 +1,9 @@
 <?php
 
 use App\Http\Controllers\Admin\CategoryController;
-use App\Http\Controllers\Admin\CustomerController;
 use App\Http\Controllers\Admin\DashboardController;
-use App\Http\Controllers\Admin\IphoneController;
 use App\Http\Controllers\Admin\ProductController;
+use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Frontend\CartController;
 use App\Http\Controllers\Frontend\CheckoutController;
 use App\Http\Controllers\Frontend\FrontendController;
@@ -42,9 +41,9 @@ Route::middleware(['auth','isAdmin'])->group( function () {
     }); */
 
     Route::get('/dashboard', [DashboardController::class, 'index']);
-    Route::resource('customers', CustomerController::class);
+    Route::resource('users', UserController::class);
     Route::resource('categories', CategoryController::class);
-    Route::resource('iphones', IphoneController::class);
+    //Route::resource('iphones', IphoneController::class);
     Route::resource('products', ProductController::class);
 });
 
@@ -78,6 +77,8 @@ Route::middleware(['auth'])->group( function () {
     Route::get('checkout', [CheckoutController::class, 'index']);
     Route::post('order', [CheckoutController::class, 'ordering']);
 
-    Route::get('rendelesek', [FrontendController::class, 'indexOrders']);
-    Route::get('rendeleseim/{id}', [FrontendController::class, 'showOrder']);
+    Route::get('orders', [FrontendController::class, 'indexOrders']);
+    Route::get('my_orders/{id}', [FrontendController::class, 'showOrder']);
+    Route::get('user_settings', [FrontendController::class, 'userSettings']);
+    Route::post('update_settings', [FrontendController::class, 'updateUsersDatas']);
 });

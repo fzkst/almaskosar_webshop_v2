@@ -10,7 +10,7 @@
             <hr>
         </div>
         <div class="card-body">
-            <table class="table table-bordered">
+            <table class="table table-bordere border-success">
                 <thead>
                     <tr class="text-center">
                         <th>#</th>
@@ -20,13 +20,13 @@
                         <th>Tárhely</th>
                         <th>Ár</th>
                         <th>Készlet</th>
-                        <th>Kép</th>
+                        <th >Kép</th>
                         <th></th>
                     </tr>
                 </thead>
                 <tbody>
                     @foreach ($products as $item)
-                        <tr>
+                        <tr class="text-center align-middle">
                             <td>{{ $item->id }}</td>
                             @switch($item->category_id)
                                 @case(1)
