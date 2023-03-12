@@ -29,7 +29,7 @@
                                             <td>{{ $order->tracking_number }}</td>
                                             <td class="text-end">{{ number_format($order->total_price, 0, '.', '.') }}.-</td>
                                             <td class="text-center">{{ $order->status == '0' ? 'folyamatban' : 'teljesítve'}}</td>
-                                            <td class="text-center"><a href="{{ url('show_orders/'.$order->id) }}" class="btn btn-sm btn-primary">Megnéz</a></td>
+                                            <td class="text-center"><a href="{{ url('my_order/'.$order->id) }}" class="btn btn-sm btn-primary">Megnéz</a></td>
                                         </tr>
                                     @endforeach
                                 </tbody>

@@ -109,13 +109,39 @@ table {
 
 /*BUTTON*/
 .btn-dangerer {
-   background-color: #CF6679;
-   color: #cacacb;
+   border-color: #03DAC6;
+   background-color: #1F1B24;
+   color: #CF6679;
 }
 
-.btn-prim {
-    background-color: #3700B3;
-    color: #cacacb;
+.btn-dangerer:hover {
+    border-color: #03DAC6;
+    background-color: #121212;
+    color: #CF6679;
+ }
+
+.btn-edit {
+    border-color: #03DAC6;
+    background-color: #1F1B24;
+    color: #BB86FC;
+}
+
+.btn-edit:hover {
+    border-color: #03DAC6;
+    background-color: #121212;
+    color: #BB86FC;
+}
+
+.btn-view {
+    border-color: #03DAC6;
+    background-color: #1F1B24;
+    color: #BB86FC;
+}
+
+.btn-view:hover {
+    border-color: #03DAC6;
+    background-color: #121212;
+    color: #BB86FC;
 }
 
 #btn_uj_kategoria, #btn_hozzaad {
@@ -129,6 +155,13 @@ table {
     color: #cacacb;
 }
 
+.userLink {
+    color: #BB86FC;
+}
+
+.userLink:hover {
+    color: #cacacb;
+}
 
 
 .kepek {

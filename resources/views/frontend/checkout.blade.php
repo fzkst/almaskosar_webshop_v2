@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container py-4">
-        <form action="{{ url('order') }}" method="post" class="checkout-form">
+        <form action="{{ url('user_order') }}" method="post" class="checkout-form">
             @csrf
             <div class="row">
                 <div class="col-7 mx-auto mb-3">

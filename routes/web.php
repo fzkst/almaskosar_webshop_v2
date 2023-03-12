@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\OrderController;
 use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Frontend\CartController;
@@ -45,6 +46,10 @@ Route::middleware(['auth','isAdmin'])->group( function () {
     Route::resource('categories', CategoryController::class);
     //Route::resource('iphones', IphoneController::class);
     Route::resource('products', ProductController::class);
+    Route::resource('orders', OrderController::class);
+    Route::get('show_user_orders/{id}', [OrderController::class, 'showUserOrders']);
+    Route::get('edit_order/{id}', [OrderController::class, 'editOrder']);
+    Route::put('update_order/{id}', [OrderController::class, 'updateOrder']);
 });
 
 
@@ -75,10 +80,10 @@ Route::post('delete-cart-item', [CartController::class, 'deleteProduct']);
 Route::middleware(['auth'])->group( function () {
     Route::get('cart', [CartController::class, 'indexCart']);
     Route::get('checkout', [CheckoutController::class, 'index']);
-    Route::post('order', [CheckoutController::class, 'ordering']);
+    Route::post('user_order', [CheckoutController::class, 'ordering']);
 
-    Route::get('orders', [FrontendController::class, 'indexOrders']);
-    Route::get('my_orders/{id}', [FrontendController::class, 'showOrder']);
+    Route::get('user_orders', [FrontendController::class, 'indexOrders']);
+    Route::get('my_order/{id}', [FrontendController::class, 'showOrder']);
     Route::get('user_settings', [FrontendController::class, 'userSettings']);
     Route::post('update_settings', [FrontendController::class, 'updateUsersDatas']);
 });

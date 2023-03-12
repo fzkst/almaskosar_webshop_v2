@@ -10,7 +10,7 @@
             <hr>
         </div>
         <div class="card-body">
-            <table class="table table_felh">
+            <table class="table table_felh border-success">
                 <thead>
                     <tr class="text-center">
                         <th>#</th>
@@ -26,20 +26,21 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($users as $item)
-                        <tr class="align-middle">
-                            <td>{{ $item->id }}</td>
-                            <td>{{ $item->last_name }}</td>
-                            <td>{{ $item->first_name }}</td>
-                            <td>{{ $item->email }}</td>
-                            <td>{{ $item->postal_code }}</td>
-                            <td>{{ $item->city }}</td>
-                            <td>{{ $item->address }}</td>
-                            <td>{{ $item->phone_number }}</td>
-                            <td>{{ $item->customer_code }}</td>
+                    @foreach ($users as $user)
+                        <tr class="align-middle text-center">
+                            <td>{{ $user->id }}</td>
+                            <td>{{ $user->last_name }}</td>
+                            <td>{{ $user->first_name }}</td>
+                            <td>{{ $user->email }}</td>
+                            <td>{{ $user->postal_code }}</td>
+                            <td>{{ $user->city }}</td>
+                            <td>{{ $user->address }}</td>
+                            <td>{{ $user->phone_number }}</td>
+                            <td>{{ $user->customer_code }}</td>
                             <td class="align-middle text-center">
-                                <a href="{{ url('users/'.$item->id.'/edit')}} "><button class="btn btn-prim btn-sm">Szerkesztés</button></a>
-                                <form action="{{ url('users/'.$item->id)}} " method="post">
+                                <a href="{{ url('show_user_orders/'.$user->id)}} "><button class="btn btn-edit btn-sm mb-1">Rendelések</button></a>
+                                <a href="{{ url('users/'.$user->id.'/edit')}}"><button class="btn btn-edit btn-sm">Szerkesztés</button></a>
+                                <form action="{{ url('users/'.$user->id)}}" method="post">
                                     @csrf
                                     @method('DELETE')
                                     <a href=""><button class="btn btn-dangerer btn-sm mt-1">Törlés</button></a>

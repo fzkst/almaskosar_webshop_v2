@@ -28,7 +28,7 @@
                     </div>
                     <div class="mb-4">
                         <label class="form-check-label" for="">Kiemelt kategória</label>
-                        <input type="checkbox" class="form-check-control" name="popular" value="{{ old('popular') }}">
+                        <input d-flex flex-row class="form-check-control" name="popular" value="{{ old('popular') }}">
                     </div>
                     <div class="mb-4">
                         <label class="form-file mb-2" for="">Kép feltöltése:</label>

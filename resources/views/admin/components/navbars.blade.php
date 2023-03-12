@@ -3,7 +3,7 @@
         <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 sidenav">
             <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-75 sticky-top sticky-offset">
                 <a href="/" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none mt-3">
-                    <img src="img/apple_nav_brand.png" alt="main_logo"> <span class="fs-5 d-none d-sm-inline brand_text ms-3 mt-2">Almáskosár</span>
+                    <img src="{{ asset('img/apple_nav_brand.png')}}" alt="apple"> <span class="fs-5 d-none d-sm-inline brand_text ms-3 mt-2">Almáskosár</span>
                 </a>
                 <hr class="container">
                 <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
@@ -26,7 +26,7 @@
                             <i class="fs-4 bi-people p-1 {{ Request::is('users') ? 'active' : '' }}"></i> <span class="ms-1 d-none d-sm-inline ms-2">Felhasználók</span> </a>
                     </li>
                     <li class="nav-item">
-                        <a href="{{ url('rendelesek') }}" class="px-0 align-middle">
+                        <a href="{{ url('orders') }}" class="px-0 align-middle">
                             <i class="fs-4 bi-table p-1 {{ Request::is('orders') ? 'active' : '' }}"></i><span class="ms-1 d-none d-sm-inline ms-3">Rendelések</span></a>
                     </li>
 

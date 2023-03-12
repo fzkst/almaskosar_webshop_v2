@@ -1,7 +1,10 @@
-@extends('layouts.frontend')
+@extends('admin.admin')
 
 @section('content')
-    <div class="container py-4">
+    <div class="container py-5">
+        <div>
+            <a href="{{ url('edit_order/'.$order->id)}}"><button class="btn btn-outline-secondary mb-2" id="btn_uj_kategoria">Rendelés szerkesztése</button></a>
+        </div>
         <div class="row">
             <div class="col">
                 <div class="card">
@@ -10,7 +13,7 @@
                             <h4>{{ $order->tracking_number }} számú rendelés:</h4>
                         </div>
                         <div class="col-1 me-3">
-                            <a href="{{ url('user_orders') }}"><button type="submit" class="col btn btn-primary">vissza</button></a>
+                            <a href="{{ url('user_orders') }}"><button type="submit" class="col btn btn-edit">vissza</button></a>
                         </div>
                     </div>
                     <hr class="w-100">

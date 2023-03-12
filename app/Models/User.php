@@ -15,7 +15,15 @@ class User extends Authenticatable
     protected $visible = [
         'id',
         'name',
-        'email'
+        'email',
+        'email_verified_at',
+        'last_name',
+        'first_name',
+        'postal_code',
+        'city',
+        'address',
+        'phone_number',
+        'customer_code'
     ];
 
     /**

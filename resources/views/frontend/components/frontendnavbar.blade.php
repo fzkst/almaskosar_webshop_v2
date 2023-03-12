@@ -40,7 +40,7 @@
 
                             <div class="dropdown-menu dropdown-menu-end drop-menu" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="{{ url('user_settings') }}">Beállítások</a>
-                                <a class="dropdown-item" href="{{ url('orders') }}">Rendeléseim</a>
+                                <a class="dropdown-item" href="{{ url('user_orders') }}">Rendeléseim</a>
                                 <a class="dropdown-item" href="{{ route('logout') }}"
                                     onclick="event.preventDefault();
                                         document.getElementById('logout-form').submit();">
