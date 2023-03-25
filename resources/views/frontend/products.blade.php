@@ -1,6 +1,9 @@
 @extends('layouts.frontend')
 
 @section('content')
+    @php
+        $link = $categories[$products[0]->category_id - 1]->name;
+    @endphp
     <div class="py-3 mb-4 shadow-sm linkline border-top">
         <div class="container">
             <h6 class="mb-0"><a href="{{ url('/') }}"><span class=" h6-bold">Almáskosár /</span></a>

@@ -374,7 +374,7 @@ class ProductSeeder extends Seeder
                 'category_id' => 1,
                 'model' => 'iPhone 14 Plus',
                 'color' => 'éjfekete',
-                'storage' => 521,
+                'storage' => 512,
                 'popular' => 1,
                 'price' => 679990,
                 'stock' => 3,

@@ -1,61 +1,83 @@
 @extends('admin.admin')
 
 @section('content')
-    <div class="card">
-        <div class="card-body">
-            <h1>iPhone Webshop</h1>
-            @php
-                $felhasznalokSzama = count($felhasznalok);
-                $mobilokSzama = count($products);
-                $adatok2 = DB::table('customers')->select('last_name')->where('city', 'LIKE', '%Budapest%')->get();
-                $adatok3 = DB::table('products')->select('color')->where('storage', 'LIKE', '128')->get();
-                $adatok4 = DB::table('customers')->select('city')->groupBy('city')->count();
-                $adatok5 = DB::table('customers')->select(DB::raw('count(*) as id_count, city'))->groupBy('city')->get();
-            @endphp
-            <div>
-                <div class="row">
-                    <div class="col-6">
-                        <div class="card">
-                            <div class="card-header">
-                                <span>Felhasználók száma:</span>
-                            </div>
-                            <div class="card-body">
-                                {{ $felhasznalokSzama }}
+    <div class="container py-4">
+        <div class="card">
+            <div class="card-body">
+                <h3 class="mb-4">Almáskosár</h3>
+                @php
+                    $felhasznalokSzama = count($users);
+                    $termekekSzama = count($products);
+                @endphp
+                <div>
+                    <div class="row">
+                        <div class="col-2">
+                            <div class="card p-2 text-center">
+                                <div class="card-title">
+                                    <h6>Felhasználók száma:</h6>
+                                </div>
+                                <div class="card-body">
+                                    <h6>{{ $felhasznalokSzama }}</h6>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-6">
-                        <div class="card">
-                            <div class="card-header">
-                                <span>Termékek száma:</span>
-                            </div>
-                            <div class="card-body">
-                                <li>{{ $mobilokSzama }}</li>
-                                <li>{{ $adatok3 }}</li>
-                                <li>{{ $adatok3[0]->color }}</li>
-                                <p>{{ $adatok3[1]->color }}</p>
-                                <p>{{ $adatok4 }}</p>
-                                <p>{{ $adatok5 }}</p>
+                        <div class="col-2">
+                            <div class="card p-2 text-center">
+                                <div class="card-title">
+                                    <h6>Termékek száma:</h6>
+                                </div>
+                                <div class="card-body">
+                                    <h6>{{ $termekekSzama }}</h6>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-6">
-                        <div class="card">
-                            <div class="card-header">
-                                <span>Felhasználók száma városok szerint:</span>
+                        <div class="col-3">
+                            <div class="card p-2">
+                                <div class="card-title">
+                                    <h6>Felhasználók városonként:</h6>
+                                </div>
+                                <div class="card-body">
+                                    <table>
+                                        @foreach ($usersCity2 as $user)
+                                            <tr>
+                                                <td class="pe-3">{{ $user->city }}</td>
+                                                <td>{{ $user->id_count }}</td>
+                                            </tr>
+                                        @endforeach
+                                    </table>
+                                </div>
                             </div>
-                            <div class="card-body">
-                                @foreach ($adatok5 as $adat)
-                                    <span>{{ $adat->city }}: </span><span>{{ $adat->id_count }}</span><br>
-                                @endforeach
+                        </div>
+                        <div class="col-5">
+                            <div class="card p-2">
+                                <div class="card-title">
+                                    <h6 class="ms-3">Alacsony készletek:</h6>
+                                </div>
+                                <div class="card-body keszlet">
+                                    <table>
+                                        <thead class="text-center">
+                                            <th>Id</th>
+                                            <th>Modell</th>
+                                            <th>Szín</th>
+                                            <th>Készlet</th>
+                                        </thead>
+                                        <tbody>
+                                            @foreach ($keszletek as $item)
+                                                <tr class="text-center">
+                                                    <td class="pe-3">{{ $item->id }}</td>
+                                                    <td>{{ $item->model }}</td>
+                                                    <td>{{ $item->color }}</td>
+                                                    <td class=" {{ $item->stock == 0 ? 'text-danger' : '' }} ">{{ $item->stock }}</td>
+                                                </tr>
+                                            @endforeach
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
-
-
         </div>
     </div>
 @endsection

@@ -61,7 +61,9 @@ Route::get('/frontend/ipads', [FrontendController::class, 'ipads']);
 Route::get('/frontend/macbooks', [FrontendController::class, 'macbooks']);
 /* Route::get('/frontend/show_iphone/{id}', [FrontendController::class, 'show_iphone']); */
 
-Route::get('filter', [FrontendController::class, 'filter']);
+Route::get('filter/iphones', [FrontendController::class, 'iphones']);
+Route::get('filter/ipads', [FrontendController::class, 'ipads']);
+Route::get('filter/macbooks', [FrontendController::class, 'macbooks']);
 
 Route::get('/frontend/show_product/{id}', [FrontendController::class, 'show_product']);
 Route::get('/frontend/footer_components/aszf', [FrontendController::class, 'aszf']);

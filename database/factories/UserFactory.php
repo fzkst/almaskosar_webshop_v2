@@ -37,7 +37,7 @@ class UserFactory extends Factory
             'last_name' => $vezeteknev,
             'first_name' => $keresztnev,
             'postal_code' => fake()->randomElement([1541, 2045, 1156]),
-            'city' => fake()->state(),
+            'city' => fake()->city(),
             'address' => fake()->streetAddress(),
             'phone_number' => fake()->phoneNumber(),
             'customer_code' => $randomNumber,

@@ -182,6 +182,13 @@ input[type="text"], input[type="number"], input[type="checkbox"], textarea {
     border-radius: 0;
 }
 
+/*DASHBOARD*/
+
+.table-stock th, td {
+    width: 100px;
+}
+
+
 
 /* Extra small devices (phones, less than 768px) */
 /* No media query since this is the default in Bootstrap */
