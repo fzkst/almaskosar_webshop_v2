@@ -7,7 +7,6 @@ use App\Models\Category;
 use App\Models\Order;
 use App\Models\Product;
 use App\Models\User;
-use Illuminate\Console\View\Components\Alert;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -76,16 +75,13 @@ class FrontendController extends Controller
         $categories = Category::all();
         $letters = ['A', 'B', 'C'];
         $category_id = $category;
-       // DD($category);
         $modelCheck = $request->input('models');
         $storageCheck = $request->input('storages');
         $colorCheck = $request->input('colors');
-        //$link = $request->input('link');
 
         $modelNames = DB::table('products')->select('model')->where('category_id', $category_id)->groupBy('model')->orderByDesc('model')->get();
         $modelStorages = DB::table('products')->select('storage')->where('category_id', $category_id)->groupBy('storage')->get();
         $modelColors = DB::table('products')->select('color')->where('category_id', $category_id)->groupBy('color')->get();
-
 
         $filter = FrontendController::filter($request, $category_id);
 
@@ -94,7 +90,7 @@ class FrontendController extends Controller
                 $products = DB::table('products')->where('category_id', $category_id)->get();
                 return view('frontend.products', compact(['products', 'letters', 'categories', 'modelNames', 'modelStorages', 'modelColors']));
             } else {
-                $errorMessage = "Nem található termék, ami megfelelne a keresési feltételeknek!";
+                $errorMessage = "Nem található olyan termék, ami megfelelne a keresési feltételeknek!";
                 return view('frontend.components.error', compact(['modelNames', 'modelStorages', 'modelColors', 'errorMessage']))->with(['status' => " Sikeresen hozzáadva a kosárhoz!", 'icon' => "success"]);
             }
         } else {

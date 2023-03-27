@@ -3,9 +3,7 @@
 @section('content')
     <div class="py-3 mb-4 shadow-sm linkline border-top">
         <div class="container">
-            <h6 class="mb-0"><a href="{{ url('/') }}"><span class=" h6-bold">Almáskosár /</span></a>
-                {{-- <span>{{ $categories[$products[0]->category_id - 1]->name }}</span> --}}
-            </h6>
+            <h6 class="mb-0"><a href="{{ url('/') }}"><span class=" h6-bold">Almáskosár /</span></a></h6>
         </div>
     </div>
 

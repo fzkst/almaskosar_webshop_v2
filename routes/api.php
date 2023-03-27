@@ -1,8 +1,6 @@
 <?php
 
 use App\Http\Controllers\API\CategoryController;
-use App\Http\Controllers\API\CustomerController;
-use App\Http\Controllers\API\IphoneController;
 use App\Http\Controllers\API\ProductController;
 use App\Http\Controllers\API\UserController;
 use Illuminate\Http\Request;
@@ -28,10 +26,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::resource('users', UserController::class);
 
-Route::resource('customers', CustomerController::class);
-
 Route::resource('categories', CategoryController::class);
-
-Route::resource('iphones', IphoneController::class);
 
 Route::resource('products', ProductController::class);

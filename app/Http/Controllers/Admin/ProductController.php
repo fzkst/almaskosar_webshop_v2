@@ -74,7 +74,7 @@ class ProductController extends Controller
             $file = $request->file('image');
             $ext = $file->getClientOriginalExtension();
             $filename = time().'.'.$ext;
-            $file->move('img/uploads/iphones', '/A'.$filename);      //$file->move('img/uploads/iphones', $filename);
+            $file->move('img/uploads/iphones', '/A'.$filename);
             $product->image = $filename;
         }
         $product->category_id = $request->input('category_id');
@@ -100,7 +100,7 @@ class ProductController extends Controller
             return response()->json(["message" => "Ilyen azonosítóval nem található termék!"], 404);
         }
         if($product->image){
-            $path = 'img/uploads/products/A'.$product->image;        //$path = 'img/uploads/products/'.$product->image;
+            $path = 'img/uploads/products/A'.$product->image;        
             if(File::exists($path))
             {
                 File::delete($path);

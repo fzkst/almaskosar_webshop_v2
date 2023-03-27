@@ -22,11 +22,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-/* Route::get('/', function () {
-    return view('welcome');
-}); */
-
-
 
 Auth::routes();
 
@@ -44,7 +39,6 @@ Route::middleware(['auth','isAdmin'])->group( function () {
     Route::get('/dashboard', [DashboardController::class, 'index']);
     Route::resource('users', UserController::class);
     Route::resource('categories', CategoryController::class);
-    //Route::resource('iphones', IphoneController::class);
     Route::resource('products', ProductController::class);
     Route::resource('orders', OrderController::class);
     Route::get('show_user_orders/{id}', [OrderController::class, 'showUserOrders']);
@@ -56,23 +50,14 @@ Route::middleware(['auth','isAdmin'])->group( function () {
 
 //FRONTEND
 Route::get('/', [FrontendController::class, 'index']);
-/* Route::get('/frontend/iphones', [FrontendController::class, 'iphones']);
-Route::get('/frontend/ipads', [FrontendController::class, 'ipads']);
-Route::get('/frontend/macbooks', [FrontendController::class, 'macbooks']); */
-
 Route::get('/frontend/products/{category}', [FrontendController::class, 'products'])->name('/frontend/products');
-
-/* Route::get('filter/iphones', [FrontendController::class, 'iphones']);
-Route::get('filter/ipads', [FrontendController::class, 'ipads']);
-Route::get('filter/macbooks', [FrontendController::class, 'macbooks']); */
-
 Route::get('filter/{category}', [FrontendController::class, 'products'])->name('filter');
-
 Route::get('/frontend/show_product/{id}', [FrontendController::class, 'show_product']);
 Route::get('/frontend/footer_components/aszf', [FrontendController::class, 'aszf']);
 Route::get('/frontend/footer_components/info', [FrontendController::class, 'info']);
 Route::get('frontend/footer_components/shops', [FrontendController::class, 'shops']);
 Route::get('frontend/footer_components/shipping', [FrontendController::class, 'shipping']);
+
 
 
 

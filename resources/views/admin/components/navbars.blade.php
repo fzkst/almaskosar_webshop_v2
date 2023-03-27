@@ -38,9 +38,6 @@
                         <i class="ms-3 bi bi-person-circle"></i><span class="d-none d-sm-inline mx-1 ms-3 purp">{{ Auth::user()->name }}</span>
                     </a>
                     <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
-                        {{-- <li><a class="dropdown-item" href="#">New project...</a></li>
-                        <li><a class="dropdown-item" href="#">Settings</a></li> --}}
-                        {{-- <li><a class="dropdown-item" href="#">Profil</a></li> --}}
                         <li>
                             <hr class="dropdown-divider">
                         </li>

@@ -62,7 +62,6 @@ class CheckoutController extends Controller
             ]);
 
             $product = Product::where('id', $item->product_id)->first(); //a kosárban lévő temékének megkeresése az összes termék közül
-            //$product->stock = $product->stock - $item->product_quantity;
             $product->stock -= $item->product_quantity;
             $product->update();
         }

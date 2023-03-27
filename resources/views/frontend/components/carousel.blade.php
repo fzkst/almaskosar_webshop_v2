@@ -37,8 +37,5 @@
                 </div>
             </div>
         </div>
-        {{-- <div class='mt-2'>
-            <hr /><hr />
-        </div> --}}
     </div>
 </div>
