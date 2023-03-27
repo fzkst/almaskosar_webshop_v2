@@ -22,7 +22,7 @@
             <div class="container py-2 iphones">
                 <div class="row g-5">
                     @foreach ($products as $product)
-                        <div class="card productData2 col-md-3 col-lg-4 mx-auto me-3 shadow kiskartya" style="max-width: 18rem">
+                        <div class="card productData2 col-sm-12 col-md-4 col-lg-3 mx-auto me-3 shadow kiskartya card-resp">
                             <img class="img-rounded"
                                 src="{{ asset('img/uploads/products/' . Arr::random($letters) . $product->image) }}"
                                 alt="{{ $product->image }}">

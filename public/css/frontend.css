@@ -91,6 +91,17 @@ body {
     font-weight: bold;
 }
 
+.card-resp {
+    max-width: 18rem;
+}
+
+@media (max-width: 250px) {
+    .card-resp {
+        max-width: 12rem;
+    }
+}
+
+
 /*SHOW_PRODUCT*/
 .carousel-indicators .active {
     background-color: darkgray;

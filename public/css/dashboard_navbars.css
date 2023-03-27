@@ -1,11 +1,18 @@
 body {
-    background-color: #121212;  /* #f8f9fa */
+    background-color: #121212;
 }
 
 /*NAVBAR*/
 .dropdown-menu {
-    /* background-color: #1F1B24; */
     background-color: #121212;
+}
+
+::after {
+    color: #BB86FC;
+}
+
+.purp {
+    color: #BB86FC;
 }
 
 .brand_text {
@@ -35,6 +42,7 @@ li a:hover {
 
 .sidenav {
    /*  background-color: #1F1B24; */
+
 }
 
 .bi-person-circle {

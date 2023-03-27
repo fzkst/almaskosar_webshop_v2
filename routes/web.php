@@ -56,14 +56,17 @@ Route::middleware(['auth','isAdmin'])->group( function () {
 
 //FRONTEND
 Route::get('/', [FrontendController::class, 'index']);
-Route::get('/frontend/iphones', [FrontendController::class, 'iphones']);
+/* Route::get('/frontend/iphones', [FrontendController::class, 'iphones']);
 Route::get('/frontend/ipads', [FrontendController::class, 'ipads']);
-Route::get('/frontend/macbooks', [FrontendController::class, 'macbooks']);
-/* Route::get('/frontend/show_iphone/{id}', [FrontendController::class, 'show_iphone']); */
+Route::get('/frontend/macbooks', [FrontendController::class, 'macbooks']); */
 
-Route::get('filter/iphones', [FrontendController::class, 'iphones']);
+Route::get('/frontend/products/{category}', [FrontendController::class, 'products'])->name('/frontend/products');
+
+/* Route::get('filter/iphones', [FrontendController::class, 'iphones']);
 Route::get('filter/ipads', [FrontendController::class, 'ipads']);
-Route::get('filter/macbooks', [FrontendController::class, 'macbooks']);
+Route::get('filter/macbooks', [FrontendController::class, 'macbooks']); */
+
+Route::get('filter/{category}', [FrontendController::class, 'products'])->name('filter');
 
 Route::get('/frontend/show_product/{id}', [FrontendController::class, 'show_product']);
 Route::get('/frontend/footer_components/aszf', [FrontendController::class, 'aszf']);

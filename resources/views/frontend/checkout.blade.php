@@ -49,8 +49,11 @@
                             <h6 class="mt-3 ms-3">Tételek:</h6>
                             <hr>
                         </div>
+                        @php
+                            $purch_price = 0;
+                        @endphp
                         <div class="card-body">
-                            <table class="table table-responsive checkout-table">
+                            <table class="table table-responsive checkout-table w-100">
                                 <tbody>
                                     <tr>
                                         <th>termék neve</th>
@@ -63,10 +66,21 @@
                                             <td class="text-center">{{ $item->product_quantity }}</td>
                                             <td class="text-end">{{ number_format($item->products->price, 0, '.', '.') }}.-</td>
                                         </tr>
+                                        @php
+                                            $purch_price += $item->products->price * $item->product_quantity;
+                                        @endphp
                                     @endforeach
                                 </tbody>
                             </table>
                         </div>
+                        <div class="row">
+                            @php
+                                $total_price = number_format($purch_price, 0, '.', '.')
+                            @endphp
+                            <h6 class="col ms-3">Bruttó végösszeg: </h6>
+                            <h6 class="col text-end me-3">{{ $total_price == 0 ? "" : "$total_price .-" }}</h6>
+                        </div>
+
                         <div class="card-footer">
                             <button class="btn btn-danger mt-2 float-end {{ $cartItems->isEmpty() ? "disabled" : "" }} " type="submit">Megrendel</button>
                         </div>

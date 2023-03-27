@@ -90,7 +90,6 @@ class CategoryController extends Controller
                 File::delete($path);
             }
         }
-        //Category::destroy($id);
         $category->delete();
         return redirect('categories')->with('message', "A kategória törlése sikeres!");
     }

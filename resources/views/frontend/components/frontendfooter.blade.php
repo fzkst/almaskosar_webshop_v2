@@ -11,18 +11,18 @@
                             <th>Kapcsolat</th>
                         </tr>
                         <tr>
-                            <td><a href="{{ asset('/frontend/iphones') }}">iPhone</a></td>
+                            <td><a href="{{ route('/frontend/products', ['category' => 1]) }}">iPhone</a></td>
                             <td><a href="{{ asset('/frontend/footer_components/shops')}}">Üzletek</a></td>
                             <td><a href="{{ asset('/frontend/footer_components/aszf')}}">Általános Szerződési Feltételek</a></td>
                         </tr>
                         <tr>
-                            <td><a href="{{ asset('/frontend/ipads') }}">iPad</a></td>
+                            <td><a href="{{ route('/frontend/products', ['category' => 2]) }}">iPad</a></td>
                             <td><a href="{{ asset('/frontend/footer_components/shops')}}">Szervíz</a></td>
                             <td><a href="{{ asset('/frontend/footer_components/info')}}">Vásárlási tájékoztató</a></td>
 
                         </tr>
                         <tr>
-                            <td><a href="{{ asset('/frontend/macbooks') }}">MacBook</a></td>
+                            <td><a href="{{ route('/frontend/products', ['category' => 3]) }}">MacBook</a></td>
                             <td><a href="{{ asset('/frontend/footer_components/shops')}}">Ügyfélszolgálat</a></td>
                             <td><a href="{{ asset('/frontend/footer_components/shipping')}}">Szállítási és fizetési tájékoztató</a></td>
                         </tr>

@@ -41,11 +41,11 @@
                                 <td>{{ $order->tracking_number }}</td>
                                 <td class="align-middle text-center">
                                     <a href="{{ url('orders/'.$order->id)}}" class="btn btn-view btn-sm mb-1">Részletek</a>
-                                    <a href="{{ url('edit_order/'.$order->id)}}"><button class="btn btn-edit btn-sm">Szerkesztés</button></a>
+                                    <a href="{{ url('edit_order/'.$order->id)}}"><button class="btn btn-edit btn-sm"><i class="bi bi-pencil-square"></i></button></a>   {{-- <button class="btn btn-edit btn-sm">Szerkesztés</button> --}}
                                     <form action="{{ url('orders/'.$order->id)}}" method="post">
                                         @csrf
                                         @method('DELETE')
-                                        <a href=""><button class="btn btn-dangerer btn-sm mt-1">Törlés</button></a>
+                                        <a href=""><button class="btn btn-dangerer btn-sm mt-1"><i class="bi bi-trash3"></i></button></a>   {{-- <button class="btn btn-dangerer btn-sm mt-1">Törlés</button> --}}
                                     </form>
                                 </td>
                             </tr>

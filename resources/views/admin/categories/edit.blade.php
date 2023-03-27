@@ -24,12 +24,12 @@
                         <textarea class="form-control" rows="6" name="description">{{ $category->description }}</textarea>
                     </div>
                     <div class="mb-4">
-                        <label class="form-check-label" for="">Státusz</label>
-                        <input type="checkbox" value="{{ $category->status }}"  class="form-check-control" name="status">
+                        <input type="checkbox" value="{{ $category->status }}" id="status" class="form-check-control" name="status">
+                        <label class="form-check-label ms-2" for="status">Státusz</label>
                     </div>
                     <div class="mb-4">
-                        <label class="form-check-label" for="">Népszerű termék</label>
-                        <input type="checkbox" value="{{ $category->popular }}"  class="form-check-control" name="popular">
+                        <input type="checkbox" value="{{ $category->popular }}" id="popular" class="form-check-control" name="popular">
+                        <label class="form-check-label ms-2" for="popular">Népszerű termék</label>
                     </div>
                     @if($category->kepfajl)
                         <img src="{{ asset('img/uploads/categories/'.$category->kepfajl)}}" class="kategoriakep mb-4" alt="kategóriakép">

@@ -13,7 +13,7 @@
                             <h4>{{ $order->tracking_number }} számú rendelés:</h4>
                         </div>
                         <div class="col-1 me-3">
-                            <a href="{{ url('user_orders') }}"><button type="submit" class="col btn btn-edit">vissza</button></a>
+                            <a href="{{ url()->previous() }}"><button type="submit" class="col btn btn-edit">vissza</button></a>
                         </div>
                     </div>
                     <hr class="w-100">
@@ -47,7 +47,13 @@
                                         <td>Vevőkód:</td>
                                         <td>{{ $order->customer_code }}</td>
                                     </tr>
+                                    <tr>
+                                        <td>Rendelés ideje:</td>
+                                        <td>{{ $order->created_at }}</td>
+                                    </tr>
                                 </table>
+
+
                             </div>
                             <div class="col">
                                 <table class="table">

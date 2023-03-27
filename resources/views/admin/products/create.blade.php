@@ -3,7 +3,7 @@
 @section('content')
     <div class="card mb-5">
         <div class="cardheader mt-2">
-            <h5>Új mobil hozzáadása</h5>
+            <h5>Új termék hozzáadása</h5>
             <hr>
         </div>
         <div class="card-body" id="kategoria_urlap">
@@ -12,7 +12,7 @@
                 <div>
                     <div class="mb-4">
                         <label class="form-label" for="">Kategória</label>
-                        <select class="form-select" name="category_id">
+                        <select class="form-select" name="category_id" id="category_id" required>
                             <option selected>Válassz kategóriát</option>
                             @foreach ($categories as $item)
                                 <option name="category_id" value="{{ $item->id }}">{{ $item->name }}</option>
@@ -33,11 +33,11 @@
                     </div>
                     <div class="mb-4">
                         <label class="form-label" for="">CPU</label>
-                        <input type="text" class="form-control" name="cpu" value="{{ old('cpu') }}">
+                        <input type="text" class="form-control" name="cpu" id="cpu" value="{{ old('cpu') }}">
                     </div>
                     <div class="mb-4">
                         <label class="form-label" for="">Memória</label>
-                        <input type="text" class="form-control" name="memory" value="{{ old('memory') }}">
+                        <input type="text" class="form-control" name="memory" id="memory" value="{{ old('memory') }}">
                     </div>
                     <div class="mb-4">
                         <label class="form-label" for="">Leírás</label>
@@ -45,12 +45,12 @@
                     </div>
                     <div class="row">
                         <div class="col mb-4">
-                            <input type="checkbox" class="form-check-control" name="cellular" value="{{ old('cellular') }}">
-                            <label class="form-check-label" for="">Cellular</label>
+                            <input type="checkbox" class="form-check-control" id="cellular" name="cellular" value="{{ old('cellular') }}">
+                            <label class="form-check-label ms-2" for="cellular">Cellular</label>
                         </div>
                         <div class="col mb-4">
                             <input type="checkbox" class="form-check-control" name="popular" value="{{ old('popular') }}">
-                            <label class="form-check-label" for="">Népszerű</label>
+                            <label class="form-check-label ms-2" for="popular">Népszerű</label>
                         </div>
                     </div>
                     <div class="mb-4">
@@ -66,7 +66,7 @@
                         <input type="text" class="form-control" name="stock" value="{{ old('stock') }}">
                     </div>
                     <div class="mb-4">
-                        <label class="form-file" for="">Kép feltöltése:</label>
+                        <label class="form-file mb-2" for="">Kép feltöltése:</label>
                         <input type="file" class="form-control" name="image">
                     </div>
                     <div class="mb-4">
@@ -77,4 +77,6 @@
         </div>
     </div>
 @endsection
+
+
 

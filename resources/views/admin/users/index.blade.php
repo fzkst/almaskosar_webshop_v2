@@ -39,11 +39,11 @@
                             <td>{{ $user->customer_code }}</td>
                             <td class="align-middle text-center">
                                 <a href="{{ url('show_user_orders/'.$user->id)}} "><button class="btn btn-edit btn-sm mb-1">Rendelések</button></a>
-                                <a href="{{ url('users/'.$user->id.'/edit')}}"><button class="btn btn-edit btn-sm">Szerkesztés</button></a>
+                                <a href="{{ url('users/'.$user->id.'/edit')}}"><button class="btn btn-edit btn-sm"><i class="bi bi-pencil-square"></i></button></a>   {{-- <button class="btn btn-edit btn-sm">Szerkesztés</button> --}}
                                 <form action="{{ url('users/'.$user->id)}}" method="post">
                                     @csrf
                                     @method('DELETE')
-                                    <a href=""><button class="btn btn-dangerer btn-sm mt-1">Törlés</button></a>
+                                    <a href=""><button class="btn btn-dangerer btn-sm mt-1"><i class="bi bi-trash3"></i></button></a>   {{-- <button class="btn btn-dangerer btn-sm mt-1">Törlés</button> --}}
                                 </form>
                             </td>
                         </tr>

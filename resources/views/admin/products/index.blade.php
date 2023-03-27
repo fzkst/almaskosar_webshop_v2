@@ -48,11 +48,11 @@
                             <td>{{ $item->stock }}</td>
                             <td class="kepek"><img src="{{ asset('img/uploads/products/A'.$item->image)}}" class="kategoriakep" alt="mobilkép"></td>
                             <td class="align-middle text-center">
-                                <a href="{{ url('products/'.$item->id.'/edit')}} "><button class="btn btn-edit btn-sm">Szerkesztés</button></a>
+                                <a href="{{ url('products/'.$item->id.'/edit')}} "><button class="btn btn-edit btn-sm"><i class="bi bi-pencil-square"></i></button></a> {{-- <button class="btn btn-edit btn-sm">Szerkesztés</button> --}}
                                 <form action="{{ url('products/'.$item->id)}}" method="post">
                                     @csrf
                                     @method('DELETE')
-                                    <a href=""><button class="btn btn-dangerer btn-sm mt-1">Törlés</button></a>
+                                    <a href=""><button class="btn btn-dangerer btn-sm mt-1"><i class="bi bi-trash3"></i></button></a>  {{-- <button class="btn btn-dangerer btn-sm mt-1">Törlés</button> --}}
                                 </form>
                             </td>
                         </tr>

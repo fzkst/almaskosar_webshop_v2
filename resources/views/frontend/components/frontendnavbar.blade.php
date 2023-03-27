@@ -10,13 +10,13 @@
             {{-- LEFT SIDE --}}
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link {{ Request::is('frontend/iphones') ? 'active' : '' }}" href="{{ url('/frontend/iphones') }}">iPhone</a>
+                    <a class="nav-link {{ Request::is('frontend/products/1') ? 'active' : '' }}" href="{{ route('/frontend/products', ['category' => 1]) }}">iPhone</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {{ Request::is('frontend/ipads') ? 'active' : '' }}" href="{{ url('/frontend/ipads') }}">iPad</a>
+                    <a class="nav-link {{ Request::is('frontend/products/2') ? 'active' : '' }}" href="{{ route('/frontend/products', ['category' => 2]) }}">iPad</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {{ Request::is('frontend/macbooks') ? 'active' : '' }}" href="{{ url('/frontend/macbooks') }}">MacBook</a>
+                    <a class="nav-link {{ Request::is('frontend/products/3') ? 'active' : '' }}" href="{{ route('/frontend/products', ['category' => 3]) }}">MacBook</a>
                 </li>
             </ul>
             {{-- RIGHT SIDE --}}

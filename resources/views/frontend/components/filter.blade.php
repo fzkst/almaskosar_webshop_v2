@@ -1,20 +1,23 @@
 <div class="row filter p-2">
     @if (str_contains($modelNames[0]->model, "iPhone"))
         @php
-            $link = "iphones"
+            $category_id = 1;
         @endphp
     @elseif (str_contains($modelNames[0]->model, "iPad"))
         @php
-            $link = "ipads"
+            $category_id = 2;
         @endphp
     @else
         @php
-            $link = "macbooks"
+            $category_id = 3;
         @endphp
     @endif
-    <form action="{{ url('filter/'.$link )}} " method="GET" enctype="multipart/form-data">
+{{--     <form action="{{ url('filter')}} " method="GET" enctype="multipart/form-data"> --}}
+    <form action="{{ route('filter', ['category' => $category_id]) }}" method="GET" enctype="multipart/form-data">
+
+
         @csrf
-        <input type="hidden" name="link" value="{{ $link }}">
+   {{--      <input type="hidden" name="link" value="{{ $link }}"> --}}
         <div class="card p-3 w-100">
             <div>
                 <h6 class="fw-bold ms-4">Modellek</h6>
@@ -71,14 +74,9 @@
                 </div>
             @endforeach
         </div>
-        <div class="">
-            <button class="btn btn-primary" type="submit">Szűrés</button>
+        <div class="card p-0 w-100 mt-3 rounded-pill">
+            <button class="btn btn-primary rounded-pill" type="submit">Szűrés</button>
         </div>
     </form>
 </div>
 
-@section('script')
-    <script>
-        let
-    </script>
-@endsection

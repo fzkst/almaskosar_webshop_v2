@@ -28,7 +28,7 @@
                             <td>{{ $item->description }}</td>
                             <td><img src="{{ asset('img/uploads/categories/'.$item->image)}}" class="kategoriakep" alt="kategóriakép"></td>
                             <td class="align-middle text-center">
-                                <a href="{{ url('categories/'.$item->id.'/edit')}} "><button class="btn btn-prim btn-sm"><i class="bi bi-pencil-square"></i></button></a>
+                                <a href="{{ url('categories/'.$item->id.'/edit')}} "><button class="btn btn-edit btn-sm"><i class="bi bi-pencil-square"></i></button></a>
                                 <form action="{{ url('categories/'.$item->id)}}" method="POST">
                                     @csrf
                                     @method('DELETE')

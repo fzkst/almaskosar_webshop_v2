@@ -7,7 +7,7 @@
                 @php
                     $kategoria_neve = DB::table('categories')->where('id', $product->category_id)->get('name');
                 @endphp
-                <a href="{{ url('/frontend/'.$kategoria_neve[0]->name)}}">{{ $kategoria_neve[0]->name }}</a>
+                <a href="{{ route('/frontend/products', ['category' => $product->category_id]) }}">{{ $kategoria_neve[0]->name }}</a>
                 / {{ $product->model }}
             </h6>
         </div>

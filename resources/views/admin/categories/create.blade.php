@@ -23,12 +23,12 @@
                         <textarea class="form-control" rows="5" name="description" value="{{ old('description') }}"></textarea>
                     </div>
                     <div class="mb-4">
-                        <label class="form-check-label" for="">Státusz</label>
-                        <input type="checkbox" class="form-check-control" name="status" value="{{ old('status') }}">
+                        <input type="checkbox" class="form-check-control" id="status" name="status" value="{{ old('status') }}">
+                        <label class="form-check-label ms-2" for="status">Státusz</label>
                     </div>
                     <div class="mb-4">
-                        <label class="form-check-label" for="">Kiemelt kategória</label>
-                        <input d-flex flex-row class="form-check-control" name="popular" value="{{ old('popular') }}">
+                        <input type="checkbox" class="form-check-control" id="popular" name="popular" value="{{ old('popular') }}">
+                        <label class="form-check-label ms-2" for="popular">Kiemelt kategória</label>
                     </div>
                     <div class="mb-4">
                         <label class="form-file mb-2" for="">Kép feltöltése:</label>

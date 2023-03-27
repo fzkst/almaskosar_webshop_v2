@@ -20,71 +20,6 @@ class FrontendController extends Controller
         return view('frontend.index', compact(['popular_products', 'letters']));
     }
 
-
-
-    public function filterx(Request $request, $category_id){
-
-        $modelCheck = $request->input('models');
-        $storageCheck = $request->input('storages');
-        $colorCheck = $request->input('colors');
-
-        $products = array();
-
-        //$products = DB::table('products')->where('category_id', $category_id)->whereIn('model', ['iPhone 14 Pro Max', $modelCheck])->get(); //->whereIn('model', $modelCheck)->get();
-        if ($modelCheck && !$storageCheck && !$colorCheck ){
-            $products = DB::table('products')->where('category_id', $category_id)->whereIn('model', $modelCheck)->get();
-
-            //$products = DB::table('products')->where([['category_id', 1], ['model', $modelCheck]])->get();
-        } elseif ($storageCheck && !$modelCheck && !$colorCheck){
-            $products = DB::table('products')->where('category_id', $category_id)->whereIn('storage', $storageCheck)->get();
-        } elseif ($colorCheck && !$modelCheck && !$storageCheck){
-            $products = DB::table('products')->where('category_id', $category_id)->whereIn('color', $colorCheck)->get();
-        } elseif ($modelCheck && $storageCheck){
-            $productsAll = DB::table('products')->where('category_id', $category_id)->whereIn('model', $modelCheck)->get();
-            foreach($productsAll as $product){
-                if(!$colorCheck) {
-                    if(in_array($product->storage, $storageCheck)){
-                    array_push($products, $product);
-                    } else {
-                        if(in_array($product->storage, $storageCheck) && in_array($product->color, $colorCheck)){
-                            array_push($products, $product);
-                        }
-                    }
-                }
-            //$products = DB::table('products')->where([['category_id', 1], ['model', $modelCheck]])->whereIn('color', $colorCheck)->get();
-            }
-        } elseif ($modelCheck && $colorCheck){
-            $productsAll = DB::table('products')->where('category_id', $category_id)->whereIn('model', $modelCheck)->get();
-            foreach($productsAll as $product){
-                if(!$storageCheck) {
-                    if(in_array($product->color, $colorCheck)){
-                    array_push($products, $product);
-                    } else {
-                        if(in_array($product->color, $colorCheck) && in_array($product->storage, $storageCheck)){
-                            array_push($products, $product);
-                        }
-                    }
-                }
-            }
-        } elseif ($storageCheck && $colorCheck){
-            $productsAll = DB::table('products')->where('category_id', $category_id)->whereIn('storage', $storageCheck)->get();
-            foreach($productsAll as $product){
-                if(!$modelCheck) {
-                    if(in_array($product->color, $colorCheck)){
-                    array_push($products, $product);
-                    } else {
-                        if(in_array($product->color, $colorCheck) && in_array($product->model, $modelCheck)){
-                            array_push($products, $product);
-                        }
-                    }
-                }
-            }
-        } else {
-            $products = DB::table('products')->where('category_id', $category_id)->get();
-        }
-        return $products;
-    }
-
     public function filter(Request $request, $category_id){
         $modelCheck = $request->input('models');
         $storageCheck = $request->input('storages');
@@ -94,7 +29,6 @@ class FrontendController extends Controller
         $productsAll = array();
         $selected = array();
 
-        //DD($category_id);
         if($modelCheck && !$storageCheck && !$colorCheck){
             $products = DB::table('products')->where('category_id', $category_id)->whereIn('model', $modelCheck)->get();
         } elseif (!$modelCheck && $storageCheck && !$colorCheck){
@@ -135,93 +69,18 @@ class FrontendController extends Controller
                 }
             }
         }
-
-
-
-        /* if (!$products){
-            $products = $products = DB::table('products')->where('category_id', $category_id)->get();
-        } */
-
         return $products;
     }
 
-
-
-
-
-    public function iphones(Request $request) {
+    public function products(Request $request, $category) {
         $categories = Category::all();
         $letters = ['A', 'B', 'C'];
-        $category_id = 1;
-
+        $category_id = $category;
+       // DD($category);
         $modelCheck = $request->input('models');
         $storageCheck = $request->input('storages');
         $colorCheck = $request->input('colors');
-        $link = $request->input('link');
-        DD($link);
-
-        $modelNames = DB::table('products')->select('model')->where('category_id', $category_id)->groupBy('model')->orderByDesc('model')->get();
-        $modelStorages = DB::table('products')->select('storage')->where('category_id', $category_id)->groupBy('storage')->get();
-        $modelColors = DB::table('products')->select('color')->where('category_id', $category_id)->groupBy('color')->get();
-
-
-        $filter = FrontendController::filter($request, $category_id);
-
-        if(count($filter) == 0){
-            if (is_null($modelCheck) && is_null($storageCheck) && is_null($colorCheck)){
-                $products = DB::table('products')->where('category_id', $category_id)->get();
-                return view('frontend.products', compact(['products', 'letters', 'categories', 'modelNames', 'modelStorages', 'modelColors']));
-            } else {
-                $errorMessage = "Nem található termék, ami megfelelne a keresési feltételeknek!";
-                return view('frontend.components.error', compact(['modelNames', 'modelStorages', 'modelColors', 'errorMessage']))->with(['status' => " Sikeresen hozzáadva a kosárhoz!", 'icon' => "success"]);
-            }
-        } else {
-            $products = $filter;
-            return view('frontend.products', compact(['products', 'letters', 'categories', 'modelNames', 'modelStorages', 'modelColors']));
-        }
-    }
-
-
-
-
-    public function ipads(Request $request) {
-        $categories = Category::all();
-        $letters = ['A', 'B', 'C'];
-        $category_id = 2;
-
-        $modelCheck = $request->input('models');
-        $storageCheck = $request->input('storages');
-        $colorCheck = $request->input('colors');
-
-        $modelNames = DB::table('products')->select('model')->where('category_id', $category_id)->groupBy('model')->orderByDesc('model')->get();
-        $modelStorages = DB::table('products')->select('storage')->where('category_id', $category_id)->groupBy('storage')->get();
-        $modelColors = DB::table('products')->select('color')->where('category_id', $category_id)->groupBy('color')->get();
-
-
-        $filter = FrontendController::filter($request, $category_id);
-
-        if(count($filter) == 0){
-            if (is_null($modelCheck) && is_null($storageCheck) && is_null($colorCheck)){
-                $products = DB::table('products')->where('category_id', $category_id)->get();
-                return view('frontend.products', compact(['products', 'letters', 'categories', 'modelNames', 'modelStorages', 'modelColors']));
-            } else {
-                $errorMessage = "Nem található termék, ami megfelelne a keresési feltételeknek!";
-                return view('frontend.components.error', compact(['modelNames', 'modelStorages', 'modelColors', 'errorMessage']))->with(['status' => " Sikeresen hozzáadva a kosárhoz!", 'icon' => "success"]);
-            }
-        } else {
-            $products = $filter;
-            return view('frontend.products', compact(['products', 'letters', 'categories', 'modelNames', 'modelStorages', 'modelColors']));
-        }
-    }
-
-    public function macbooks(Request $request) {
-        $categories = Category::all();
-        $letters = ['A', 'B', 'C'];
-        $category_id = 3;
-
-        $modelCheck = $request->input('models');
-        $storageCheck = $request->input('storages');
-        $colorCheck = $request->input('colors');
+        //$link = $request->input('link');
 
         $modelNames = DB::table('products')->select('model')->where('category_id', $category_id)->groupBy('model')->orderByDesc('model')->get();
         $modelStorages = DB::table('products')->select('storage')->where('category_id', $category_id)->groupBy('storage')->get();
@@ -267,7 +126,6 @@ class FrontendController extends Controller
     public function shipping() {
         return view('frontend.footer_components.shipping');
     }
-
 
     // Rendelések
 
