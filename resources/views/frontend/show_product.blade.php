@@ -3,7 +3,7 @@
 @section('content')
     <div class="py-3 mb-4 shadow-sm border-top">
         <div class="container">
-            <h6 class="mb-0"><a href="{{ url('/') }}">Almáskosár /</a>
+            <h6 class="mb-0"><a href="{{ url('/') }}" class="fw-bold">Almáskosár /</a>
                 @php
                     $kategoria_neve = DB::table('categories')->where('id', $product->category_id)->get('name');
                 @endphp

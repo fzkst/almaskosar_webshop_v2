@@ -1,7 +1,7 @@
 @extends('admin.admin')
 
 @section('content')
-    <div class="container py-5">
+    <div class="container py-5 ms-5">
         <div class="card">
             <div class="card-title">
                 <h5 class="pt-3 ms-3">Az {{$order->tracking_number}} rendelés szerkesztése</h5>
@@ -89,3 +89,4 @@
             </form>
         </div>
     </div>
+@endsection

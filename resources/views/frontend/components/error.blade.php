@@ -7,7 +7,7 @@
         </div>
     </div>
 
-    <div class="container-fluid row mx-auto gap-3">
+    <div class="container row mx-auto gap-3">
         <h2 class="container py-3">Készülékek</h2>
         <div class="col-2">
             @include('frontend.components.filter')

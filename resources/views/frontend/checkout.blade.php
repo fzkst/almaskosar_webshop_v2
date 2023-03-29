@@ -14,15 +14,15 @@
                         <div class="card-body">
                             <div class="mb-3">
                                 <label class="form-label"  for="last_name">Vezetéknév:</label>
-                                <input class="form-control" value="{{ Auth::user()->last_name }}" type="text" name="last_name" placeholder="Vezetéknév">
+                                <input class="form-control" value="{{ Auth::user()->last_name }}" type="text" name="last_name" placeholder="Vezetéknév" required>
                             </div>
                             <div class="mb-3">
                                 <label class="form-label"  for="first_name">Keresztnév:</label>
-                                <input class="form-control" value="{{ Auth::user()->first_name }}" type="text" name="first_name" placeholder="Keresztnév">
+                                <input class="form-control" value="{{ Auth::user()->first_name }}" type="text" name="first_name" placeholder="Keresztnév" required>
                             </div>
                             <div class="mb-3">
                                 <label class="form-label"  for="email">Email:</label>
-                                <input class="form-control" value="{{ Auth::user()->email }}" type="email" name="email" placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+                                <input class="form-control" value="{{ Auth::user()->email }}" type="email" name="email" placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
                             </div>
                             <div class="mb-3">
                                 <label class="form-label"  for="postal_code">Irányítószám:</label>

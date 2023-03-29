@@ -12,13 +12,13 @@
         </div>
     </div>
 
-    <div class="container-fluid row mx-auto gap-3">
+    <div class="container row mx-auto gap-3">
         <h2 class="container py-3">Készülékek</h2>
-        <div class="col-2">
+        <div class="col-3">
             @include('frontend.components.filter')
         </div>
 
-        <div class="col-9">
+        <div class="col-8">
             <div class="container py-2 iphones">
                 <div class="row g-5">
                     @foreach ($products as $product)

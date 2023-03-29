@@ -1,4 +1,4 @@
-<div class="container-fluid ms-4 py-3">
+<div class="container-fluid ms-4 py-3 d-flex justify-content-center align-items-center">
     <div class="row">
         @php
             $categories = DB::table('categories')->get();

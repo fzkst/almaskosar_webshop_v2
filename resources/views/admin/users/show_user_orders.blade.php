@@ -1,7 +1,7 @@
 @extends('admin.admin')
 
 @section('content')
-    <div class="container pt-5">
+    <div class="container pt-5 ms-5">
         <div class="card">
             <div class="card-header">
                 <div class="row mt-2">

@@ -1,7 +1,7 @@
 @extends('admin.admin')
 
 @section('content')
-    <div class="container py-5">
+    <div class="container py-5 ms-5">
         <div>
             <a href="{{ url('edit_order/'.$order->id)}}"><button class="btn btn-outline-secondary mb-2" id="btn_uj_kategoria">Rendelés szerkesztése</button></a>
         </div>

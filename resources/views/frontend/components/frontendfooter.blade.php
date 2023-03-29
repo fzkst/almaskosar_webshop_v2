@@ -7,8 +7,8 @@
                     <table>
                         <tr>
                             <th>Termékeink</th>
-                            <th>Információk</th>
                             <th>Kapcsolat</th>
+                            <th>Információk</th>
                         </tr>
                         <tr>
                             <td><a href="{{ route('/frontend/products', ['category' => 1]) }}">iPhone</a></td>
