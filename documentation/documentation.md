@@ -19,25 +19,25 @@ Mindhárom aloldal jelenleg ugyanarra az üzlet aloldalra visz (szervíz és üg
 
 A Kapcsolat menüpont alatt pedig az ÁSZF van, amire rákattintva kiadja a teljes ÁSZF aloldalt görgethetően. 
 
-![ASZF](screenshots/shop/shop-04 aszf.jpg)
+![ASZF](screenshots/shop/aszf.jpg)
 
 Itt található egy Vásárlási tájékoztató aloldal és egy Szállítási és fizetési tájékoztató aloldal, ami kattintásra megnyílik. 
 Jobb alsó sarokban lévő connect gombok jelenleg nem működnek, inaktívak, mivel nincs ilyen fiók. 
 
-![Fooldal](screenshots/shop/shop-06 szallitas.jpg)
+![Fooldal](screenshots/shop/szallitas.jpg)
 
 Bejelnetkezés nélkül bármelyik termékcsoport nevére rákattintva behozza az adott termékcsoport listáját kis kártyánként. 
 Bal oldalt található egy szűrés panel, amivel több különböző paraméter beállításával tudjuk szűkíteni a termékek keresését, listázását.
 
-![Fooldal](creenshots/shop/shop-07 termekek.jpg)
+![Fooldal](creenshots/shop/termekek.jpg)
 
 Amennyiben nem található egyetlen termék sem a keresési feltételekhez, akkor az aloldal "Nem található olyan termék ami megfeleln a keresés ifeltételeknek! feliratot ír ki, és "Vissza" gombra kattintva az előző találati oldalra állhatunk vissza.
 
-![Fooldal](screenshots/shop/shop-09 szures.jpg)
+![Fooldal](screenshots/shop/szures.jpg)
 
 Az egyes termékek kártyáin a részletek gomb aktív, és rákattintva az adott termék aloldalára navigálhatunk. 
 
-![Fooldal](screenshots/shop/shop-13 termekkartya.jpg)
+![Fooldal](screenshots/shop/termekkartya.jpg)
 
 Amennyiben az adott termékből nincsne készleten egyetlen darab sem, akkor a termék adatkártyájának jobb alsó sarkában található bevásárlókosár ikon inaktív.
 Bal alsó sarkában a terméknek található a kosárba helyezendő mennyiség plusz minusz gombokkal állítható, de manuálisan is átírható szám értékre a textbox.
@@ -49,66 +49,87 @@ Középen a navigigációs sávon megjelenik az adott aloldal termékek közti e
 
 Amennyibne nem vagyunk bejelentkezve, akkor a kosárba helyezés gombját megnyitva felugró üzenetben tájékoztat minket az oldal, hogy bejelentés szükséges a vásárláshoz, tehát ilynekor nem helyeződik a kosárba a termék.
 
+![Bejelentkezesuzenet](screenshots/shop/bejelentkezesuzenet.jpg)
+
 
 REGISZTRÁCIÓ
 
-![Fooldal](screenshots/shop/shop-16 regisztralas.jpg)
-
+![Regisztralas](screenshots/shop/regisztralas.jpg)
 
 A regiszráció gombra kattinva a regiszrtációs aloldal jön be, ez reklámok nélkül, egy űrlap oldal, ahol a Név az Email a Jelszó és a jelszó újra történő begépéléshez szükséges űrlapok jelennek meg, mely felhasználóregisztrációt az Elküld gombbal tudjuk véglegesíteni.
 Jelszó karatek pontokkal vannak titkosítva, helyettesítve. 
 
+![RegisztraciosHiba](screenshots/shop/hibasregisztracio.jpg)
+
 Nem engedi a form azt, hogy Név mező üresen maradjon, és úgy legyen elküldve. Email validáció is van beépítve, ami elvárja a @ karaktert, és ezt sem lehetséges elküldeni üresen. 
+
+![RegisztraciosHiba](screenshots/shop/hibasregisztracio2.jpg)
 
 Amennyiben a két jelszó nem egyforma, akkor a jelszó ablak alatt egy angol üzenetben értesít (The password must be least 8 characters).
 Legalább 8 karakteresnek kell lennie a jelszónak.
 
-screenshot
+![RegisztraciosHiba](screenshots/shop/hibasregisztracio3.jpg)
+
+![RegisztraciosHiba](screenshots/shop/hibasregisztracio4.jpg)
+
+![RegisztraciosHiba](screenshots/shop/hibasregisztracio5.jpg)
 
 Amennyiben sikeres az Elküld gomb, akkor visszairányít a főoldalra, és bejelentkezés is megtörténik. 
 
 A vásárolandó mennyiség nem lehet több, mint amennyi éppen raktáron lévő mennyiségként mutat az adatlap. 
 
-Felugró menübel jelző hogy az adott  termék SIkeresen hozzáadásra került a kosárhoz, amit az OK gombbal veheetünk tudomásul. Zöld pipa is jelzi.
+![Kosaruzenet](screenshots/shop/kosaruzenet.jpg)
 
-screenshot
+Felugró menübel jelző hogy az adott termék sikeresen hozzáadásra került a kosárhoz, amit az OK gombbal veheetünk tudomásul. Zöld pipa is jelzi.
+
+![Hozzaadas](screenshots/shop/hozzaadasakosarhoz.jpg)
 
 Az adatlap jobb alsó sarkán a Kosárba gomb felett jelzi a termék darab árát. 
 
-A jobb felső sarokban tlaálható kosár gombra rákattintva bejön a kosár aloldal, mely kilistázza, hogy milyne termékből hány darabot kívánsz várásolni, ahol a mennyiséget is lehet változtatni, ill. törölni is lehet a termékeket. 
-A vásárlandó termékek listájában látható a termék bélyegképet.
+A jobb felső sarokban tlaálható kosár gombra rákattintva bejön a kosár aloldal, mely kilistázza, hogy milyen termékből hány darabot kívánsz várásolni, ahol a mennyiséget is lehet változtatni, ill. törölni is lehet a termékeket. 
+A vásárlandó termékek listájában látható a termék bélyegképe.
 
-Amennyiben olyan termék adatlapján kattintunk ismét a kosár gombra, mint ameilyenből már van a kosarunkba helyezve, akkor felugró ablakban étresít minket az oldal, hogy ilyen termékból már van a kosaradban, és hogyha többet szeretnénk vásárolni ebből, akkor a megrendelsnél lehet módosítani a mennyiséget. 
+![Kosar](screenshots/shop/kosar.jpg)
 
-screenshot
+Amennyiben olyan termék adatlapján kattintunk ismét a kosár gombra, mint ameilyenből már van a kosarunkba helyezve, akkor felugró ablakban étresít minket az oldal, hogy ilyen termékból már van a kosaradban, és hogyha többet szeretnénk vásárolni ebből, akkor a megrendelésnél lehet módosítani a mennyiséget. 
 
-A kosár aloldalon a termékek törlés gombjára kattintva felugró ablak étrsít minket, hogy a törlés sikeres volt.
-Kiíjra a bruttó vgösszeget, összesíti a rendelést. 
+A kosár aloldalon a termékek törlés gombjára kattintva felugró ablak értesít minket, hogy a törlés sikeres volt.
+Kiíjra a bruttó végösszeget, összesíti a rendelést. 
 
 A pénztár gombra kattintva megjelenik a pénztár aloldal, ahol a számlázási adatokat lehet űrlapon megadni, úgy mint Vezetéknév Keresztnév, email iránytószám, város cím és telefonszám.
-Amennyiben már korábban volt vásárlás, vagy a profilunkban már kitöltöttük az adatainkat, akkor ezek itt kitöldnek, és megjelennek, de módosíthatóak itt is.
+Amennyiben már korábban volt vásárlás, vagy a profilunkban már kitöltöttük az adatainkat, akkor ezek itt kitöltődnek, és megjelennek, de módosíthatóak itt is.
 
-Jobb oldalt látható ismét a terméklista, miből hány darab, és az összesen mennyi. 
+![Megrendeles](screenshots/shop/megrendeles.jpg)
+
+Jobb oldalt látható ismét a terméklista, miből hány darab, és az összesen mekkora értékben kerül megrendelésre. 
 
 A megrendelés leadásához a Számlázási adatok minden egyes űrlaprészének kitöltése kötelező, erről egy üzenetsáv értesít. 
-
-screenshot
 
 Megrendel gombra kattintva lehet leadni a megrendelést. 
 Egy új aloldalban értesít minket az oldal, hogy Sikeresen leadva rendelésünk, Vásárlás folytatása gombra rákattintva főoldalra navigálhatunk.
 
-A Felhasználó menüje a kosár mellett lenyílik, ahol Beállítások Rendeléseim és Kijelentkezés gomb található.
+![MegrendelesSikeres](screenshots/shop/sikeresrendeles.jpg)
 
-screenshot
+A Felhasználó menüje a kosár mellett lenyílik, ahol Beállítások Rendeléseim és Kijelentkezés gomb található.
 
 Beállítások
 Ezen az aloldalon a bejelentkezett felhasználó adatainak a formja látható, itt ha módosítunk valamelyik értéken, akkor a jobb felső sarokban léső módosítás gombra kattintva tudjuk az adatbázisba külden iaz adatokat. Egy új aloldalon mitatja, hogy az adatok módosítása sikeres, és a vásárlás folytatása gombbal ugyanúgy a főoldalra jutunk. 
 
-A rendeléseim aloldalon látható az adott felhasználó összes rendelésének a kilistázása, Rendelés dátuma rendeléstzszám rendelés söszeget, és rendelés állapota. Megnéz gombra kattinva az egyes rendelések aloldalon  nyílink meg, részletesen mutatja, hogy milyen adatokkal és miket rendeltünk, emmyniért. Vissza gombra kattintva tudunk visszanavigálni a rendeléseink oldalra. 
+![Adatokmodositasa](screenshots/shop/adatokmodositasa.jpg)
 
-A kijelentéekzés gombra kattintva pedig a főoldalra navigálunk, immáron kijelentkezve. 
+A rendeléseim aloldalon látható az adott felhasználó összes rendelésének a kilistázása.
+
+![Rendelesek](screenshots/shop/rendelesek.jpg)
+
+Rendelés dátuma rendelésszám rendelés öszege, és rendelés állapota. Megnéz gombra kattinva az egyes rendelések aloldalon nyílnak meg, részletesen mutatja, hogy milyen adatokkal, miket és mennyiért rendeltünk. A vissza gombra kattintva tudunk visszanavigálni a rendeléseink oldalra. 
+
+![Rendelesreszletei](screenshots/shop/rendelesreszletei.jpg)
+
+A kijelentkezés gombra kattintva pedig a főoldalra navigálunk, immáron kijelentkezve. 
 
 Admin bejelentkezés:
+
+![Fooldal](screenshots/admin/fooldal.jpg)
 
 Amennyiben admin jogú felhasználóval jelentkezünk be, úgy teljesen más dizájnú oldalt kapunk. Bal oldalt Dashboard kategóriák termékek fleaználók rendelések menüponokkal, és ezek alatt pedig a admin névvel. 
 Rögtön a dashboard oldalra navigál az oldal. 
