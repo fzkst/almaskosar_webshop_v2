@@ -13,31 +13,31 @@ Alatta pedig a webshop kiemelt termékeinek a adatlapjai váltakoznak. (a backen
 Az egyes termékek részletei gombra történő rákattintással megnyílik a termék adatlapja, ez működik bejelentkezés nélkül is.
 A képernyő legalsó részén látható egy információs sáv a termékek kategóriáivál, információk gombbal, ahol pl. az üzletek gombra kattintva térképes információs aloldal nyílik meg, jelenleg egy üzlet található itt.
 
-![Tajekoztato](documentation/screenshots/shop/shop-05 tajekoztato.jpg)
+![Tajekoztato](screenshots/shop/shop-05 tajekoztato.jpg)
 
 Mindhárom aloldal jelenleg ugyanarra az üzlet aloldalra visz (szervíz és ügyfélszolgálat).
 
 A Kapcsolat menüpont alatt pedig az ÁSZF van, amire rákattintva kiadja a teljes ÁSZF aloldalt görgethetően. 
 
-![ASZF](documentation/screenshots/shop/shop-04 aszf.jpg)
+![ASZF](screenshots/shop/shop-04 aszf.jpg)
 
 Itt található egy Vásárlási tájékoztató aloldal és egy Szállítási és fizetési tájékoztató aloldal, ami kattintásra megnyílik. 
 Jobb alsó sarokban lévő connect gombok jelenleg nem működnek, inaktívak, mivel nincs ilyen fiók. 
 
-![Fooldal](documentation/screenshots/shop/shop-06 szallitas.jpg)
+![Fooldal](screenshots/shop/shop-06 szallitas.jpg)
 
 Bejelnetkezés nélkül bármelyik termékcsoport nevére rákattintva behozza az adott termékcsoport listáját kis kártyánként. 
 Bal oldalt található egy szűrés panel, amivel több különböző paraméter beállításával tudjuk szűkíteni a termékek keresését, listázását.
 
-![Fooldal](documentation/screenshots/shop/shop-07 termekek.jpg)
+![Fooldal](creenshots/shop/shop-07 termekek.jpg)
 
 Amennyiben nem található egyetlen termék sem a keresési feltételekhez, akkor az aloldal "Nem található olyan termék ami megfeleln a keresés ifeltételeknek! feliratot ír ki, és "Vissza" gombra kattintva az előző találati oldalra állhatunk vissza.
 
-![Fooldal](documentation/screenshots/shop/shop-09 szures.jpg)
+![Fooldal](screenshots/shop/shop-09 szures.jpg)
 
 Az egyes termékek kártyáin a részletek gomb aktív, és rákattintva az adott termék aloldalára navigálhatunk. 
 
-![Fooldal](documentation/screenshots/shop/shop-13 termekkartya.jpg)
+![Fooldal](screenshots/shop/shop-13 termekkartya.jpg)
 
 Amennyiben az adott termékből nincsne készleten egyetlen darab sem, akkor a termék adatkártyájának jobb alsó sarkában található bevásárlókosár ikon inaktív.
 Bal alsó sarkában a terméknek található a kosárba helyezendő mennyiség plusz minusz gombokkal állítható, de manuálisan is átírható szám értékre a textbox.
@@ -52,7 +52,7 @@ Amennyibne nem vagyunk bejelentkezve, akkor a kosárba helyezés gombját megnyi
 
 REGISZTRÁCIÓ
 
-![Fooldal](documentation/screenshots/shop/shop-16 regisztralas.jpg)
+![Fooldal](screenshots/shop/shop-16 regisztralas.jpg)
 
 
 A regiszráció gombra kattinva a regiszrtációs aloldal jön be, ez reklámok nélkül, egy űrlap oldal, ahol a Név az Email a Jelszó és a jelszó újra történő begépéléshez szükséges űrlapok jelennek meg, mely felhasználóregisztrációt az Elküld gombbal tudjuk véglegesíteni.
