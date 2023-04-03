@@ -13,7 +13,7 @@ Alatta pedig a webshop kiemelt termékeinek a adatlapjai váltakoznak. (a backen
 Az egyes termékek részletei gombra történő rákattintással megnyílik a termék adatlapja, ez működik bejelentkezés nélkül is.
 A képernyő legalsó részén látható egy információs sáv a termékek kategóriáivál, információk gombbal, ahol pl. az üzletek gombra kattintva térképes információs aloldal nyílik meg, jelenleg egy üzlet található itt.
 
-![Tajekoztato](screenshots/shop/shop-05 tajekoztato.jpg)
+![Tajekoztato](screenshots/shop/tajekoztato.jpg)
 
 Mindhárom aloldal jelenleg ugyanarra az üzlet aloldalra visz (szervíz és ügyfélszolgálat).
 
