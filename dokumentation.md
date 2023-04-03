@@ -1,5 +1,7 @@
 Az Almaskosar Webshop projekt alkalmazás
 
+![Fooldal](screenshots/shop/shop-01 főoldal.jpg)
+
 A főoldalon a felső menüsávon lehet választani három kategória közül.
 Az Almáskosár pedig a főoldalra irányító gomb, ami bármelyik aloldalról működik.
 A főoldalon bejelentkezés nélkül látható jobb felső sarokban a Belépés és a Regisztráció gomb.
