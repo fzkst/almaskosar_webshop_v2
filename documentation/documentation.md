@@ -2,7 +2,7 @@ Az Almaskosar Webshop projekt alkalmazás
 
 FŐOLDAL 
 
-![Fooldal](documentation/screenshots/shop/mainpage.jpg)
+![Fooldal](screenshots/shop/mainpage.jpg)
 
 A főoldalon a felső menüsávon lehet választani három kategória közül.
 Az Almáskosár pedig a főoldalra irányító gomb, ami bármelyik aloldalról működik.
