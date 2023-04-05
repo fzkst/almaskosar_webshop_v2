@@ -1,6 +1,9 @@
 <?php
 
+use App\Http\Controllers\API\CartController;
 use App\Http\Controllers\API\CategoryController;
+use App\Http\Controllers\API\Order_itemController;
+use App\Http\Controllers\API\OrderController;
 use App\Http\Controllers\API\ProductController;
 use App\Http\Controllers\API\UserController;
 use Illuminate\Http\Request;
@@ -24,8 +27,15 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 
 
-Route::resource('users', UserController::class);
+Route::apiResource('users', UserController::class);
 
-Route::resource('categories', CategoryController::class);
+Route::apiResource('categories', CategoryController::class);
 
-Route::resource('products', ProductController::class);
+Route::apiResource('products', ProductController::class);
+
+Route::apiResource('carts', CartController::class);
+
+Route::apiResource('orders', OrderController::class);
+
+Route::apiResource('order_items', Order_itemController::class);
+

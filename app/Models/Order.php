@@ -14,17 +14,19 @@ class Order extends Model
 
     protected $fillable = [
 
-            'last_name',
-            'first_name',
-            'email',
-            'postal_code',
-            'city',
-            'address',
-            'phone_number',
-            'customer_code',
-            'status',
-            'message',
-            'tracking_number'
+        'user_id',
+        'last_name',
+        'first_name',
+        'email',
+        'postal_code',
+        'city',
+        'address',
+        'phone_number',
+        'customer_code',
+        'total_price',
+        'status',
+        'message',
+        'tracking_number'
     ];
 
     public function orderItems(){

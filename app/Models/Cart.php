@@ -9,6 +9,8 @@ class Cart extends Model
 {
     use HasFactory;
 
+    protected $table = 'carts';
+
     protected $visible = [
         'id',
         'user_id',

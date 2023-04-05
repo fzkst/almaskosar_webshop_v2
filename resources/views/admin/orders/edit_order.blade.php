@@ -82,7 +82,7 @@
                             </div>
                         <div class="mt-3">
                             <label class="form-label" for="">Rendeléssel kapcsolatos üzenet a vásárlónak</label>
-                            <textarea class="form-control" name="first_name" rows="5" value="{{ $order->message }}"></textarea>
+                            <textarea class="form-control" name="message" rows="5" value="{{ $order->message }}"></textarea>
                         </div>
                     </div>
                 </div>
