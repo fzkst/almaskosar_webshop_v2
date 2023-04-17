@@ -119,6 +119,16 @@ body {
     font-size: smaller;
 }
 
+.details img{
+    max-width: 50px;
+}
+
+@media (max-width: 1000px) {
+    .quantity-hidden {
+        visibility: hidden;
+    }
+}
+
 /*CART*/
 .quantity {
     max-width: 50px;

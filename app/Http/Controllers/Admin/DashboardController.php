@@ -21,4 +21,10 @@ class DashboardController extends Controller
         $keszletek = DB::table('products')->where('stock', '<=', 1)->get();
         return view('admin.index', compact(['users', 'products', 'usersCity2', 'adatok', 'keszletek']));
     }
+
+    public function productsSize(){
+        $products = Product::all();
+        $products_size = count($products);
+        return response()->json(['products_size' => $products_size]);
+    }
 }

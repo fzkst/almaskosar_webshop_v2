@@ -27,7 +27,7 @@
                                     <h6>Termékek száma:</h6>
                                 </div>
                                 <div class="card-body">
-                                    <h6>{{ $termekekSzama }}</h6>
+                                    <h6 class="termekek_szama"></h6>
                                 </div>
                             </div>
                         </div>

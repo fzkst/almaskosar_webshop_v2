@@ -17,4 +17,16 @@ window.addEventListener('load', function() {
         }
         console.log(id);
     });
+    termekek_szama();
+    function termekek_szama(){
+        $.ajax({
+            type: "GET",
+            url: "/products-size",
+            dataType: "json",
+            success: function (response) {
+                $('.termekek_szama').text(response.products_size);
+            }
+        })
+    }
+
 });

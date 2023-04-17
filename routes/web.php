@@ -37,6 +37,7 @@ Route::middleware(['auth','isAdmin'])->group( function () {
     }); */
 
     Route::get('/dashboard', [DashboardController::class, 'index']);
+    Route::get('/products-size', [DashboardController::class, 'productsSize']);
     Route::resource('users', UserController::class);
     Route::resource('categories', CategoryController::class);
     Route::resource('products', ProductController::class);
