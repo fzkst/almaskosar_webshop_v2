@@ -157,7 +157,7 @@ Az űrlap az minden kategóriánál ugyanaz, viszont amennyiben valamelyik tulaj
 A termék listában is ugyanúgy kilistázza a tualjdonságokat, a készlet számot az árat, képet is mutatja bélyegképként, és ugyanúgy termékenként van szerkesztés s törlés gomb. 
 
 A felhasználók:
-A flehasználók gombra kattintva bejön a felhaználók aloldal, a felső Új felhasználó hozzáadása gombra kattintva megjelenik az űrlap aloldal, amit kitöltve a Hozzáad gombbal lehetséges a felhasználó hozzáadása. 
+A felehasználók gombra kattintva bejön a felhaználók aloldal, a felső Új felhasználó hozzáadása gombra kattintva megjelenik az űrlap aloldal, amit kitöltve a Hozzáad gombbal lehetséges a felhasználó hozzáadása. 
 A Vevőkód mező is ebben az esetben kitölthető, megadható, ami alapesetben egy 5 jegyű szám. 
 Ezen a felületen minden mező kitöltése kötelező a sikeres felhasználói hozzáadáshoz. 
 Rendelések gomb is van a szerkesztés és törlés mellett, amire rákattintva megjelenik az adott felhasználó rendeléseinek aloldala, és a jobb oldalt a vissza gombra kattintva vissza lehet térni a felhasználói listához. 

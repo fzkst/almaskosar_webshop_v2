@@ -28,21 +28,46 @@ class LoginController extends Controller
      * @var string
      */
 
-     //protected $redirectTo = RouteServiceProvider::HOME;
+    //protected $redirectTo = RouteServiceProvider::HOME;
 
-     protected function authenticated()
-     {
-         if(Auth::user()->admin == '1') //1 = Admin Login
-         {
-             //return redirect('dashboard')->with('status','Welcome to your dashboard');
-             return redirect('dashboard')->with('status','Üdv az ADMIN felületen!');
-         }
-         elseif(Auth::user()->admin == '0') // Normal or Default User Login
-         {
-             //return redirect('/')->with('status','Logged in successfully');
-             return redirect('/')->with('status','Sikeres bejelentkezés!');
-         }
-     }
+
+    /**
+     * @OA\Post(
+     * path="/login",
+     * summary="Sign in",
+     * description="Bejelentkezés email-el és jelszóval",
+     * operationId="authLogin",
+     * tags={"auth"},
+     * @OA\RequestBody(
+     *    required=true,
+     *    description="A felhasználó hitelesítő adatainak átadása",
+     *    @OA\JsonContent(
+     *       required={"email","password"},
+     *       @OA\Property(property="email", type="string", format="email", example="user1@mail.com"),
+     *       @OA\Property(property="password", type="string", format="password", example="PassWord12345"),
+     *    ),
+     * ),
+     * @OA\Response(
+     *    response=422,
+     *    description="Wrong credentials response",
+     *    @OA\JsonContent(
+     *       @OA\Property(property="message", type="string", example="Sorry, wrong email address or password. Please try again")
+     *        )
+     *     )
+     * )
+     */
+    protected function authenticated()
+    {
+        if (Auth::user()->admin == '1') //1 = Admin Login
+        {
+            //return redirect('dashboard')->with('status','Welcome to your dashboard');
+            return redirect('dashboard')->with('status', 'Üdv az ADMIN felületen!');
+        } elseif (Auth::user()->admin == '0') // Normal or Default User Login
+        {
+            //return redirect('/')->with('status','Logged in successfully');
+            return redirect('/')->with('status', 'Sikeres bejelentkezés!');
+        }
+    }
 
     /**
      * Create a new controller instance.

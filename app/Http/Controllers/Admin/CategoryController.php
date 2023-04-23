@@ -11,26 +11,27 @@ use Illuminate\Support\Facades\File;
 
 class CategoryController extends Controller
 {
+
     public function index()
     {
         $categories = Category::all();
         return view('admin.categories.index', compact('categories'));
     }
 
-    public function create(){
+    public function create()
+    {
         return view('admin.categories.create');
     }
 
     public function store(StoreCategoryRequest $request)
     {
         $category = new Category();
-        if($request->hasFile('image')){
+        if ($request->hasFile('image')) {
             $file = $request->file('image');
             $ext = $file->getClientOriginalExtension();
-            $filename = time().'.'.$ext;
+            $filename = time() . '.' . $ext;
             $file->move('img/uploads/categories', $filename);
             $category->image = $filename;
-
         }
 
         $category->name = $request->input('name');
@@ -42,7 +43,8 @@ class CategoryController extends Controller
         return redirect('categories')->with('message', "Sikeresen hozzáadva!");
     }
 
-    public function show(Category $category){
+    public function show(Category $category)
+    {
         //
     }
 
@@ -52,19 +54,17 @@ class CategoryController extends Controller
         return view('admin.categories.edit', compact('category'));
     }
 
-
     public function update(UpdateCategoryRequest $request, $id)
     {
         $category = Category::find($id);
-        if($request->hasFile('image')){
-            $path = 'img/uploads/categories/'.$category->image;
-            if(File::exists($path))
-            {
+        if ($request->hasFile('image')) {
+            $path = 'img/uploads/categories/' . $category->image;
+            if (File::exists($path)) {
                 File::delete($path);
             }
             $file = $request->file('image');
             $ext = $file->getClientOriginalExtension();
-            $filename = time().'.'.$ext;
+            $filename = time() . '.' . $ext;
             $file->move('img/uploads/categories', $filename);
             $category->image = $filename;
         }
@@ -80,13 +80,12 @@ class CategoryController extends Controller
     public function destroy($id)
     {
         $category = Category::find($id);
-        if(is_null($category)){
+        if (is_null($category)) {
             return response()->json(["message" => "Ilyen azonosítóval nem található kategória!"], 404);
         }
-        if($category->kepfajl){
-            $path = 'img/uploads/categories/'.$category->image;
-            if(File::exists($path))
-            {
+        if ($category->kepfajl) {
+            $path = 'img/uploads/categories/' . $category->image;
+            if (File::exists($path)) {
                 File::delete($path);
             }
         }
