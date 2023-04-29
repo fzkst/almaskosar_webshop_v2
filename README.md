@@ -1,6 +1,5 @@
-# ![Almáskosár webshop]
+# Almáskosár webshop
 
-----------
 
 ## Leírás
 
@@ -15,20 +14,24 @@ Előfeltételek:
 
 Telepítés:
 
+
 Repó klónozása:
 ```bash
     git clone https://github.com/fzkst/almaskosar_webshop_v2.git
 ```
+
 
 Mappaváltás a repóra:
 ```bash
     cd almaskosar_webshop_v2
 ```
 
+
 Függőségek telepítése composer-el:
 ```bash
     composer install
 ```
+
 
 Az .env.example fájlról készítsünk egy másolatot .env néven, és szerkesszük át, ha szükséges:
 
@@ -43,15 +46,18 @@ DB_PASSWORD=          # Az adatbázis-kapcsolathoz használt jelszó
 DB_DATABASE=database  # Az adatbázis neve
 ```
 
+
 Új alkalmazás-kulcs generálása:
 ```bash
     php artisan key:generate
 ```
 
+
 Adatbázis migrációk futtatása:
 ```bash
     php artisan migrate
 ```
+
 
 ## Az alkalmazás futtatása
 
@@ -59,6 +65,7 @@ Adatbázis migrációk futtatása:
     php artisan serve
 ```
 Ezután az alkalmazás elérheő a  http://localhost:8000 linken.
+
 
 ### REST API
 
