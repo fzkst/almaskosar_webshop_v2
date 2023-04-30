@@ -13,6 +13,9 @@ use Illuminate\Support\Facades\Auth;
 
 class CheckoutController extends Controller
 {
+    /***
+     * Visszaadja a felhasználó kosárba helyezett azon termékeit, amik az adott időpontban készleten vannak.
+     */
     public function index(){
         $allCartItems = Cart::where('user_id', Auth::id())->get();
         foreach($allCartItems as $item){
@@ -26,6 +29,9 @@ class CheckoutController extends Controller
     }
 
 
+    /***
+     * Rendelés hozzáadása az adatbázishoz
+     */
     public function ordering(Request $request){
         $customer_code = rand(11111,99999);
 
@@ -52,7 +58,7 @@ class CheckoutController extends Controller
         $order->tracking_number = "Almáskosár/".rand(1111,9999);
         $order->save();
 
-        $cartItems = Cart::where('user_id', Auth::id())->get(); //a user vásárlásainak kiválogatása
+        $cartItems = Cart::where('user_id', Auth::id())->get(); //a felhasználó kosárba helyezett termékeinek kiválogatása
         foreach($cartItems as $item){
             OrderItem::create([
                 'order_id' => $order->id,
@@ -62,11 +68,11 @@ class CheckoutController extends Controller
             ]);
 
             $product = Product::where('id', $item->product_id)->first(); //a kosárban lévő temékének megkeresése az összes termék közül
-            $product->stock -= $item->product_quantity;
+            $product->stock -= $item->product_quantity; // csökkenti a termék mennyiségét az adatbázisban a rendelés mértékével
             $product->update();
         }
 
-        if(Auth::user()->cim == NULL){
+        if(Auth::user()->cim == NULL){ // módosítja a felhasználó adatait az adatbázisban, ha hiányosak az adatai
             $user = User::where('id', Auth::id())->first();
             $user->last_name = $request->input('last_name');
             $user->first_name = $request->input('first_name');

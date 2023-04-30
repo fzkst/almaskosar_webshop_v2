@@ -13,12 +13,18 @@ use Illuminate\Support\Facades\DB;
 
 class FrontendController extends Controller
 {
+    /***
+     * Listázza a népszerű termékekkategóriák tábla összes elemét.
+     */
     public function index() {
         $letters = ['A', 'B', 'C'];
         $popular_products = DB::table('products')->where('popular', 1)->get();
         return view('frontend.index', compact(['popular_products', 'letters']));
     }
 
+    /***
+     * Termékek szűrése kategória, szín, tárhely alapján.
+     */
     public function filter(Request $request, $category_id){
         $modelCheck = $request->input('models');
         $storageCheck = $request->input('storages');
@@ -71,6 +77,9 @@ class FrontendController extends Controller
         return $products;
     }
 
+    /***
+     * Visszaadja a szűrési feltételeknek megfelelő termékeket.
+     */
     public function products(Request $request, $category) {
         $categories = Category::all();
         $letters = ['A', 'B', 'C'];
@@ -99,6 +108,9 @@ class FrontendController extends Controller
         }
     }
 
+    /***
+     * Megjeleníti a kiválasztott terméket.
+     */
     public function show_product($id) {
         $product = Product::find($id);
         if(is_null($product)){
@@ -125,20 +137,32 @@ class FrontendController extends Controller
 
     // Rendelések
 
+    /***
+     * Visszaadja a felhasználó rendeléseit.
+     */
     public function indexOrders(){
         $orders = Order::where('user_id', Auth::id())->get();
         return view('frontend.orders_index', compact('orders'));
     }
 
+    /***
+     * Visszaadja a felhasználó kiválasztott rendeléseit.
+     */
     public function showOrder($id){
         $order = Order::where('id', $id)->where('user_id', Auth::id())->first();
         return view('frontend.show_order', compact('order'));
     }
 
+    /***
+     * Vissazaad egy űrlapot, amin szerkeszteni lehet a felhasználó adatait.
+     */
     public function userSettings(){
         return view('frontend.user_settings');
     }
 
+    /***
+     * Frissíti a felhasználó adatait az adatbázisban az űrlapon megadott adatokkal.
+     */
     public function updateUsersDatas(Request $request){
         $user = User::where('id', Auth::id())->first();
         $user->last_name = $request->input('last_name');

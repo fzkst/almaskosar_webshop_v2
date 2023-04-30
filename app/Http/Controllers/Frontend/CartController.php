@@ -10,6 +10,9 @@ use Illuminate\Support\Facades\Auth;
 
 class CartController extends Controller
 {
+    /***
+     * A kiválasztott terméket hozzáadja a felhasználó kosarához.
+     */
     public function addProduct(Request $request){
 
         $category_id = $request->input('category_id');
@@ -46,6 +49,9 @@ class CartController extends Controller
         }
     }
 
+    /***
+     * Módosítja a kosárban lévő termék mennyiségét.
+     */
     public function updateProduct(Request $request) {
 
         $product_id = $request->input('product_id');
@@ -63,12 +69,18 @@ class CartController extends Controller
     }
 
 
+    /***
+     * Visszaadja a felhasználó összes termékét, ami a kosarában van.
+     */
     public function indexCart(){
         $cartItems = Cart::where('user_id', Auth::id())->get();
         return view('frontend.cart', compact('cartItems'));
     }
 
 
+    /***
+     * Termék eltávolítása a felhasználó kosarából.
+     */
     public function deleteProduct(Request $request){
         if (Auth::check()){
             $product_id = $request->input('product_id');

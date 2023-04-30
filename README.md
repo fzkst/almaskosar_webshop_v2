@@ -59,12 +59,20 @@ Adatbázis migrációk futtatása:
 ```
 
 
+Adatbázis feltöltése adatokkal: (Nem szükséges, de így átláthatóbb a webshop működése).
+```bash
+    php artisan db:seed
+```
+
+
 ## Az alkalmazás futtatása
 
 ```bash
     php artisan serve
 ```
-Ezután az alkalmazás elérheő a  http://localhost:8000 linken.
+Ezután az alkalmazás a http://localhost:8000 linken elérhető.
+Az admin felület megtekintéséhez módosítani kell az adatbázisban az egyik felhasználó admin oszlop értékét 0-ról 1-re. 
+Ha ezzel a felhasználóval jelentkezünk be, az admin felület fog megjelenni: http://localhost:8000/dashboard
 
 
 ### REST API

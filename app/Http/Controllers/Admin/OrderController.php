@@ -9,11 +9,17 @@ use Illuminate\Http\Request;
 
 class OrderController extends Controller
 {
+    /***
+     * Listázza a rendelések tábla összes elemét.
+     */
     public function index(){
         $orders = Order::all();
         return view('admin.orders.index', compact('orders'));
     }
 
+    /***
+     * Visszaadja a kiválasztott rendelést.
+     */
     public function show($id){
         $order = Order::find($id);
         if (is_null($order)){
@@ -22,6 +28,9 @@ class OrderController extends Controller
         return view('admin.orders.show_order', compact('order'));
     }
 
+    /***
+     * Visszaadja egy megadott felhasználó összes rendelését.
+     */
     public function showUserOrders($id){
         $orders = Order::where('user_id', $id)->get();
         $user = User::where('id', $id)->first();
@@ -32,6 +41,9 @@ class OrderController extends Controller
 
     }
 
+    /***
+     * Vissazaad egy űrlapot, amin szerkeszteni lehet a kiválasztott rendelést.
+     */
     public function editOrder($id){
         $order = Order::find($id);
         if (is_null($order)){
@@ -40,6 +52,9 @@ class OrderController extends Controller
         return view('admin.orders.edit_order', compact('order'));
     }
 
+    /***
+     * Frissíti a kiválasztott rendelést az adatbázisban, az űrlapon megadott adatokkal.
+     */
     public function updateOrder(Request $request, $id){
         $order = Order::where('id', $id)->first();
         if (is_null($order)){

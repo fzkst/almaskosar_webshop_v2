@@ -11,16 +11,25 @@ use Illuminate\Support\Facades\File;
 
 class ProductController extends Controller
 {
+    /***
+     * Listázza a termékek tábla összes elemét.
+     */
     public function index(){
         $products = Product::all();
         return view('admin.products.index', compact('products'));
     }
 
+    /***
+     * Vissazaad egy űrlapot, amin új terméket lehet létrehozni.
+     */
     public function create(){
         $categories = Category::all();
         return view('admin.products.create', compact('categories'));
     }
 
+    /***
+     * Hozzáadja az adatbázishoz az új terméket, az űrlapon megadott adatokkal.
+     */
     public function store(StoreProductRequest $request){
         $product = new Product();
         if($request->hasFile('image')){
@@ -51,6 +60,9 @@ class ProductController extends Controller
         //
     }
 
+    /***
+     * Vissazaad egy űrlapot, amin szerkeszteni lehet a kiválasztott terméket.
+     */
     public function edit($id){
         $product = Product::find($id);
         if (is_null($product)){
@@ -60,6 +72,9 @@ class ProductController extends Controller
         return view('admin.products.edit', compact(['product', 'categories']));
     }
 
+    /***
+     * Frissíti a kiválasztott termék adatait az adatbázisban, az űrlapon megadott adatokkal.
+     */
     public function update(UpdateProductRequest $request, $id){
         $product = Product::find($id);
         if (is_null($product)){
@@ -94,13 +109,16 @@ class ProductController extends Controller
         return redirect('products')->with('message', "A termék adatainak módosítása sikeres!");
     }
 
+    /***
+     * Törli a kiválasztott terméket az adatbázisból.
+     */
     public function destroy($id){
         $product = Product::find($id);
         if (is_null($product)){
             return response()->json(["message" => "Ilyen azonosítóval nem található termék!"], 404);
         }
         if($product->image){
-            $path = 'img/uploads/products/A'.$product->image;        
+            $path = 'img/uploads/products/A'.$product->image;
             if(File::exists($path))
             {
                 File::delete($path);

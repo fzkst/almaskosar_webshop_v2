@@ -11,15 +11,24 @@ use Illuminate\Support\Str;
 
 class UserController extends Controller
 {
+    /***
+     * Listázza a felhasználók tábla összes elemét.
+     */
     public function index(){
         $users = User::all();
         return view('admin.users.index', compact('users'));
     }
 
+    /***
+     * Vissazaad egy űrlapot, amin új felhasználót lehet létrehozni.
+     */
     public function create(){
         return view('admin.users.create');
     }
 
+    /***
+     * Hozzáadja az adatbázishoz az új felhasználót, az űrlapon megadott adatokkal.
+     */
     public function store(StoreUserRequest $request){
         $user = new User();
         $user->name = $request->input('first_name');
@@ -41,11 +50,17 @@ class UserController extends Controller
         //
     }
 
+    /***
+     * Vissazaad egy űrlapot, amin szerkeszteni lehet a kiválasztott felhasználó adatait.
+     */
     public function edit($id){
         $user = User::find($id);
         return view('admin.users.edit', compact('user'));
     }
 
+    /***
+     * Frissíti a kiválasztott felhasználó adatait az űrlapon megadott adatokkal az adatbázisban.
+     */
     public function update(UpdateUserRequest $request, $id){
         $user = User::find($id);
         $user->name = $request->input('first_name');
@@ -61,6 +76,9 @@ class UserController extends Controller
         return redirect('users')->with('message', "A felhasználó adatainak módosítása sikeres!");
     }
 
+    /***
+     * Törlia a kiválasztott felhasználót az adatbázisból.
+     */
     public function destroy($id){
         $felhasznalo = User::find($id);
         if(is_null($felhasznalo)){

@@ -11,18 +11,26 @@ use Illuminate\Support\Facades\File;
 
 class CategoryController extends Controller
 {
-
+    /***
+     * Listázza a kategóriák tábla összes elemét.
+     */
     public function index()
     {
         $categories = Category::all();
         return view('admin.categories.index', compact('categories'));
     }
 
+    /***
+     * Vissazaad egy űrlapot, amin új kategóriát lehet létrehozni.
+     */
     public function create()
     {
         return view('admin.categories.create');
     }
 
+    /***
+     * Hozzáadja az adatbázishoz az új kategóriát, az űrlapon megadott adatokkal.
+     */
     public function store(StoreCategoryRequest $request)
     {
         $category = new Category();
@@ -48,12 +56,18 @@ class CategoryController extends Controller
         //
     }
 
+    /***
+     * Vissazaad egy űrlapot, amin szerkeszteni lehet a kiválasztott kategóriát.
+     */
     public function edit($id)
     {
         $category = Category::find($id);
         return view('admin.categories.edit', compact('category'));
     }
 
+    /***
+     * Frissíti a kiválasztott kategória adatait az adatbázisban, az űrlapon megadott adatokkal.
+     */
     public function update(UpdateCategoryRequest $request, $id)
     {
         $category = Category::find($id);
@@ -77,6 +91,9 @@ class CategoryController extends Controller
         return redirect('categories')->with('message', "A kategória módosítása sikeres!");
     }
 
+    /***
+     * Törli a kiválasztott kategóriát az adatbázisból.
+     */
     public function destroy($id)
     {
         $category = Category::find($id);

@@ -6,7 +6,7 @@
         <div>
             <ol>
                 <li>
-                    A vásárlás megkezdése előtt Önnek el kell döntenie, hogy regisztrál-e az iStyle Hungary Kft.
+                    A vásárlás megkezdése előtt Önnek el kell döntenie, hogy regisztrál-e az Almáskosár
                     webáruházában, vagy regisztráció nélkül kíván vásárolni. Amennyiben Ön előreláthatólag gyakran látogat
                     majd vissza a webáruházba, célszerű regisztrálnia, mert így nem kell minden egyes alkalommal megadnia
                     személyes adatait, szállítási címét. Amennyiben regisztrál első alkalommal történő vásárláshoz, úgy a

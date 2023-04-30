@@ -24,10 +24,10 @@
             <ul>
                 <li>
                     <h6 class="fw-bold">Az Almáskosár webáruházat üzemeltető vállalkozás adatai:</h6>
-                <li>Cégnév: Almafa Hungary Kft.</li>
+                <li>Cégnév: Almafa Kft.</li>
                 <li>Székhely: 1213 Budapest, Almafa utca 3.</li>
                 <li>Cégjegyzékszám: 01-09-45722 (Fővárosi Törvényszék Cégbírósága)</li>
-                <li>Adószám: 13553333-2-44</li>
+                <li>Adószám: 19553333-1-44</li>
                 <li>Üzleti tevékenység helye:</li>
                 <li>1025 Budapest, Lövőház u. 7-9. (Árkád)</li>
                 </li>
@@ -37,11 +37,11 @@
         <div class="mt-5">
             <h6 class="fw-bold" id="bevezetes">Bevezetés</h6>
             <p>
-                Az iSTYLE Hungary Kft. internetes áruházában (a továbbiakban: Áruház) történő megrendelés
+                Az Almáskosár internetes áruházában (a továbbiakban: Áruház) történő megrendelés
                 esetén a Vásárló elfogadja és magára nézve kötelezőnek ismeri el az alábbi Általános
                 Szerződési Feltételeket (a továbbiakban: ÁSZF-et).
             </p>
-            <p>Az Áruházban forgalmazott valamennyi termék vonatkozásában Eladónak az iSTYLE Hungary Kft. minősül.</p>
+            <p>Az Áruházban forgalmazott valamennyi termék vonatkozásában Eladónak az Almáskosár minősül.</p>
             <p>
                 Vásárlónak minősülő az, aki elektronikus úton, az Interneten keresztül ad le megrendelést az Eladó
                 honlapján
