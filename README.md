@@ -59,7 +59,7 @@ Adatbázis migrációk futtatása:
 ```
 
 
-Adatbázis feltöltése adatokkal: (Nem szükséges, de így átláthatóbb a webshop működése).
+Adatbázis feltöltése adatokkal: (Nem szükséges, de így átláthatóbb a webshop működése, és tesztelhető).
 ```bash
     php artisan db:seed
 ```
