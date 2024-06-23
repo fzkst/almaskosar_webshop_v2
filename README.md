@@ -9,7 +9,7 @@ Ez egy webshop, aminek backend és frontend része is Laravellel készült.
 
 Előfeltételek:
 
-* NodeJS 18.1
+* NodeJS 18.0.2
 * Telepített MySQL / MariaDB
 
 Telepítés:
@@ -59,7 +59,7 @@ Adatbázis migrációk futtatása:
 ```
 
 
-Adatbázis feltöltése adatokkal: (Nem szükséges, de így átláthatóbb a webshop működése).
+Adatbázis feltöltése adatokkal: (Nem szükséges, de így átláthatóbb a webshop működése, és tesztelhető).
 ```bash
     php artisan db:seed
 ```

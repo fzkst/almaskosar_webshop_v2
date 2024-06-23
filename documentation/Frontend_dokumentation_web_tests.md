@@ -1,4 +1,4 @@
-Az Almaskosar Webshop projekt alkalmazás
+Az Almaskosar Webshop projekt alkalmazás frontend leírása, ill. látható benne pár teszteset is leírással.
 
 FŐOLDAL 
 
@@ -29,7 +29,7 @@ Jobb alsó sarokban lévő connect gombok jelenleg nem működnek, inaktívak, m
 Bejelnetkezés nélkül bármelyik termékcsoport nevére rákattintva behozza az adott termékcsoport listáját kis kártyánként. 
 Bal oldalt található egy szűrés panel, amivel több különböző paraméter beállításával tudjuk szűkíteni a termékek keresését, listázását.
 
-![Fooldal](creenshots/shop/termekek.jpg)
+![Fooldal](screenshots/shop/termekek.jpg)
 
 Amennyiben nem található egyetlen termék sem a keresési feltételekhez, akkor az aloldal "Nem található olyan termék ami megfeleln a keresés ifeltételeknek! feliratot ír ki, és "Vissza" gombra kattintva az előző találati oldalra állhatunk vissza.
 
@@ -140,7 +140,7 @@ AMennyiben még nincs megadva a felhasználónak város, akkor ebben a listában
 Alacsony készletek listánál kilistázza azokat a termékeket, ahol 2 alatti a raktáron lévő rendelhető darabszám.
 Itt látható a listában a termék id-ja Modellnév, a színe, és a jelnelegi készlet. 
 
-screenshot
+![Termekek](screenshots/admin/termekek.jpg)
 
 Kategóriák gombra kattintva az aloldalon új kategóriát tudunk hozzáadni.
 Új kategória. űrlap jelenik meg, kategória megnevezése, táblanév, leírás, státusz kiemelt kategória checkboxok nem kötelezőek. Alul 1 db Kép feltöltése lehetséges. a Formok értékeinek megadása kötelező.
@@ -148,7 +148,7 @@ Hozzád gombra kattintva felugró menü értesít minket a sikeres hozzáadásr�
 A kateógriáknál a felvitt kategóriák listája látható, és azokról hashtag (id), név leírás kép, és két gomb, felső a szerkesztés aloldalra visz, míg a szemeteskuka pictogram pedig törli az adott kategóriát. Törlés esetén szintén felugró ablakban értesít a törlés siekrességéről, amelyet OK gombbal.
 Kategória szerkesztésnél a képet újra be kell tallózni. 
 
-screenshot
+![Kategoria hozzaadasa](screenshots/admin/kategoriahozzaadas.jpg)
 
 Termékek 
 Kilistázza a termékeket, felül Új termék hozzáadása gombnál megjelenik. 
